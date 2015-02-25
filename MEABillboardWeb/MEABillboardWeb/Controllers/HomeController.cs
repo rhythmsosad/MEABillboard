@@ -18,5 +18,10 @@ namespace MEABillboardWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult Gundam()
+        {
+            return View();
+        }
     }
 }
