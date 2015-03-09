@@ -5,8 +5,7 @@ using System.Web;
 
 namespace MEABillboardWeb.Areas.Admin.Models
 {
-    public class AdminUserGroup
+    public class AdminFunction
     {
-        
     }
 }
