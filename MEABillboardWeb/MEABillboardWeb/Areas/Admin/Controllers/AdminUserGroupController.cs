@@ -8,6 +8,10 @@ namespace MEABillboardWeb.Areas.Admin.Controllers
 {
     public class AdminUserGroupController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
         // GET: UMUserGroup
         //public ActionResult Index()
         //{

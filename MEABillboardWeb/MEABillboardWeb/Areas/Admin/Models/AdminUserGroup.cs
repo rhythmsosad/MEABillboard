@@ -7,5 +7,6 @@ namespace MEABillboardWeb.Areas.Admin.Models
 {
     public class AdminUserGroup
     {
+        
     }
 }
