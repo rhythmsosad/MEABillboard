@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,7 @@ namespace MEABillboardWeb.Models
 
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
