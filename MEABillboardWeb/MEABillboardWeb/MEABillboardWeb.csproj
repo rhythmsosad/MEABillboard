@@ -662,6 +662,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UMUserGroupController.cs" />
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -699,6 +700,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\UMUserGroup\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
