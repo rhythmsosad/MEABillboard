@@ -25,7 +25,7 @@ namespace MEABillboardWeb.Models
         //ALLNAME
         //SNAME
 
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int GroupId { get; set; }
         public string FunctionName { get; set; }
         public string UserGroupName { get; set; }

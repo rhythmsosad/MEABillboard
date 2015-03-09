@@ -14,7 +14,7 @@ namespace MEABillboardWeb.Models
 
         }
 
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -26,11 +26,9 @@ namespace MEABillboardWeb.Models
         public string Password { get; set; }
         public int Active { get; set; }
         public string CreatedBy { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public DateTime CreatedDate { get; set; }
+        //public DateTime? CreatedDate { get; set; }
         public string ModifiedBy { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public DateTime ModifiedDate { get; set; }
+        //public DateTime? ModifiedDate { get; set; }
 
 
         // CRUD
@@ -48,6 +46,9 @@ namespace MEABillboardWeb.Models
         {
             using(var context = new MEABillboardContext())
             {
+                //this.CreatedDate = DateTime.Now;
+                //this.ModifiedDate = DateTime.Now;
+
                 context.AuthUsers.Add(this);
                 context.SaveChanges();
             }

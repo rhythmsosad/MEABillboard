@@ -306,6 +306,7 @@
     <Content Include="Areas\Admin\Views\Shared\_TopNavbar2.cshtml" />
     <Content Include="Areas\Admin\Views\Page\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AdminFunction\Form.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminUserGroup\Form.cshtml" />
     <Content Include="Areas\Admin\Views\AdminUser\Index.cshtml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -726,6 +727,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HMTLHelperExtensions.cs" />
+    <Compile Include="Migrations\201503090854535_InitialCreate.cs" />
+    <Compile Include="Migrations\201503090854535_InitialCreate.Designer.cs">
+      <DependentUpon>201503090854535_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuthUser.cs" />
     <Compile Include="Models\AuthUserGroup.cs" />
     <Compile Include="Models\MEABillboardContext.cs" />
@@ -761,6 +767,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201503090854535_InitialCreate.resx">
+      <DependentUpon>201503090854535_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
