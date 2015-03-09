@@ -33,5 +33,14 @@ namespace MEABillboardWeb.Models
         public string Function { get; set; }
         public string AllName { get; set; }
         public string UserInGroup { get; set; }
+
+        public void Add()
+        {
+            using (var context = new MEABillboardContext())
+            {
+                context.AuthUserGroups.Add(this);
+                context.SaveChanges();
+            }
+        }
     }
 }

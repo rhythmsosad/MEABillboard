@@ -25,5 +25,14 @@ namespace MEABillboardWeb.Models
         public DateTime CreatedDate { get; set; }
         public string ModifiedBy { get; set; }
         public DateTime ModifiedDate { get; set; }
+
+        public void Add()
+        {
+            using(var context = new MEABillboardContext())
+            {
+                context.AuthUsers.Add(this);
+                context.SaveChanges();
+            }
+        }
     }
 }
