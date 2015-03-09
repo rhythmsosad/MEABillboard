@@ -1,1 +1,203 @@
-﻿
+﻿@model MEABillboardWeb.Models.AuthUserGroup
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="wrapper wrapper-content  animated fadeInRight">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>กลุ่มผู้ใช้งาน</h5>
+                </div>
+                <div class="ibox-content">
+                    @using (Html.BeginForm("Form", "AdminUserGroup", FormMethod.Post, new { @id = "MyForm", @class = "form-horizontal", data_bv_feedbackicons_valid = "glyphicon glyphicon_ok", data_bv_feedbackicons_invalid = "glyphicon glyphicon_remove", data_bv_feedbackicons_validating = "glyphicon glyphicon_refresh" }))
+                    {
+                        @Html.HiddenFor(x => x.GroupId)
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label>ชื่อกลุ่มผู้ใช้งาน:</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        @Html.TextBoxFor(x => x.UserGroupName, new { @class = "form-control", required = true, data_bv_notempty = "true", data_bv_stringlength = "true", data_bv_stringlength_max = "64" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label>ชื่อกลุ่มเมนู:</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        @Html.DropDownListFor(x => x.Function, Model.FunctionList(), new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <div class="col-sm-5">
+                                        <div class="input-group">
+                                            <input type="text" id="txtSearchAllUser" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class=" btn btn-ptt-success" id="btnSearchAllUser" type="button" style="font-size:10px">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <div style="margin-top:10px">
+                                            <label>ผู้ใช้งานทั้งหมด</label>
+                                        </div>
+                                        @Html.ListBoxFor(x => x.FAKE_ALLNAME, Model.AllNameList(), new { @class = "form-control", style = "height:250px;width:250px" })
+                                        @Html.ListBoxFor(x => x.ALLNAME, Model.AllNameList(), new { @class = "form-control", style = "height:250px;width:250px;display:none" })
+                                    </div>
+                                    <div class="col-sm-1" style="margin-top:150px">
+                                        <button class="btn btn-ptt-info btn-sm" type="button" id="btright"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                                        <br />
+                                        <br />
+                                        <button class="btn btn-ptt-info btn-sm" type="button" id="btleft"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="input-group">
+                                            <input type="text" id="txtSearchUser" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-ptt-success" id="btnSearchUser" type="button" style="font-size:10px"><span class="glyphicon glyphicon-search"></span></button>
+                                            </span>
+                                        </div>
+                                        <div style="margin-top:10px">
+                                            <label>ผู้ใช้งานในกลุ่มนี้</label>
+                                        </div>
+                                        @Html.ListBoxFor(x => x.FAKE_SNAME, Model.NameList(), new { @class = "form-control", style = "height:250px;width:250px" })
+                                        @Html.ListBoxFor(x => x.SNAME, Model.NameList(), new { @class = "form-control", style = "height:250px;width:250px;display:none" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:10px; margin-right:5px;">
+                            <button class="btn btn-success pull-left" type="submit" id="btnSubmit" style="margin-left:10px"><span class="glyphicon glyphicon-floppy-disk"></span> บันทึก</button>
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+@section scripts{
+    @System.Web.Optimization.Scripts.Render("~/plugins/validate")
+
+    <script type="text/javascript">
+        $(function () {
+          
+
+            $('#btnSearchAllUser').click(function () {
+                var value = $('#txtSearchAllUser').val();
+                if (value) {
+                    $("#FAKE_ALLNAME").empty();
+                    $("#ALLNAME option").each(function () {
+                        if ($(this).text().toLowerCase().indexOf(value) != -1) {
+                            $("#FAKE_ALLNAME").append("<option value=" + $(this).val() + ">" + $(this).text() + "</option>");
+                        }
+                    });
+                } else {
+                    $("#FAKE_ALLNAME").empty();
+                    $("#ALLNAME option").each(function () {
+                        $("#FAKE_ALLNAME").append("<option value=" + $(this).val() + ">" + $(this).text() + "</option>");
+                    });
+                }
+            });
+
+            $('#btnSearchUser').click(function () {
+                var value = $('#txtSearchUser').val();
+                if (value) {
+                    $("#FAKE_SNAME").empty();
+                    $("#SNAME option").each(function () {
+                        if ($(this).text().toLowerCase().indexOf(value) != -1) {
+                            $("#FAKE_SNAME").append("<option value=" + $(this).val() + ">" + $(this).text() + "</option>");
+                        }
+                    });
+                } else {
+                    $("#FAKE_SNAME").empty();
+                    $("#SNAME option").each(function () {
+                        $("#FAKE_SNAME").append("<option value=" + $(this).val() + ">" + $(this).text() + "</option>");
+                    });
+                }
+            });
+
+            $('#MyForm').submit(function () {
+                var fnlist = "";
+                $("#SNAME option").each(function () {
+                    fnlist += $(this).val() + "^";
+                });
+                fnlist = fnlist.substr(0, fnlist.length - 1);
+
+                $.ajax({
+                    url: this.action + '?fnList=' + fnlist,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        $('#myModal').modal('hide');
+                        if (result.success == true) {
+                            setModalAlertContent(GlobalMessage.successTitle, GlobalMessage.successMessage);
+                            showModalAlert(function (e) {
+                                window.location.reload();
+                            });
+                        } else {
+                            setModalAlertContent(GlobalMessage.errorTitle, GlobalMessage.errorMessage);
+                            showModalAlert(function (e) {
+                                $('#myModal').modal('show');
+                            });
+                        }
+                    }
+                });
+                return false;
+            });
+
+            /* $("#cancel").click(function () {
+                 console.log("tttt");
+                 $('#myModal').modal('hide');
+             });*/
+
+            $("#btright").click(function () {
+                var value = $("#FAKE_ALLNAME option:selected").val();
+                if (typeof value != 'undefined') {
+                    $("#FAKE_ALLNAME option:selected").each(function () {
+                        $("#SNAME").append('<option value=' + $(this).val() + '>' + $(this).text() + '</option>');
+                        $('#ALLNAME option[value=' + $(this).val() + ']').remove();
+
+                        $("#FAKE_SNAME").append('<option value=' + $(this).val() + '>' + $(this).text() + '</option>');
+                        $('#FAKE_ALLNAME option[value=' + $(this).val() + ']').remove();
+                    });
+                }
+            });
+
+
+            $("#btleft").click(function () {
+                var value = $("#FAKE_SNAME option:selected").val();
+                if (typeof value != 'undefined') {
+                    $("#FAKE_SNAME option:selected").each(function () {
+                        $("#ALLNAME").append('<option value=' + $(this).val() + '>' + $(this).text() + '</option>');
+                        $('#SNAME option[value=' + $(this).val() + ']').remove();
+
+                        $("#FAKE_ALLNAME").append('<option value=' + $(this).val() + '>' + $(this).text() + '</option>');
+                        $('#FAKE_SNAME option[value=' + $(this).val() + ']').remove();
+                    });
+                }
+            });
+
+
+        });
+    </script>
+}

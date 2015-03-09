@@ -13,6 +13,26 @@ namespace MEABillboardWeb.Areas.Admin.Controllers
             return View();
         }
 
+        public ActionResult Form()
+        {
+
+            return View(new MEABillboardWeb.Models.AuthUserGroup());
+        }
+
+        [HttpPost]
+        public JsonResult Form(string fnList)
+        {
+            try
+            {
+                //umUserGroup.Add();
+                return Json(new { success = true });
+            }
+            catch
+            {
+                return Json(new { success = false });
+            }
+        }
+
 
 
         // GET: UMUserGroup
