@@ -17,7 +17,7 @@
     @Styles.Render("~/font-awesome/css")                                                
     @Styles.Render("~/Content/css")
 </head>
-<body>
+<body class="top-navigation">
 
     <!-- Skin configuration box -->
     @Html.Partial("_SkinConfig")
@@ -26,14 +26,11 @@
     <!-- PageClass give you ability to specify custom style for specific view based on action -->
     <div id="wrapper" class="@Html.PageClass()">
 
-        <!-- Navigation -->
-        @Html.Partial("_Navigation")
-
         <!-- Page wraper -->
         <div id="page-wrapper" class="gray-bg @ViewBag.SpecialClass">
 
             <!-- Top Navbar -->
-            @Html.Partial("_TopNavbar")
+            @Html.Partial("_TopNavbar2")
 
             <!-- Main view  -->
             @RenderBody()
