@@ -12,6 +12,9 @@ namespace MEABillboardWeb.Areas.Admin.Controllers
         {
             return View();
         }
+
+
+
         // GET: UMUserGroup
         //public ActionResult Index()
         //{
