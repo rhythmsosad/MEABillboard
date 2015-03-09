@@ -28,8 +28,8 @@
                             <div class="col-md-10 double-space-bottom col-md-offset-1">
                                 <h3 class="heading">เพิ่มผู้ใช้งาน<span></span></h3>
                                 <div class="space-top">
-                                    <form action="@Url.Action("Form", "AdminUser", new { id = UrlParameter.Optional })" method="post">
-                                        <div class="form-group" >
+                                    <form id="mainForm" action="@Url.Action("Form", "AdminUser", new { id = UrlParameter.Optional })" method="post">
+                                        <div class="form-group">
                                             <label class="" for="FirstName">ชื่อ*</label>
                                             <input type="text" class="form-control input-lg" id="FirstName" name="FirstName" placeholder="ชื่อ" value="@Model.FirstName" />
                                         </div>
@@ -42,7 +42,7 @@
                                             <input type="text" class="form-control input-lg" id="Position" name="Position" placeholder="ตำแหน่ง" value="@Model.Position" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="Department">หน่วยงาน*</label>
+                                            <label class="" for="Branch">หน่วยงาน*</label>
                                             <div class="select-style">
                                                 @*@Html.DropDownList("StartDate_Date", ARWeb.Classes.LookupUtil.GetLutDay())*@
                                                 @*@Html.DropDownList("Department")*@
@@ -50,16 +50,16 @@
                                             <input type="text" class="form-control input-lg" id="Branch" name="Branch" placeholder="หน่วยงาน" value="@Model.Branch" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">อีเมล์*</label>
+                                            <label class="" for="Email">อีเมล์*</label>
                                             <input type="text" class="form-control input-lg" id="Email" name="Email" placeholder="อีเมล์" value="@Model.Email" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">เบอร์โทรศัพท์*</label>
+                                            <label class="" for="Mobile">เบอร์โทรศัพท์*</label>
                                             <input type="text" class="form-control input-lg" id="Mobile" name="Mobile" placeholder="เบอร์โทรศัพท์" value="@Model.Mobile" />
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="" for="UserAccount">บัญชีผู้ใช้งาน*</label>
+                                            <label class="" for="Username">บัญชีผู้ใช้งาน*</label>
                                             <input type="text" class="form-control input-lg" id="Username" name="Username" placeholder="บัญชีผู้ใช้งาน" value="@Model.Username" />
                                         </div>
                                         <div class="form-group">
@@ -89,3 +89,63 @@
 
     </div>
 </div>
+@section Scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $("#mainForm").validate({
+                rules: {
+
+                    FirstName: {
+                        required: true
+                    },
+                    LastName: {
+                        required: true
+                    },
+                    Position: {
+                        required: true
+                    },
+                    Email: {
+                        required: true
+                    },
+                    Mobile: {
+                        required: true
+                    },
+                    Username: {
+                        required: true
+                    },
+                    Password: {
+                        required: true//,
+                        //minlength: 5
+                    },
+                    ConfirmPassword: {
+                        required: true,
+                        equalTo: ".form-password"//,
+                        // minlength: 5
+                    },
+                    Email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    Role: "Please select a role",
+                    Password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    ConfirmPassword: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long",
+                        equalTo: "Please enter the same password as above"
+                    },
+                    Email: "Please enter a valid email address"
+                },
+                //submitHandler: function() {
+                //    alert("submitted!");
+                //},
+                debug: false
+            });
+        });
+    </script>
+}
