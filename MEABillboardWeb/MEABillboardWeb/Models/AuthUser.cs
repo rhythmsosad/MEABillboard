@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -11,6 +12,8 @@ namespace MEABillboardWeb.Models
         {
 
         }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -22,9 +25,23 @@ namespace MEABillboardWeb.Models
         public string Password { get; set; }
         public int Active { get; set; }
         public string CreatedBy { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime CreatedDate { get; set; }
         public string ModifiedBy { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime ModifiedDate { get; set; }
+
+
+        // CRUD
+        public List<AuthUser> Query()
+        {
+            using (var context = new MEABillboardContext())
+            {
+                var list = from o in context.AuthUsers
+                           select o;
+                return list.ToList();
+            }
+        }
 
         public void Add()
         {
