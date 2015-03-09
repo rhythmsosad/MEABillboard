@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MEABillboardWeb.Areas.Admin.Controllers
 {
-    public class UMUserGroupController : Controller
+    public class AdminUserGroupController : Controller
     {
         // GET: Admin/UMUserGroup
         public ActionResult Index()
