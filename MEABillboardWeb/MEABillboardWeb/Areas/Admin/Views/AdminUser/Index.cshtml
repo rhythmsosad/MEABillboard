@@ -52,31 +52,24 @@
                         <thead>
                             <tr>
                                 <th>ชื่อ</th>
-                                <th>ตำแหน่ง</th>
-                                <th>อีเมล์</th>
-                                <th>บัญชีผู้ใช้งาน</th>
-                                <th>สถานะ</th>
+                                <th>นามสกุล</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="gradeX">
-                                <td>Trident</td>
-                                <td>
-                                    Internet
-                                    Explorer 4.0
-                                </td>
-                                <td>Win 95+</td>
-                                <td class="center">4</td>
-                                <td class="center">X</td>
-                            </tr>
+                            @{
+                                foreach(var item in @Model.Query())
+                                {
+                                    <tr>
+                                        <td>@item.FirstName</td>
+                                        <td>@item.FirstName</td>
+                                    </tr>
+                                }
+                            }
                         </tbody>
                         <tfoot>
                             <tr>
                                 <th>ชื่อ</th>
-                                <th>ตำแหน่ง</th>
-                                <th>อีเมล์</th>
-                                <th>บัญชีผู้ใช้งาน</th>
-                                <th>สถานะ</th>
+                                <th>นามสกุล</th>
                             </tr>
                         </tfoot>
                     </table>
@@ -97,11 +90,11 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-
+            var swfPath = "@Url.Content("~/scripts/plugins/dataTables/swf/copy_csv_xls_pdf.swf")";
             $('.dataTables-example').dataTable({
                 "dom": 'T<"clear">lfrtip',
                 "tableTools": {
-                    "sSwfPath": "../scripts/plugins/dataTables/swf/copy_csv_xls_pdf.swf"
+                    "sSwfPath": swfPath
                 }
             });
 

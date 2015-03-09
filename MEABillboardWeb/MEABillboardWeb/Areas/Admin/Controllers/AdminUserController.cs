@@ -13,7 +13,8 @@ namespace MEABillboardWeb.Areas.Admin.Controllers
         // GET: Admin/AdminUser
         public ActionResult Index()
         {
-            return View();
+            AuthUser item = new AuthUser();
+            return View(item);
         }
 
         public ActionResult Form()
