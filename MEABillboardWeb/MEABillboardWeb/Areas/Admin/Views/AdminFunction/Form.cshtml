@@ -1,7 +1,73 @@
-﻿
+﻿@model MEABillboardWeb.Areas.Admin.Models.AdminFunctionItem
+
 @{
     ViewBag.Title = "Form";
 }
 
-<h2>Form</h2>
+<div class="page">
+    <section class="user-account text-center">
+        @*<ol class="breadcrumb">
+                <li><a href="@Url.Action("Index", "Home")">@Resources.Breadcrumb.Home</a></li>
+                <li class="active">@Resources.Breadcrumb.WebInfo</li>
+            </ol>*@
+    </section>
+    <div class="container space-top space-bottom">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel static panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">แก้ไขข้อมูลเมนู</h4>
+                    </div>
+                </div>
+
+                <section class="double-space-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 double-space-bottom col-md-offset-1">
+                                <h3 class="heading">แก้ไขข้อมูลเมนู<span></span></h3>
+                                <div class="space-top">
+                                    <form action="@Url.Action("Form", "AdminFunction", new { id = UrlParameter.Optional })" method="post">
+                                        <div class="form-group">
+                                            <label class="" for="Code">รหัส: </label>
+                                            <input type="text" class="form-control input-lg" id="Code" name="Code" placeholder="รหัส" value="@Model.Code" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="" for="LastName">ชื่อเมนู: </label>
+                                            <input type="text" class="form-control input-lg" id="Menu" name="Menu" placeholder="ชื่อเมนู" value="@Model.Menu" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="" for="FileDir">ที่อยู่ไฟล์: </label>
+                                            <input type="text" class="form-control input-lg" id="FileDir" name="FileDir" placeholder="ที่อยู่ไฟล์" value="@Model.FileDir" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="" for="Icon">ไอคอน: </label>
+                                            <input type="text" class="form-control input-lg" id="Icon" name="Icon" placeholder="ไอคอน" value="@Model.Icon" />
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="" for="Order">ลำดับ: </label>
+                                            <input type="text" class="form-control input-lg" id="Order" name="Order" placeholder="ลำดับ" value="@Model.Order" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="" for="Status">สถานะ: </label>
+                                            <input type="text" class="form-control input-lg" id="Status" name="Status" placeholder="สถานะ" value="@Model.Status" />
+                                        </div>
+
+                                        @*<input type="hidden" id="WebId" name="WebId" value=1 />*@
+                                        <button type="submit" class="btn btn-md btn-primary">บันทึก</button>
+                                        @*<button type="reset" class="btn btn-md btn-default">ล้างค่า</button>*@
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+</div>
 
