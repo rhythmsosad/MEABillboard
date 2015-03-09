@@ -290,6 +290,7 @@
     <Content Include="fonts\font-awesome\scss\_rotated-flipped.scss" />
     <Content Include="fonts\font-awesome\scss\_stacked.scss" />
     <Content Include="fonts\font-awesome\scss\_variables.scss" />
+    <Content Include="Areas\Admin\Views\AdminUserGroup\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Footer.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout_2.cshtml" />
@@ -708,6 +709,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminUserGroupController.cs" />
     <Compile Include="Areas\Admin\Controllers\PageController.cs" />
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
+    <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -745,7 +747,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\UMUserGroup\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
