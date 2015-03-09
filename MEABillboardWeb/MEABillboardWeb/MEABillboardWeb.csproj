@@ -306,6 +306,7 @@
     <Content Include="Areas\Admin\Views\Shared\_TopNavbar2.cshtml" />
     <Content Include="Areas\Admin\Views\Page\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AdminFunction\Form.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminUser\Index.cshtml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
