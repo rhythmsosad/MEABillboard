@@ -27,20 +27,20 @@
                                 <h3 class="heading">เพิ่มผู้ใช้งาน<span></span></h3>
                                 <div class="space-top">
                                     <form action="@Url.Action("Form", "AdminUser", new { id = UrlParameter.Optional })" method="post">
-                                        <div class="form-group" style="display:none;">
-                                            <label class="" for="WebMeta">ชื่อ*</label>
+                                        <div class="form-group" >
+                                            <label class="" for="FirstName">ชื่อ*</label>
                                             <input type="text" class="form-control input-lg" id="FirstName" name="FirstName" placeholder="ชื่อ" value="@Model.FirstName" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebTitle">นามสกุล*</label>
+                                            <label class="" for="LastName">นามสกุล*</label>
                                             <input type="text" class="form-control input-lg" id="LastName" name="LastName" placeholder="นามสกุล" value="@Model.LastName" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebGA">ตำแหน่ง*</label>
+                                            <label class="" for="Position">ตำแหน่ง*</label>
                                             <input type="text" class="form-control input-lg" id="Position" name="Position" placeholder="ตำแหน่ง" value="@Model.Position" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebFaceBook">หน่วยงาน*</label>
+                                            <label class="" for="Department">หน่วยงาน*</label>
                                             <div class="select-style">
                                                 @*@Html.DropDownList("StartDate_Date", ARWeb.Classes.LookupUtil.GetLutDay())*@
                                                 @*@Html.DropDownList("Department")*@
@@ -54,15 +54,15 @@
 
 
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">บัญชีผู้ใช้งาน*</label>
+                                            <label class="" for="UserAccount">บัญชีผู้ใช้งาน*</label>
                                             <input type="text" class="form-control input-lg" id="UserAccount" name="UserAccount" placeholder="บัญชีผู้ใช้งาน" value="@Model.UserAccount" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">รหัสผ่าน*</label>
+                                            <label class="" for="Password">รหัสผ่าน*</label>
                                             <input type="text" class="form-control input-lg" id="Password" name="Password" placeholder="รหัสผ่าน" value="@Model.Password" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">ยืนยันรหัสผ่าน*</label>
+                                            <label class="" for="ConfirmPassword">ยืนยันรหัสผ่าน*</label>
                                             <input type="text" class="form-control input-lg" id="ConfirmPassword" name="ConfirmPassword" placeholder="ยืนยันรหัสผ่าน" value="@Model.ConfirmPassword" />
                                         </div>
                                         <div class="form-group">
