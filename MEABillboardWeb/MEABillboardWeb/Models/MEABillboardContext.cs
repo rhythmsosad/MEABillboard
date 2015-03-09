@@ -11,7 +11,7 @@ namespace MEABillboardWeb.Models
         public MEABillboardContext()
             : base()
         {
-
+            Database.SetInitializer<MEABillboardContext>(new MEABillboardDBInitializer());
         }
 
         public DbSet<AuthUser> AuthUsers { get; set; }

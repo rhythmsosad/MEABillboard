@@ -1,4 +1,5 @@
-﻿using MEABillboardWeb.Areas.Admin.Models;
+﻿
+using MEABillboardWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +13,25 @@ namespace MEABillboardWeb.Areas.Admin.Controllers
         // GET: Admin/AdminUser
         public ActionResult Index()
         {
-            return View();
+            AuthUser item = new AuthUser();
+            return View(item);
         }
 
         public ActionResult Form()
         {
-            int id = 1;
-            AdminUser modelCollection = new AdminUser();
-            AdminUserItem model = modelCollection.Find(id);
-            return View(model);
+            AuthUser modelCollection = new AuthUser();
+            return View(modelCollection);
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Form(AuthUser model)
+        {
+            model.CreatedBy = "Chin";
+            model.ModifiedBy = "Chin";
+            model.Add();
+
+            return Redirect(Url.Action("Form", "AdminUser"));
         }
     }
 }
