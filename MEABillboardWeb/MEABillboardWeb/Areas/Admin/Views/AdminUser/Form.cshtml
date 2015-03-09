@@ -1,13 +1,14 @@
-﻿@model MEABillboardWeb.Areas.Admin.Models.AdminUser
+﻿@model MEABillboardWeb.Areas.Admin.Models.AdminUserItem
+@{
     ViewBag.Title = "Form";
 }
 
 <div class="page">
     <section class="user-account text-center">
         @*<ol class="breadcrumb">
-            <li><a href="@Url.Action("Index", "Home")">@Resources.Breadcrumb.Home</a></li>
-            <li class="active">@Resources.Breadcrumb.WebInfo</li>
-        </ol>*@
+                <li><a href="@Url.Action("Index", "Home")">@Resources.Breadcrumb.Home</a></li>
+                <li class="active">@Resources.Breadcrumb.WebInfo</li>
+            </ol>*@
     </section>
     <div class="container space-top space-bottom">
 
@@ -25,62 +26,53 @@
                             <div class="col-md-10 double-space-bottom col-md-offset-1">
                                 <h3 class="heading">เพิ่มผู้ใช้งาน<span></span></h3>
                                 <div class="space-top">
-                                    @*<form action="@Url.Action("Form", "WebInfo", new { id = UrlParameter.Optional })" method="post">
+                                    <form action="@Url.Action("Form", "AdminUser", new { id = UrlParameter.Optional })" method="post">
                                         <div class="form-group" style="display:none;">
-                                            <label class="" for="WebMeta">Meta</label>
-                                            @Html.TextAreaFor(x => x.WebMeta, new { @class = "form-control", required = "true", placeHolder = "Meta" })
+                                            <label class="" for="WebMeta">ชื่อ*</label>
+                                            <input type="text" class="form-control input-lg" id="FirstName" name="FirstName" placeholder="ชื่อ" value="@Model.FirstName" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebTitle">ชื่อเว็บไซต์</label>
-                                            <input type="text" class="form-control input-lg" id="WebTitle" name="WebTitle" placeholder="Title" value="@Model.WebTitle" />
+                                            <label class="" for="WebTitle">นามสกุล*</label>
+                                            <input type="text" class="form-control input-lg" id="LastName" name="LastName" placeholder="นามสกุล" value="@Model.LastName" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebGA">Google Analytics</label>
-                                            @Html.TextAreaFor(x => x.WebGA, new { @class = "form-control", required = "true", placeHolder = "Google Analytics" })
+                                            <label class="" for="WebGA">ตำแหน่ง*</label>
+                                            <input type="text" class="form-control input-lg" id="Position" name="Position" placeholder="ตำแหน่ง" value="@Model.Position" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebFaceBook">Facebook Url</label>
-                                            <input type="text" class="form-control input-lg" id="WebFaceBook" name="WebFaceBook" placeholder="Facebook" value="@Model.WebFaceBook" />
+                                            <label class="" for="WebFaceBook">หน่วยงาน*</label>
+                                            <div class="select-style">
+                                                @*@Html.DropDownList("StartDate_Date", ARWeb.Classes.LookupUtil.GetLutDay())*@
+                                                @*@Html.DropDownList("Department")*@
+                                            </div>
+                                            <input type="text" class="form-control input-lg" id="Department" name="Department" placeholder="หน่วยงาน" value="@Model.Department" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">ที่อยู่</label>
-                                            <input type="text" class="form-control input-lg" id="WebAddress" name="WebAddress" placeholder="Address" value="@Model.WebAddress" />
+                                            <label class="" for="WebAddress">อีเมล์*</label>
+                                            <input type="text" class="form-control input-lg" id="Email" name="Email" placeholder="อีเมล์" value="@Model.Email" />
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="" for="WebAddress">บัญชีผู้ใช้งาน*</label>
+                                            <input type="text" class="form-control input-lg" id="UserAccount" name="UserAccount" placeholder="บัญชีผู้ใช้งาน" value="@Model.UserAccount" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">Address</label>
-                                            <input type="text" class="form-control input-lg" id="WebAddress_Eng" name="WebAddress_Eng" placeholder="English Address" value="@Model.WebAddress_Eng" />
+                                            <label class="" for="WebAddress">รหัสผ่าน*</label>
+                                            <input type="text" class="form-control input-lg" id="Password" name="Password" placeholder="รหัสผ่าน" value="@Model.Password" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">Phone No.</label>
-                                            <input type="text" class="form-control input-lg" id="PhoneNo" name="PhoneNo" placeholder="Phone No." value="@Model.PhoneNo" />
+                                            <label class="" for="WebAddress">ยืนยันรหัสผ่าน*</label>
+                                            <input type="text" class="form-control input-lg" id="ConfirmPassword" name="ConfirmPassword" placeholder="ยืนยันรหัสผ่าน" value="@Model.ConfirmPassword" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="WebAddress">Fax No.</label>
-                                            <input type="text" class="form-control input-lg" id="FaxNo" name="FaxNo" placeholder="Fax No." value="@Model.FaxNo" />
+                                            <label>@Html.CheckBox("LocationImgDelete") </label>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="" for="WebAddress">Email</label>
-                                            <input type="text" class="form-control input-lg" id="Email" name="Email" placeholder="Email" value="@Model.Email" />
-                                        </div>
-                                        <div class="form-group">
-                                            <h3 class="heading">Meta<span></span></h3>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="" for="WebAddress">Meta Keyword (แต่ละคำคั่นด้วย comma " , ")</label>
-                                            <input type="text" class="form-control input-lg" id="Meta_Keyword" name="Meta_Keyword" placeholder="Meta Keyword" value="@Model.Meta_Keyword" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="" for="WebAddress">Meta Description (แต่ละคำคั่นด้วย comma " , ")</label>
-                                            <input type="text" class="form-control input-lg" id="Meta_Descr" name="Meta_Descr" placeholder="Meta Description" value="@Model.Meta_Descr" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="" for="WebAddress">Meta Author (แต่ละคำคั่นด้วย comma " , ")</label>
-                                            <input type="text" class="form-control input-lg" id="Meta_Author" name="Meta_Author" placeholder="Meta Author" value="@Model.Meta_Author" />
-                                        </div>
-                                        <input type="hidden" id="WebId" name="WebId" value=1 />
+
+                                        @*<input type="hidden" id="WebId" name="WebId" value=1 />*@
                                         <button type="submit" class="btn btn-md btn-primary">บันทึก</button>
-                                        <button type="reset" class="btn btn-md btn-default">ล้างค่า</button>
-                                    </form>*@
+                                        @*<button type="reset" class="btn btn-md btn-default">ล้างค่า</button>*@
+                                    </form>
                                 </div>
                             </div>
                         </div>
