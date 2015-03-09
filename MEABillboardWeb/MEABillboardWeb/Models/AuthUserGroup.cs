@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -23,6 +24,7 @@ namespace MEABillboardWeb.Models
         //ALLNAME
         //SNAME
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int GroupId { get; set; }
         public string FunctionName { get; set; }
         public string UserGroupName { get; set; }
