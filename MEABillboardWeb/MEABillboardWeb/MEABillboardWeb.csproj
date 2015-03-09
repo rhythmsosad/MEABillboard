@@ -305,6 +305,7 @@
     <Content Include="Areas\Admin\Views\Shared\_TopNavbar.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_TopNavbar2.cshtml" />
     <Content Include="Areas\Admin\Views\Page\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFunction\Form.cshtml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
@@ -711,9 +712,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminFunctionController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserGroupController.cs" />
     <Compile Include="Areas\Admin\Controllers\PageController.cs" />
+    <Compile Include="Areas\Admin\Models\AdminFunction.cs" />
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
     <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
     <Compile Include="Controllers\HomeController.cs" />
