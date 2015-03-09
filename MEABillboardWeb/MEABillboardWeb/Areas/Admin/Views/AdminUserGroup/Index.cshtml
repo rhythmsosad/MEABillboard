@@ -1,1 +1,99 @@
-﻿
+﻿@{
+    //ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="wrapper wrapper-content  animated fadeInRight">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>กลุ่มผู้ใช้งาน</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
+                    </p>
+                    <p>
+                        To creata a custom Inspinia modal all you have to do is to add <code>.inmodal</code> class to html modal element.
+                        Modal contains title, content and footer
+                    </p>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            Launch demo modal
+                        </button>
+                    </div>
+
+
+                </div>
+                <div class="ibox-content">
+
+                    <table id="tableUserGroup" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>ชื่อกลุ่ม</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @for (int i = 1; i < 30; i++)
+                            {
+                                <tr>
+                                    <td>กลุ่มผู้ใช้งาน @{string.Format("{0:000}", i);}</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+@section Styles {
+    @System.Web.Optimization.Styles.Render("~/Content/plugins/dataTables/dataTablesStyles")
+}
+
+
+@section scripts{
+    @System.Web.Optimization.Scripts.Render("~/plugins/jeditable")
+    @System.Web.Optimization.Scripts.Render("~/plugins/dataTables")
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#tableUserGroup').dataTable({
+                "stateSave": true,
+                "lengthChange": false,
+                "searching": false,
+                "language": {
+                    "sProcessing": "กำลังดำเนินการ...",
+                    "sLengthMenu": "แสดง_MENU_ แถว",
+                    "sZeroRecords": "ไม่พบข้อมูล",
+                    "sInfo": "แสดง _START_ ถึง _END_ จาก _TOTAL_ แถว",
+                    "sInfoEmpty": "แสดง 0 ถึง 0 จาก 0 แถว",
+                    "sInfoFiltered": "(กรองข้อมูล _MAX_ ทุกแถว)",
+                    "sInfoPostFix": "",
+                    "sSearch": "ค้นหา:",
+                    "sUrl": "",
+                    "oPaginate": {
+                        "sFirst": "เริ่มต้น",
+                        "sPrevious": "ก่อนหน้า",
+                        "sNext": "ถัดไป",
+                        "sLast": "สุดท้าย"
+                    }
+                }
+            });
+        });
+    </script>
+
+}
+
+
+
