@@ -665,6 +665,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserGroupController.cs" />
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
+    <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
