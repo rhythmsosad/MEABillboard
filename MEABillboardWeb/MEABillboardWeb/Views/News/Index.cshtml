@@ -20,9 +20,9 @@
                     <li>In <a href="#">Design</a></li>
                     <li>Posted January 24, 2015</li>
                 </ul>
-                <h2><a href="#">Incredible standard post “IMAGE”</a></h2>
+                <h2><a href="@Url.Action("info")">Incredible standard post “IMAGE”</a></h2>
                 <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
-                <ul class="post-shares">
+                @*<ul class="post-shares">
                     <li>
                         <a href="#">
                             <i class="rounded-x icon-speech"></i>
@@ -31,7 +31,7 @@
                     </li>
                     <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
                     <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
-                </ul>
+                </ul>*@
             </div>
         </div>
     </div><!--/end row-->
@@ -71,9 +71,9 @@
                     <li>In <a href="#">Design</a></li>
                     <li>Posted January 24, 2015</li>
                 </ul>
-                <h2><a href="#">Amazing post “IMAGE-SLIDER”</a></h2>
+                <h2><a href="@Url.Action("info")">Amazing post “IMAGE-SLIDER”</a></h2>
                 <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
-                <ul class="post-shares">
+                @*<ul class="post-shares">
                     <li>
                         <a href="#">
                             <i class="rounded-x icon-speech"></i>
@@ -82,7 +82,7 @@
                     </li>
                     <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
                     <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
-                </ul>
+                </ul>*@
             </div>
         </div>
     </div><!--/end row-->
@@ -104,9 +104,9 @@
                     <li>In <a href="#">Design</a></li>
                     <li>Posted January 24, 2015</li>
                 </ul>
-                <h2><a href="#">Awesome post “VIDEO”</a></h2>
+                <h2><a href="@Url.Action("info")">Awesome post “VIDEO”</a></h2>
                 <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
-                <ul class="post-shares">
+                @*<ul class="post-shares">
                     <li>
                         <a href="#">
                             <i class="rounded-x icon-speech"></i>
@@ -115,7 +115,7 @@
                     </li>
                     <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
                     <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
-                </ul>
+                </ul>*@
             </div>
         </div>
     </div><!--/end row-->
@@ -135,9 +135,9 @@
                     <li>In <a href="#">Design</a></li>
                     <li>Posted January 24, 2015</li>
                 </ul>
-                <h2><a href="#">Wonderful post “IMAGE”</a></h2>
+                <h2><a href="@Url.Action("info")">Wonderful post “IMAGE”</a></h2>
                 <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
-                <ul class="post-shares">
+                @*<ul class="post-shares">
                     <li>
                         <a href="#">
                             <i class="rounded-x icon-speech"></i>
@@ -146,7 +146,7 @@
                     </li>
                     <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
                     <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
-                </ul>
+                </ul>*@
             </div>
         </div>
     </div><!--/end row-->
@@ -155,11 +155,28 @@
     <div class="clearfix margin-bottom-20"><hr></div>
 
     <!-- Pager v3 -->
-    <ul class="pager pager-v3 pager-md no-margin-bottom">
+    @*<ul class="pager pager-v3 pager-md no-margin-bottom">
         <li class="previous"><a href="#">&larr; Older</a></li>
         <li class="page-amount">1 of 7</li>
         <li class="next"><a href="#">Newer &rarr;</a></li>
-    </ul>
+    </ul>*@
     <!-- End Pager v3 -->
+
+    <!--Pagination-->
+    <div class="text-center">
+        <ul class="pagination">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="active"><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>
+    <!--End Pagination-->
 </div><!--/end container-->
 <!--=== End Blog Posts ===-->
