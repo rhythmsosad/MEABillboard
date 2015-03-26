@@ -38,12 +38,17 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/theme-colors/orange.css")" id="style_color">
+
     <style type="text/css">
         body {
             font-family: "db_ozone_xregular", "Open Sans", Arial, sans-serif;
             font-size: 18px;
         }
     </style>
+
+    @RenderSection("Styles", required: false)
 </head>
 
 <body>
@@ -74,7 +79,7 @@
                         <li class="topbar-devider"></li>
                         <li><a href="page_faq.html">Help</a></li>
                         <li class="topbar-devider"></li>*@
-                        <li><a href="page_login.html">Login</a></li>
+                        ><li><a href="page_login.html">Login</a></li>
                     </ul>
                 </div>
                 <!-- End Topbar -->
@@ -269,6 +274,8 @@
         <script src="@Url.Content("~/assets/plugins/html5shiv.js")"></script>
         <script src="@Url.Content("~/assets/plugins/placeholder-IE-fixes.js")"></script>
     <![endif]-->
+
+    @RenderSection("Scripts", required: false)
 
 </body>
 </html>
