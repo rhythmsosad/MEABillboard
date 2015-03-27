@@ -13,5 +13,15 @@ namespace MEABillboardWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult Contract()
+        {
+            return View();
+        }
+
+         public ActionResult ContractInfo()
+        {
+            return View();
+        }
     }
 }

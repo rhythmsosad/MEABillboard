@@ -9,7 +9,7 @@
 	margin: 0;
 	outline: none;
 	box-shadow: 0 0 20px rgba(0,0,0,.3);
-	font: 13px/1.55 'Open Sans', Helvetica, Arial, sans-serif;
+	font: 20px/1.55 "db_ozone_xregular",'Open Sans', Helvetica, Arial, sans-serif;
 	color: #666;
 }
 .sky-form header {
@@ -88,7 +88,7 @@
 	border-style: solid;
 	border-radius: 0;
 	background: #fff;
-	font: 15px/23px 'Open Sans', Helvetica, Arial, sans-serif;
+	font: 15px/23px  "db_ozone_xregular",'Open Sans', Helvetica, Arial, sans-serif;
 	color: #404040;
 	appearance: normal;
 	-moz-appearance: none;
@@ -206,7 +206,7 @@
 .sky-form .checkbox {
 	margin-bottom: 4px;
 	padding-left: 27px;
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 27px;
 	color: #404040;
 	cursor: pointer;
