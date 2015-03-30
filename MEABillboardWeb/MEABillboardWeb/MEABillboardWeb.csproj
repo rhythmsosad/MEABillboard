@@ -8304,6 +8304,7 @@
     <Content Include="Theme_Unify\shortcode_typo_headings.html" />
     <Content Include="Theme_Unify\shortcode_typo_tagline_boxes.html" />
     <Content Include="Theme_Unify\shortcode_typo_testimonials.html" />
+    <Content Include="Views\Shared\_Slider.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -9597,7 +9598,6 @@
     <Content Include="Theme_Unify\Shop-UI\assets\plugins\sky-forms-pro\skyforms\icons\fontawesome-webfont.ttf" />
     <Content Include="Theme_Unify\Shop-UI\assets\plugins\sky-forms-pro\skyforms\icons\fontawesome-webfont.woff" />
     <Content Include="Theme_Unify\Shop-UI\assets\plugins\sky-forms-pro\skyforms\icons\FontAwesome.otf" />
-    <Content Include="Views\Shared\_Slider.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\News\Info.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
