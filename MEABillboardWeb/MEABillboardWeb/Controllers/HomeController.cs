@@ -11,6 +11,7 @@ namespace MEABillboardWeb.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            ViewBag.IsFirstPage = true;
             return View();
         }
 
