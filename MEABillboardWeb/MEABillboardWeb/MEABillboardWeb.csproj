@@ -3106,7 +3106,6 @@
     <Content Include="Areas\Admin\Views\AdminUserGroup\Form.cshtml" />
     <Content Include="Areas\Admin\Views\AdminUser\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Slider.cshtml" />
     <Content Include="assets\php\sky-forms-pro\demo-comment-process.php" />
     <Content Include="assets\php\sky-forms-pro\demo-contacts-process.php" />
     <Content Include="assets\php\sky-forms-pro\demo-login-process.php" />
