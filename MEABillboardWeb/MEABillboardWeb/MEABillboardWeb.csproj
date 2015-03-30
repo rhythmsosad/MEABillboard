@@ -3064,6 +3064,7 @@
     <Content Include="fonts\font-db-ozone-x\stylesheet.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Slider\bg_Slider.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\AdminUser\Form.cshtml" />
@@ -9611,7 +9612,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503090854535_InitialCreate.resx">
