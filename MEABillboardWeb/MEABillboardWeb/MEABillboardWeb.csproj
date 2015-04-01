@@ -3065,6 +3065,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\Slider\bg_Slider.jpg" />
+    <Content Include="Images\Slider\test.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\AdminUser\Form.cshtml" />
@@ -9603,6 +9604,7 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\Contract.cshtml" />
     <Content Include="Views\Profile\ContractInfo.cshtml" />
+    <Content Include="Views\Profile\Media.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
