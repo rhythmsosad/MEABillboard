@@ -1,0 +1,43 @@
+﻿body {
+    font-family: "db_ozone_xregular", "Open Sans", Arial, sans-serif;
+    font-size: 24px;
+}
+
+.header {
+    background-image: url('../Images/top-mnu_22.gif');
+}
+
+    .header .logo img {
+        margin: 0px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+.da-slide h2 {
+    color: #f9f9f9 !important;
+    font-family: "db_ozone_xregular", "Open Sans",sans-serif;
+    font-weight: 400 !important;
+    line-height: 50px;
+}
+
+.da-slide p i {
+    font-family: "db_ozone_xregular", "Open Sans",sans-serif;
+}
+
+.breadcrumbs-v1 {
+    background-image: url('../Images/Slider/test.jpg');
+    padding: 100px 0;
+    position: relative;
+}
+
+    .breadcrumbs-v1 h1 i {
+        font-size: 36px;
+        font-style: normal;
+        padding: 0 5px;
+        text-transform: uppercase;
+        background-color: rgba(230, 126, 34, 0.8);
+    }
+
+.link-list a, .footer-v1 address, .latest-list a {
+    font-size: 18px;
+}
