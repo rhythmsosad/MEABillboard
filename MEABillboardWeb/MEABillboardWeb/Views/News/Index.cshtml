@@ -1,8 +1,7 @@
 ﻿ <!--=== Breadcrumbs v1 ===-->
 <div class="breadcrumbs-v1">
     <div class="container">
-        <span>Blog Page</span>
-        <h1>ข่าวประชาสัมพันธ์</h1>
+        <h1><i>ข่าวประชาสัมพันธ์</i></h1>
     </div>
 </div>
 <!--=== End Breadcrumbs v1 ===-->
@@ -11,17 +10,35 @@
     <!-- News v3 -->
     <div class="row margin-bottom-20">
         <div class="col-sm-5 sm-margin-bottom-20">
-            <img class="img-responsive" src="@Url.Content("~/assets/img/main/img12.jpg")" alt="">
+            @*<img class="img-responsive" src="http://www.mea.or.th/upload/editor-pic/154/news2558/csr/e_bus/bye/1427642274_2.jpg" alt="">*@
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                    <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                    <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="http://www.mea.or.th/upload/editor-pic/154/news2558/csr/e_bus/bye/1427642274_17.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="http://www.mea.or.th/upload/editor-pic/154/news2558/csr/e_bus/bye/1427642274_26.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="http://www.mea.or.th/upload/editor-pic/154/news2558/csr/e_bus/bye/1427642275_45.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-sm-7">
             <div class="news-v3">
                 <ul class="list-inline posted-info">
-                    <li>By Alexander Jenni</li>
-                    <li>In <a href="#">Design</a></li>
-                    <li>Posted January 24, 2015</li>
+                    <li>เผยแพร่เมื่อ 24 มกราคม 2558</li>
                 </ul>
-                <h2><a href="@Url.Action("info")">Incredible standard post “IMAGE”</a></h2>
-                <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
+                <h2><a href="@Url.Action("info")">กฟน. จัดกิจกรรม Young MEA ปั่น ปลูก by E-bus</a></h2>
+                <p>กิจกรรม “Young MEA ปั่น ปลูก by E-bus” เป็นกิจกรรมที่การไฟฟ้านครหลวง จัดขึ้นโดยมีวัตถุประสงค์เพื่อสร้างจิตสำนึกด้านการอนุรักษ์พลังงานและสิ่งแวดล้อม..</p>
                 @*<ul class="post-shares">
                     <li>
                         <a href="#">
@@ -42,24 +59,20 @@
     <!-- News v3 -->
     <div class="row margin-bottom-20">
         <div class="col-sm-5 sm-margin-bottom-20">
-            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel2">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
-                    <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
-                    <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+                    <li data-target="#blog-carousel2" data-slide-to="0" class="active rounded-x"></li>
+                    <li data-target="#blog-carousel2" data-slide-to="1" class="rounded-x"></li>
                 </ol>
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="@Url.Content("~/assets/img/main/img19.jpg")" alt="">
+                        <img src="http://www.mea.or.th/upload/editor-pic/154/news2558/act_mea/ext_act/11083680_1077533275607142_5980006521785459265_n.jpg" alt="">
                     </div>
                     <div class="item">
-                        <img src="@Url.Content("~/assets/img/main/img3.jpg")" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="@Url.Content("~/assets/img/main/img24.jpg")" alt="">
+                        <img src="http://www.mea.or.th/upload/editor-pic/154/news2558/act_mea/ext_act/11094717_1077533305607139_402110940401912667_n.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -67,12 +80,10 @@
         <div class="col-sm-7">
             <div class="news-v3">
                 <ul class="list-inline posted-info">
-                    <li>By Luke Etheridge</li>
-                    <li>In <a href="#">Design</a></li>
-                    <li>Posted January 24, 2015</li>
+                    <li>เผยแพร่เมื่อ 24 มกราคม 2558</li>
                 </ul>
-                <h2><a href="@Url.Action("info")">Amazing post “IMAGE-SLIDER”</a></h2>
-                <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
+                <h2><a href="@Url.Action("info")">กฟน.แถลงผลโครงการ 60+ Earth Hour 2015 เพียง 1 ช.ม. ช่วยชาติประหยัดค่าไฟกว่า 7 ล้านบาท</a></h2>
+                <p>นางชุลี ศุภวรรธนะกุล รองผู้ว่าการการไฟฟ้านครหลวง แถลงผลการดำเนินโครงการปิดไฟ 1 ชั่วโมง เพื่อลดโลกร้อน ประจำปี 2558 (60+ Earth hour 2015)...</p>
                 @*<ul class="post-shares">
                     <li>
                         <a href="#">

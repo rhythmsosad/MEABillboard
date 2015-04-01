@@ -3065,6 +3065,8 @@
     <Content Include="fonts\font-db-ozone-x\stylesheet.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\logo2_crop.png" />
+    <Content Include="Images\MEA_logo_2.png" />
     <Content Include="Images\Slider\bg_Slider.jpg" />
     <Content Include="Images\Slider\test.jpg" />
     <Content Include="Images\top-mnu_04.gif" />
