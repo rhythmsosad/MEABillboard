@@ -9605,6 +9605,7 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\Contract.cshtml" />
     <Content Include="Views\Profile\ContractInfo.cshtml" />
+    <Content Include="Views\Profile\Media.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
