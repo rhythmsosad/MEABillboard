@@ -3050,6 +3050,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\email.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\override.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\style.css" />
     <Content Include="fonts\font-awesome\css\font-awesome.css" />
@@ -3066,6 +3067,8 @@
     <Content Include="Global.asax" />
     <Content Include="Images\Slider\bg_Slider.jpg" />
     <Content Include="Images\Slider\test.jpg" />
+    <Content Include="Images\top-mnu_04.gif" />
+    <Content Include="Images\top-mnu_22.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\AdminUser\Form.cshtml" />

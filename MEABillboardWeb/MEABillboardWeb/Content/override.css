@@ -1,0 +1,25 @@
+﻿body {
+    font-family: "db_ozone_xregular", "Open Sans", Arial, sans-serif;
+    font-size: 18px;
+}
+
+.header {
+    background-image: url('../Images/top-mnu_22.gif');
+}
+
+.header .logo img {
+    margin: 0px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.da-slide h2 {
+    color: #f9f9f9 !important;
+    font-family: "db_ozone_xregular", "Open Sans",sans-serif;
+    font-weight: 400 !important;
+    line-height: 50px;
+}
+
+.da-slide p i {
+    font-family: "db_ozone_xregular", "Open Sans",sans-serif;
+}
