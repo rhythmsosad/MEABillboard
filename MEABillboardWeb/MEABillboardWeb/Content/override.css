@@ -1,6 +1,6 @@
 ﻿body {
     font-family: "db_ozone_xregular", "Open Sans", Arial, sans-serif;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .header {
@@ -40,4 +40,8 @@
 
 .link-list a, .footer-v1 address, .latest-list a {
     font-size: 18px;
+}
+
+.thumbnail h3 a, .thumbnail-style h3 a, .headline h2 {
+    font-size: 24px;
 }

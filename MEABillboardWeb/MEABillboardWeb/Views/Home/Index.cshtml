@@ -320,10 +320,9 @@
     </div>
     <!-- End Recent Works -->
     <div class="col-md-12">
-        <div class="headline"><h3>Map</h3></div>
+        <div class="headline"><h2>ค้นหาสถานที่ติดตั้งป้าย</h2></div>
         <div class="col-md-9">
             <!-- Basic Map -->
-            
             @*<input id="pac-input" class="controls" type="text" placeholder="Search Box">
                 <div id="googleMap" class="map margin-bottom-50"></div>*@
             <input id="pac-input" class="controls" type="text" placeholder="Search Box">
@@ -335,6 +334,7 @@
 </div>
 @section Scripts{
     <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script>
         function initialize() {
             var mapProp = {
@@ -344,6 +344,14 @@
             };
             var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
+            var markerLocation = new google.maps.LatLng(13.7038227, 100.6361991);
+            var marker;
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: markerLocation
+            });
             ////search
             var markers = [];
             //var map = new google.maps.Map(document.getElementById('map-canvas'), {
