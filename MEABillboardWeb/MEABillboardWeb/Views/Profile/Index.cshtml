@@ -23,20 +23,7 @@
         <div class="col-md-3 md-margin-bottom-40">
             @*<img class="img-responsive profile-img margin-bottom-20" src="assets/img/team/img1-md.jpg" alt="">*@
 
-           
-            <ul class="list-group sidebar-nav-v1 margin-bottom-40" id="sidebar-nav-1">
-                <li class="list-group-item">
-                    <a href="@Url.Action("Index")"><i class="fa fa-user"></i> ข้อมูลส่วนตัว</a>
-                </li>
-
-                <li class="list-group-item">
-                    <a href="@Url.Action("Contract")"><i class="fa fa-cubes"></i> สัญญา</a>
-                </li>
-
-                <li class="list-group-item active">
-                    <a href="#"><i class="fa fa-cog"></i> Settings</a>
-                </li>
-            </ul>
+            @{ Html.RenderPartial("Menu");  }
 
             <div class="panel-heading-v2 overflow-h">
                 <h2 class="heading-xs pull-left"><i class="fa fa-bar-chart-o"></i> Task Progress</h2>
@@ -109,8 +96,8 @@
                                 </dd>
                                 <hr>
                             </dl>
-                            <button type="button" class="btn-u btn-u-default">Cancel</button>
-                            <button type="button" class="btn-u">Save Changes</button>
+                            @*<button type="button" class="btn-u btn-u-default">Cancel</button>
+                            <button type="button" class="btn-u">Save Changes</button>*@
                         </div>
 
                         <div id="passwordTab" class="profile-edit tab-pane fade">

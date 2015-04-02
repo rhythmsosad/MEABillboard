@@ -9611,6 +9611,8 @@
     <Content Include="Views\Profile\Contract.cshtml" />
     <Content Include="Views\Profile\ContractInfo.cshtml" />
     <Content Include="Views\Profile\Media.cshtml" />
+    <Content Include="Views\Profile\Menu.cshtml" />
+    <Content Include="Views\Profile\MediaInfo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

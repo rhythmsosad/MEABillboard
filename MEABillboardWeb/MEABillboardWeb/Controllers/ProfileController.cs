@@ -29,5 +29,19 @@ namespace MEABillboardWeb.Controllers
             return View();
         }
 
+        public ActionResult MediaInfo()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Partial view ส่วนแสดงเมนู
+        /// </summary>
+        /// <returns></returns>
+        public ViewResult Menu()
+        {
+            return View("Menu");
+        }
+
     }
 }
