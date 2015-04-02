@@ -4220,6 +4220,7 @@
     <Content Include="fonts\font-db-ozone-x\DB_Ozone_X_v3_2-webfont.ttf" />
     <Content Include="fonts\font-db-ozone-x\DB_Ozone_X_v3_2-webfont.woff" />
     <Content Include="fonts\font-db-ozone-x\DB_Ozone_X_v3_2-webfont.woff2" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
