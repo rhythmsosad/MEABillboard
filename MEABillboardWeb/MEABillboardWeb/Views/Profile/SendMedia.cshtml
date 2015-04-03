@@ -36,16 +36,9 @@
                             <input type="text">
                         </label>
                     </section>
-
-                    <section>
-                        <label class="label">ไฟล์สื่อ</label>
-                        <label for="file" class="input input-file">
-                            <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
-                        </label>
-                    </section>
                     <section>
                         <label class="label">ประเภทสื่อ</label>
-                        <div class="row">                          
+                        <div class="row">
                             <div class="col col-3">
                                 <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Media</label>
                             </div>
@@ -54,6 +47,12 @@
                             </div>
                         </div>
                     </section>
+                    <section>
+                        <label class="label">ไฟล์สื่อ</label>
+                        <label for="file" class="input input-file">
+                            <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
+                        </label>
+                    </section>                    
                     <hr />
                     <a class="btn-u" href="@Url.Action("Media")"><span class="icon icon-"></span> ส่งสื่อ </a>
                     <a class="btn-u btn-u-default" href="@Url.Action("Media")"><span class="icon icon-back"></span> ย้อนกลับ</a>
