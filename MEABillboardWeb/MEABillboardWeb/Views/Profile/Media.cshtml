@@ -33,36 +33,42 @@
                 <fieldset>
                     <section>
                         <label class="input">
-                            <input type="text" name="ContractName" placeholder="ชื่อโครงการ">
-                            <b class="tooltip tooltip-bottom-right">ชื่อโครงการ</b>
+                            <input type="text" name="ContractName" placeholder="ชื่อสื่อ">
+                            <b class="tooltip tooltip-bottom-right">ชื่อสื่อ</b>
                         </label>
                     </section>
                     <section>
-                        <label class="label">ประเภท</label>
-                        <div class="inline-group">
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>สื่อ digital</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ไวนิล</label>
+                        <label class="label">ประเภทสื่อ</label>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>Media</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>Vynil</label>
+                            </div>
                         </div>
                     </section>
                     <section>
-                        <label class="label">สถานะ</label>
-                        <div class="inline-group">
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ผ่าน</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>กำลังตรวจสอบ</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>หมดอายุ</label>
+                        <label class="label">สถานะการตรวจสอบ</label>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ผ่าน</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ไม่ผ่าน</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>กำลังตรวจสอบ</label>
+                            </div>
                         </div>
                     </section>
 
                     <a href="#" class="btn-u">ค้นหา</a>
                 </fieldset>
 
-
-
             </form>
-
-
             <div class="margin-bottom-60"></div>
+
             <div class="headline"><h2>รายการสื่อ</h2></div>
             <div class="table-search-v1 panel panel-dark">
 
@@ -70,22 +76,18 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>ชื่อ</th>
-                                <th>วันที่</th>
-                                <th>ประเภท</th>
-                                <th>สถานะ</th>
+                                <th>ชื่อ </th>
+                                <th>ประเภท </th>
+                                <th>สถานะ </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">HP Enterprise Service</a>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #1</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    สื่อ digital
+                                    Media
                                 </td>
                                 <td>
                                     <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
@@ -93,55 +95,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Samsung Electronics</a>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #2</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    สื่อ digital
-                                </td>
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("ContractInfo")">Sony Corporation</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-danger">&nbsp;หมดอายุ&nbsp;</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("ContractInfo")">Lenovo Group</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-yellow">กำลังตรวจสอบ</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("ContractInfo")">HP Enterprise Service</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    สื่อ digital
+                                    Media
                                 </td>
                                 <td>
                                     <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
@@ -149,72 +106,90 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Samsung Electronics</a>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #3</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    Media
                                 </td>
                                 <td>
-                                    สื่อ digital
-                                </td>
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Sony Corporation</a>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #4</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    vinyl
                                 </td>
                                 <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-danger">&nbsp;หมดอายุ&nbsp;</span>
+                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Lenovo Group</a>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #5</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    vinyl
                                 </td>
                                 <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-yellow">กำลังตรวจสอบ</span>
+                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Sony Corporation</a>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #6</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    vinyl
                                 </td>
                                 <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-danger">&nbsp;หมดอายุ&nbsp;</span>
+                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Lenovo Group</a>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #7</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    vinyl
                                 </td>
                                 <td>
-                                    ป้าย
+                                    <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #8</a>
                                 </td>
                                 <td>
-                                    <span class="label label-yellow">กำลังตรวจสอบ</span>
+                                    vinyl
+                                </td>
+                                <td>
+                                    <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #9</a>
+                                </td>
+                                <td>
+                                    vinyl
+                                </td>
+                                <td>
+                                    <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("MediaInfo")">โฆษณา HP Enterprise Service #10</a>
+                                </td>
+                                <td>
+                                    vinyl
+                                </td>
+                                <td>
+                                    <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
                             </tr>
                         </tbody>
