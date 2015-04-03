@@ -51,6 +51,14 @@ namespace MEABillboardWeb.Controllers
             return View();
         }
 
+        public ActionResult SendMedia()
+        {
+            return View();
+        }
+
+
+
+
         /// <summary>
         /// Partial view ส่วนแสดงเมนู
         /// </summary>
@@ -69,6 +77,9 @@ namespace MEABillboardWeb.Controllers
         {
             return View();
         }
+
+
+
 
     }
 }

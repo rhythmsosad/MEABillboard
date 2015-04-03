@@ -9616,6 +9616,7 @@
     <Content Include="Views\Profile\MediaInfo.cshtml" />
     <Content Include="Views\Profile\Sidebar.cshtml" />
     <Content Include="Views\Profile\BoardInfo.cshtml" />
+    <Content Include="Views\Profile\SendMedia.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
