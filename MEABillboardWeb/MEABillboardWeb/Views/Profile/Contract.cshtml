@@ -21,33 +21,10 @@
     <div class="row">
         <!--Left Sidebar-->
         <div class="col-md-3 md-margin-bottom-40">
-            @*<img class="img-responsive profile-img margin-bottom-20" src="assets/img/team/img1-md.jpg" alt="">*@
-
-
             @{ Html.RenderPartial("Menu");  }
-
-            <div class="panel-heading-v2 overflow-h">
-                <h2 class="heading-xs pull-left"><i class="fa fa-bar-chart-o"></i> Task Progress</h2>
-                <a href="#"><i class="fa fa-cog pull-right"></i></a>
-            </div>
-            <h3 class="heading-xs">Web Design <span class="pull-right">92%</span></h3>
-            <div class="progress progress-u progress-xxs">
-                <div style="width: 92%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="92" role="progressbar" class="progress-bar progress-bar-u">
-                </div>
-            </div>
-            <h3 class="heading-xs">Unify Project <span class="pull-right">85%</span></h3>
-            <div class="progress progress-u progress-xxs">
-                <div style="width: 85%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar" class="progress-bar progress-bar-blue">
-                </div>
-            </div>
-            <h3 class="heading-xs">Sony Corporation <span class="pull-right">64%</span></h3>
-            <div class="progress progress-u progress-xxs margin-bottom-40">
-                <div style="width: 64%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="64" role="progressbar" class="progress-bar progress-bar-dark">
-                </div>
-            </div>
+            @{ Html.RenderPartial("Sidebar");  }
         </div>
         <!--End Left Sidebar-->
-
         <!-- Profile Content -->
         <div class="col-md-9">
             <div class="headline"><h2>สัญญา</h2></div>
@@ -55,194 +32,139 @@
                 <fieldset>
                     <section>
                         <label class="input">
-                            <input type="text" name="ContractName" placeholder="ชื่อโครงการ">
-                            <b class="tooltip tooltip-bottom-right">ชื่อโครงการ</b>
+                            <input type="text" name="ContractName" placeholder="เลขที่สัญญา">
+                            <b class="tooltip tooltip-bottom-right">เลขที่สัญญา</b>
                         </label>
                     </section>
                     <section>
                         <label class="label">ประเภท</label>
-                        <div class="inline-group">
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>สื่อ digital</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ไวนิล</label>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทตั้งเสา Tower</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทผนังอาคาร</label>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <label class="label">ป้าย</label>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Digital Billboard </label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Billboard/Vinyl </label>
+                            </div>
                         </div>
                     </section>
                     <section>
                         <label class="label">สถานะ</label>
-                        <div class="inline-group">
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline" ><i></i>ผ่าน</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>กำลังตรวจสอบ</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>หมดอายุ</label>
-                        </div>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>อยู่ระหว่างสัญญา</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ใกล้สิ้นสุดสัญญา</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>หมดสัญญา</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ยกเลิกสัญญา</label>
+                            </div>
+                        </div>                      
                     </section>
 
-                    <a href="#" class="btn-u" >ค้นหา</a>
+                    <a href="#" class="btn-u">ค้นหา</a>
                 </fieldset>
 
-               
-               
+
+
             </form>
 
 
             <div class="margin-bottom-60"></div>
-            <div class="headline"><h2>รายการสัญญา</h2></div>
+            <div class="headline"><h2>ผลลัพธ์</h2></div>
             <div class="table-search-v1 panel panel-dark">
-               
+
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>ชื่อ</th>
-                                <th>วันที่</th>
-                                <th>ประเภท</th>
+                                <th>เลขที่สัญญา</th>
+                                <th>ระยะเวลาสัญญา</th>
+                                <th>จำนวนป้าย</th>
+                                <th>ชื่อพื้นที่</th>
                                 <th>สถานะ</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">HP Enterprise Service</a>
+                                    <a href="@Url.Action("ContractInfo")">201544113</a>
                                 </td>
                                 <td>
-                                   1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
                                 <td>
-                                   สื่อ digital
-                                </td>                               
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                    10
                                 </td>
-                            </tr>
-                            <tr>
+                                <td></td>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Samsung Electronics</a>                                   
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    สื่อ digital
-                                </td>
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Sony Corporation</a>                                    
+                                    <a href="@Url.Action("ContractInfo")">201544123</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    1 ม.ค. 2556 - 1 ม.ค. 2559
                                 </td>
                                 <td>
-                                    ป้าย
+                                    10
                                 </td>
+                                <td></td>
                                 <td>
-                                    <span class="label label-danger">&nbsp;หมดอายุ&nbsp;</span>
+                                    <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;ใกล้สิ้นสุดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
-                            </tr>
+                            </tr>          
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">Lenovo Group</a>                                   
+                                    <a href="@Url.Action("ContractInfo")">201544126</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
                                 <td>
-                                    ป้าย
+                                    10
                                 </td>
+                                <td></td>
                                 <td>
-                                    <span class="label label-yellow">กำลังตรวจสอบ</span>
+                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;หมดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
-                            </tr>
+                            </tr>          
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">HP Enterprise Service</a>
+                                    <a href="@Url.Action("ContractInfo")">201544129</a>
                                 </td>
                                 <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
                                 <td>
-                                    สื่อ digital
+                                    10
                                 </td>
+                                <td></td>
                                 <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ยกเลิกสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("ContractInfo")">Samsung Electronics</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    สื่อ digital
-                                </td>
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("ContractInfo")">Sony Corporation</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-danger">&nbsp;หมดอายุ&nbsp;</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("ContractInfo")">Lenovo Group</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-yellow">กำลังตรวจสอบ</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("ContractInfo")">Sony Corporation</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-danger">&nbsp;หมดอายุ&nbsp;</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("ContractInfo")">Lenovo Group</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 15 ม.ค. 2557
-                                </td>
-                                <td>
-                                    ป้าย
-                                </td>
-                                <td>
-                                    <span class="label label-yellow">กำลังตรวจสอบ</span>
-                                </td>
-                            </tr>
+                            </tr>          
+
                         </tbody>
-                    </table>                  
+                    </table>
                 </div>
-               
+
             </div>
             <!--Pagination-->
             <div class="text-center">

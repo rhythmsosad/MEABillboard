@@ -40,7 +40,17 @@ namespace MEABillboardWeb.Controllers
         /// <returns></returns>
         public ViewResult Menu()
         {
-            return View("Menu");
+            return View();
+        }
+
+
+        /// <summary>
+        /// Partial view ส่วนแสดงข้อมูล sidebar
+        /// </summary>
+        /// <returns></returns>
+        public ViewResult Sidebar()
+        {
+            return View();
         }
 
     }
