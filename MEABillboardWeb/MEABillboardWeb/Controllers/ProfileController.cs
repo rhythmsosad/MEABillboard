@@ -14,11 +14,19 @@ namespace MEABillboardWeb.Controllers
             return View();
         }
 
+        /// <summary>
+        /// แสดงรายละเอียดสัญญา
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Contract()
         {
             return View();
         }
 
+        /// <summary>
+        /// แสดงรายละเอียดสัญญา
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ContractInfo()
         {
             return View();
@@ -30,6 +38,15 @@ namespace MEABillboardWeb.Controllers
         }
 
         public ActionResult MediaInfo()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// แสดงรายละเอียดป้าย
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult BoardInfo()
         {
             return View();
         }

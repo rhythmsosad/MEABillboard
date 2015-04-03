@@ -3067,6 +3067,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\logo2_crop.png" />
     <Content Include="Images\MEA_logo_2.png" />
+    <Content Include="Images\Sample\board1.jpg" />
     <Content Include="Images\Slider\bg_Slider.jpg" />
     <Content Include="Images\Slider\test.jpg" />
     <Content Include="Images\top-mnu_04.gif" />
@@ -9614,6 +9615,7 @@
     <Content Include="Views\Profile\Menu.cshtml" />
     <Content Include="Views\Profile\MediaInfo.cshtml" />
     <Content Include="Views\Profile\Sidebar.cshtml" />
+    <Content Include="Views\Profile\BoardInfo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
