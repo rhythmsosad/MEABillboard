@@ -1,0 +1,25 @@
+﻿<ul class="nav navbar-nav">
+    <li class="@Html.IsSelected(controller: "Home")"><a href="@Url.Action("Index", "Home")">หน้าหลัก</a></li>
+    <li class="dropdown @Html.IsSelected(controller: "News")">
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+            ข่าวประชาสัมพันธ์
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="@Url.Action("Index", "News")">ข่าวประชาสัมพันธ์ Admin</a></li>
+            <li><a href="@Url.Action("Index", "News")">ผลการพิจารณา Admin</a></li>
+        </ul>
+    </li>
+    <!-- Search Block -->
+    <li>
+        <i class="search fa fa-search search-btn"></i>
+        <div class="search-open">
+            <div class="input-group animated fadeInDown">
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-btn">
+                    <button class="btn btn-u" type="button">Go</button>
+                </span>
+            </div>
+        </div>
+    </li>
+    <!-- End Search Block -->
+</ul>
