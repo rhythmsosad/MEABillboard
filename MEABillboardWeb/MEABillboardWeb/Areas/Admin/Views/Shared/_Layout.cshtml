@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/font-awesome/css/font-awesome.min.css")">
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/parallax-slider/css/parallax-slider.css")">
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
@@ -52,11 +54,11 @@
     <div class="wrapper">
         <!--=== Header ===-->
         <div class="header">
-            <div class="container" style="height: 85px;">
+            <div class="container">
                 <!-- Logo -->
-                <a class="logo" href="index.html">
+                <a class="logo" href="@Url.Action("Index", "Home", new { area="admin" })">
                     @*<img src="@Url.Content("~/assets/img/logo1-default.png")" alt="Logo">*@
-                    <img src="@Url.Content("~/Images/top-mnu_04.gif")" alt="Logo" />
+                    <img src="@Url.Content("~/Images/MEALogo_Horizontal_ss.png")" alt="Logo" />
                 </a>
                 <!-- End Logo -->
                 <!-- Topbar -->
