@@ -4335,6 +4335,7 @@
     <Content Include="assets\js_custom\flot\NEWS.md" />
     <Content Include="assets\js_custom\flot\PLUGINS.md" />
     <Content Include="assets\js_custom\flot\README.md" />
+    <Content Include="Areas\Admin\Views\BoardAdmin\Form.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -9742,7 +9743,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\BoardAdmin\" />
     <Folder Include="assets\js_custom\flot\examples\gauge\" />
   </ItemGroup>
   <ItemGroup>
