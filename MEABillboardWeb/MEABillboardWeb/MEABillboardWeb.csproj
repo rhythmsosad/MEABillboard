@@ -8436,6 +8436,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminFunctionController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserGroupController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BoardAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\PageController.cs" />
     <Compile Include="Areas\Admin\Models\AdminFunction.cs" />
@@ -9741,6 +9742,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\BoardAdmin\" />
     <Folder Include="assets\js_custom\flot\examples\gauge\" />
   </ItemGroup>
   <ItemGroup>
