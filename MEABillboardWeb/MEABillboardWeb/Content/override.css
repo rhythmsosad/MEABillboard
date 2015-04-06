@@ -71,3 +71,11 @@ h2.heading-xs {
     border-top: medium none;
     padding: 10px 0 5px;
 }
+
+.data-point-label {
+    font-size: 18px;
+}
+
+.flot-tooltip { 
+    font-size: 18px;
+}
