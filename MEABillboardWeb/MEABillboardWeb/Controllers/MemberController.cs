@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace MEABillboardWeb.Controllers
 {
-    public class HomeController : Controller
+    public class MemberController : Controller
     {
-        // GET: Home
-        public ActionResult Index()
+        // GET: Member
+        public ActionResult Login()
         {
-            ViewBag.IsFirstPage = true;
             return View();
         }
     }

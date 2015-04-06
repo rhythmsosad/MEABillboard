@@ -5,7 +5,7 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-    <title>Unify - Responsive Website Template</title>
+    <title>MEA Billboard</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="@Url.Content("~/Images/favicon.ico")">
 
     <!-- Web Fonts -->
     @*<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>*@
@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/font-awesome/css/font-awesome.min.css")">
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/parallax-slider/css/parallax-slider.css")">
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
@@ -52,11 +54,11 @@
     <div class="wrapper">
         <!--=== Header ===-->
         <div class="header">
-            <div class="container" style="height: 85px;">
+            <div class="container">
                 <!-- Logo -->
-                <a class="logo" href="index.html">
+                <a class="logo" href="@Url.Action("Index", "Home", new { area="admin" })">
                     @*<img src="@Url.Content("~/assets/img/logo1-default.png")" alt="Logo">*@
-                    <img src="@Url.Content("~/Images/top-mnu_04.gif")" alt="Logo" />
+                    <img src="@Url.Content("~/Images/MEALogo_Horizontal_ss.png")" alt="Logo" />
                 </a>
                 <!-- End Logo -->
                 <!-- Topbar -->
@@ -91,42 +93,18 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
                 <div class="container">
-                    <ul class="nav navbar-nav">
-                        <li class="@Html.IsSelected(controller: "Home")"><a href="@Url.Action("Index", "Home")">หน้าหลัก</a></li>
-                        <li class="dropdown @Html.IsSelected(controller: "News")">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                ข่าวประชาสัมพันธ์
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="@Url.Action("Index", "News")">ข่าวประชาสัมพันธ์</a></li>
-                                <li><a href="@Url.Action("Index", "News")">ผลการพิจารณา</a></li>
-                            </ul>
-                        </li>
-                        <!-- Search Block -->
-                        <li>
-                            <i class="search fa fa-search search-btn"></i>
-                            <div class="search-open">
-                                <div class="input-group animated fadeInDown">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-u" type="button">Go</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- End Search Block -->
-                    </ul>
+                    @Html.Partial("_Navigation")
                 </div><!--/end container-->
             </div><!--/navbar-collapse-->
         </div>
         <!--=== End Header ===-->
         <!--=== Slider ===-->
         @{
-                if (ViewBag.IsFirstPage != null && ViewBag.IsFirstPage)
-                {
-                    Html.RenderPartial("_Slider");
-                }
+            if (ViewBag.IsFirstPage != null && ViewBag.IsFirstPage)
+            {
+                Html.RenderPartial("_Slider");
             }
+        }
 
         <!--/slider-->
         <!--=== End Slider ===-->
@@ -141,7 +119,7 @@
                     <div class="row">
                         <!-- About -->
                         <div class="col-md-3 md-margin-bottom-40">
-                            <a href="index.html"><img id="logo-footer" class="footer-logo" src="@Url.Content("~/Images/MEA_logo_2.png")" alt=""></a>
+                            <a href="index.html"><img id="logo-footer" class="footer-logo" src="@Url.Content("~/Images/MEALogo_Horizontal_ss.png")" alt=""></a>
                             <p>มุ่งสู่องค์กรสมรรถนะสูง เป็นผู้นำด้านระบบจำหน่ายพลังไฟฟ้า และบริการที่เป็นเลิศ</p>
                             <p>สร้างความเข้มแข็งในธุรกิจเกี่ยวเนื่อง รับผิดชอบต่อสังคมและสิ่งแวดล้อม</p>
                         </div><!--/col-md-3-->
@@ -165,7 +143,8 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>--><!--/col-md-3-->
+                        </div>-->
+                        <!--/col-md-3-->
                         <!-- End Latest -->
                         <!-- Link List -->
                         <div class="col-md-3 md-margin-bottom-40">
@@ -198,7 +177,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <p>
-                                &copy; สงวนลิขสิทธิ์ 2556 การไฟฟ้านครหลวง
+                                &copy; สงวนลิขสิทธิ์ 2558 การไฟฟ้านครหลวง
                                 @*<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>*@
                             </p>
                         </div>
