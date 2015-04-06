@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace MEABillboardWeb.Areas.Admin.Controllers
 {
-    public class SendMediaController : Controller
+    public class BoardAdminController : Controller
     {
-        // GET: Admin/SendMedia
+        // GET: Admin/BoardAdmin
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult Form()
         {
             return View();
         }
