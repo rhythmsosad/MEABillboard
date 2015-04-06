@@ -4221,6 +4221,8 @@
     <Content Include="fonts\font-db-ozone-x\DB_Ozone_X_v3_2-webfont.ttf" />
     <Content Include="fonts\font-db-ozone-x\DB_Ozone_X_v3_2-webfont.woff" />
     <Content Include="fonts\font-db-ozone-x\DB_Ozone_X_v3_2-webfont.woff2" />
+    <Content Include="Areas\Admin\Views\SendMedia\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SendMedia\Form.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -8323,6 +8325,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserGroupController.cs" />
     <Compile Include="Areas\Admin\Controllers\PageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SendMediaController.cs" />
     <Compile Include="Areas\Admin\Models\AdminFunction.cs" />
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
     <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
