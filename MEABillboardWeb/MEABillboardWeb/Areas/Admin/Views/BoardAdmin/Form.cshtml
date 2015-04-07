@@ -8,8 +8,8 @@
         <div class="container">
             <h1 class="pull-left">เพิ่มป้ายโฆษณา</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Admin</a></li>
+                <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+                <li><a href="">แอดมิน</a></li>
                 <li class="active">เพิ่มป้ายโฆษณา</li>
             </ul>
         </div>
@@ -22,9 +22,9 @@
             <!-- Begin Content -->
             @*<div class="col-md-9">*@
             <!-- General Unify Forms -->
-            <form action="#" class="sky-form">
-                <header>เพิ่มป้ายโฆษณา</header>
-
+            <form action="#" class="sky-form" style="border:none;">
+                @*<header>เพิ่มป้ายโฆษณา</header>*@
+                <div class="headline"><h2>เพิ่มป้ายโฆษณา</h2></div>
                 <fieldset>
                     <section>
                         <label class="label">ชื่อป้าย</label>
