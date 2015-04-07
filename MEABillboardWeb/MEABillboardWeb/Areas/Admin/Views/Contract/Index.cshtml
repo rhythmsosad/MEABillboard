@@ -11,9 +11,11 @@
 
     <!-- CSS Page Style -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/js_custom/chosen/chosen.css")">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
+
 }
 
 <!--=== Breadcrumbs ===-->
@@ -25,16 +27,20 @@
             <li class="active">สัญญาเช่า</li>
         </ul>
     </div>
-</div><!--/breadcrumbs-->
+</div>
+<!--/breadcrumbs-->
 <!--=== End Breadcrumbs ===-->
 <!--=== Profile ===-->
 <div class="container content profile">
     <div class="row">
         <!-- Profile Content -->
         <div class="col-md-12">
+
+            <a href="@Url.Action("Form")" class="btn-u"><span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มสัญญาเช่า</a>
+
             <div class="headline"><h2>ค้นหา</h2></div>
             <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
-                <fieldset>                
+                <fieldset>
                     <section>
                         <label class="label">สัญญาเลขที่</label>
                         <label class="input">
@@ -51,33 +57,39 @@
                     </section>
                     <section>
                         <label class="label">พื้นที่เช่า</label>
-                        <label class="input">
-                            <input type="text" name="ContractName" placeholder="พื้นที่เช่า">
-                            <b class="tooltip tooltip-bottom-right">พื้นที่เช่า</b>
-                        </label>
+                        @*<label class="input">
+                                <input type="text" name="ContractName" placeholder="พื้นที่เช่า">
+                                <b class="tooltip tooltip-bottom-right">พื้นที่เช่า</b>
+                            </label>*@
+                        <select class="chosen-select form-control" id="form-field-select-4" data-placeholder="ไม่ระบุ">
+                            <option value="0">ไม่ระบุ</option>
+                            <option value="1">การไฟฟ้านครหลวงเขตวัดเลียบ</option>
+                            <option value="2">การไฟฟ้านครหลวงเขตลาดพร้าว</option>
+                            <option value="3">การไฟฟ้านครหลวงเขตมีนบุรี</option>
+                        </select>
                     </section>
                     @*<section>
-                        <label class="label">ประเภท</label>
-                        <div class="row">
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทตั้งเสา Tower</label>
+                            <label class="label">ประเภท</label>
+                            <div class="row">
+                                <div class="col col-3">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทตั้งเสา Tower</label>
+                                </div>
+                                <div class="col col-3">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทผนังอาคาร</label>
+                                </div>
                             </div>
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทผนังอาคาร</label>
+                        </section>
+                        <section>
+                            <label class="label">ป้าย</label>
+                            <div class="row">
+                                <div class="col col-3">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Digital Billboard </label>
+                                </div>
+                                <div class="col col-3">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Billboard/Vinyl </label>
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <section>
-                        <label class="label">ป้าย</label>
-                        <div class="row">
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Digital Billboard </label>
-                            </div>
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Billboard/Vinyl </label>
-                            </div>
-                        </div>
-                    </section>*@
+                        </section>*@
                     <section>
                         <label class="label">สถานะ</label>
                         <div class="row">
@@ -117,6 +129,7 @@
                                 <th>ชื่อผู้เช่า</th>
                                 <th>ชื่อพื้นที่</th>
                                 <th>สถานะ</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -127,8 +140,8 @@
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
-                                <td class="text-right">
-                                    5
+                                <td>
+                                    นายอมร บุญมี
                                 </td>
                                 <td>
                                     การไฟฟ้านครหลวงเขตวัดเลียบ<br />
@@ -138,6 +151,16 @@
                                 <td>
                                     <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="@Url.Action("Form")" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="แก้ไข">
+                                            <i class="fa fa-pencil fa-lg"></i>
+                                        </a>
+                                        <button class="btn btn-danger btn-delete" data-id="1" data-toggle="tooltip" data-placement="bottom" title="ลบ">
+                                            <i class="fa fa-trash fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -146,7 +169,7 @@
                                 <td>
                                     1 ม.ค. 2556 - 1 ม.ค. 2559
                                 </td>
-                                <td class="text-right">
+                                <td>
                                     นายอมร จิตกร
                                 </td>
                                 <td>
@@ -154,6 +177,16 @@
                                 </td>
                                 <td>
                                     <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;ใกล้สิ้นสุดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="@Url.Action("Form")" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="แก้ไข">
+                                            <i class="fa fa-pencil fa-lg"></i>
+                                        </a>
+                                        <button class="btn btn-danger btn-delete" data-id="1" data-toggle="tooltip" data-placement="bottom" title="ลบ">
+                                            <i class="fa fa-trash fa-lg"></i>
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -163,7 +196,7 @@
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
-                                <td class="text-right">
+                                <td>
                                     นายสมปอง วัฒนะ
                                 </td>
                                 <td>
@@ -171,6 +204,16 @@
                                 </td>
                                 <td>
                                     <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;หมดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="@Url.Action("Form")" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="แก้ไข">
+                                            <i class="fa fa-pencil fa-lg"></i>
+                                        </a>
+                                        <button class="btn btn-danger btn-delete" data-id="1" data-toggle="tooltip" data-placement="bottom" title="ลบ">
+                                            <i class="fa fa-trash fa-lg"></i>
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -180,7 +223,7 @@
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
-                                <td class="text-right">
+                                <td>
                                     นายสมบูรณ์ ดีเสมอ
                                 </td>
                                 <td>
@@ -188,6 +231,16 @@
                                 </td>
                                 <td>
                                     <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ยกเลิกสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="@Url.Action("Form")" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="แก้ไข">
+                                            <i class="fa fa-pencil fa-lg"></i>
+                                        </a>
+                                        <button class="btn btn-danger btn-delete" data-id="1" data-toggle="tooltip" data-placement="bottom" title="ลบ">
+                                            <i class="fa fa-trash fa-lg"></i>
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -197,7 +250,7 @@
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
-                                <td class="text-right">
+                                <td>
                                     นายสมบูรณ์ ดีเสมอ
                                 </td>
                                 <td>
@@ -205,6 +258,16 @@
                                 </td>
                                 <td>
                                     <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="@Url.Action("Form")" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="แก้ไข">
+                                            <i class="fa fa-pencil fa-lg"></i>
+                                        </a>
+                                        <button class="btn btn-danger btn-delete" data-id="1" data-toggle="tooltip" data-placement="bottom" title="ลบ">
+                                            <i class="fa fa-trash fa-lg"></i>
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -214,7 +277,7 @@
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
-                                <td class="text-right">
+                                <td>
                                     นายเอกราช บูญมี
                                 </td>
                                 <td>
@@ -223,16 +286,26 @@
                                 <td>
                                     <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
                                 </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="@Url.Action("Form")" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="แก้ไข">
+                                            <i class="fa fa-pencil fa-lg"></i>
+                                        </a>
+                                        <button class="btn btn-danger btn-delete" data-id="1" data-toggle="tooltip" data-placement="bottom" title="ลบ">
+                                            <i class="fa fa-trash fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
                                     <a href="@Url.Action("ContractInfo")">201545670</a>
-                                    
+
                                 </td>
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
                                 </td>
-                                <td class="text-สำเสำดะ">
+                                <td>
                                     นายสถาพร มั่งคั่ง
                                 </td>
                                 <td>
@@ -240,6 +313,16 @@
                                 </td>
                                 <td>
                                     <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="@Url.Action("Form")" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="แก้ไข">
+                                            <i class="fa fa-pencil fa-lg"></i>
+                                        </a>
+                                        <button class="btn btn-danger btn-delete" data-id="1" data-toggle="tooltip" data-placement="bottom" title="ลบ">
+                                            <i class="fa fa-trash fa-lg"></i>
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -283,6 +366,8 @@
     <script type="text/javascript" src="@Url.Content("~/assets/js/forms/reg.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
+    <script src='@Url.Content("~/assets/js_custom/chosen/chosen.jquery.js")'></script>
+
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();
@@ -290,6 +375,35 @@
             RegForm.initRegForm();
             Datepicker.initDatepicker();
             CheckoutForm.initCheckoutForm();
+
+            //start custom script
+
+            //$(".chosen-select").chosen();
+
+            @*$(".btn-delete").click(function () {
+                theButton = this;
+                bootbox.dialog({
+                    message: "ต้องการลบข้อมูล?",
+                    title: "ข้อความเตือน",
+                    buttons: {
+                        ok: {
+                            label: "ตกลง",
+                            className: "btn-primary",
+                            callback: function () {
+                                //var url = "@Url.Action("Delete", "NewsAdmin")" + "/" + $(theButton).data("id");
+                                //window.location.replace(url);
+                            }
+                        },
+                        cancel: {
+                            label: "ยกเลิก",
+                            className: "btn-default",
+                            callback: function () {
+
+                            }
+                        }
+                    }
+                });
+            });*@
         });
     </script>
 }

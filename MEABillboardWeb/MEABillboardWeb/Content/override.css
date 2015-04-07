@@ -78,3 +78,8 @@ h2.heading-xs {
 .flot-tooltip { 
     font-size: 18px;
 }
+
+
+.form-control {
+    font-size: 20px;
+}

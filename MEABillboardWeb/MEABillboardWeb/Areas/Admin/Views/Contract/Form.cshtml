@@ -5,74 +5,175 @@
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">General Forms</h1>
+            <h1 class="pull-left">สัญญาเช่า</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Admin</a></li>
-                <li class="active">เพิ่มป้ายโฆษณา</li>
+                <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+                <li><a href="@Url.Action("Index")">สัญญาเช่า</a></li>
+                <li class="active">รายละเอียด</li>
             </ul>
         </div>
-    </div><!--/breadcrumbs-->
+    </div>
+    <!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
     <!--=== Content Part ===-->
     <div class="container content">
         <div class="row">
             <!-- Begin Content -->
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <!-- General Unify Forms -->
                 <form action="#" class="sky-form">
-                    <header>เพิ่มป้ายโฆษณา</header>
+                    <header>รายละเอียดสัญญา</header>
                     <fieldset>
-                        <section>
-                            <label class="label">ชื่อป้าย</label>
-                            <label class="input">
-                                <input type="text">
-                            </label>
-                        </section>
-                        <section>
-                            <label class="label">ประเภทป้าย</label>
-                            <label class="select">
-                                <select name="interested">
-                                    <option value="0" selected disabled>Painted billboards</option>
-                                    <option value="1">Digital billboards</option>
-                                    <option value="2">Mobile billboards</option>
-                                    <option value="3">Inflatable billboards</option>
-                                </select>
-                                <i></i>
-                            </label>
-                        </section>
-                        <section>
-                            <label class="label">ประเภทสื่อ</label>
-                            <div class="row">
-                                <div class="col col-3">
-                                    <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Media</label>
-                                </div>
-                                <div class="col col-3">
-                                    <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Vynil</label>
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <label class="label">ชื่อพื้นที่</label>
-                            <label class="input">
-                                <input type="text">
-                            </label>
-                        </section>
-                        <section>
-                            <label class="label">รูปภาพ</label>
-                            <label for="file" class="input input-file">
-                                <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
-                            </label>
-                        </section>
                         <section>
                             <label class="label">เลขที่สัญญา</label>
                             <label class="input">
-                                <input type="text" disabled value="1234567">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">วันที่ทำสัญญา</label>
+                            <label class="input">
+                                <i class="icon-append fa fa-calendar"></i>
+                                <input type="text"  class="mea-form-date">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ชื่อผู้เช่า</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ที่อยู่สำนักงานใหญ่</label>
+                            <label class="textarea">
+                                <textarea></textarea>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ชื่อผู้มีอำนาจลงนาม</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ลงวันที่</label>
+                            <label class="input">
+                                <i class="icon-append fa fa-calendar"></i>
+                                <input type="text"  class="mea-form-date">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ชื่อผู้รับมอบอำนาจ</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ลงวันที่รับมอบอำนาจ</label>
+                            <label class="input">
+                                <i class="icon-append fa fa-calendar"></i>
+                                <input type="text"  class="mea-form-date">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ประเภทพื้นที่เช่า</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">วันที่เริ่มเช่า</label>
+                            <label class="input">
+                                <i class="icon-append fa fa-calendar"></i>
+                                <input type="text" class="mea-form-date">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">วันที่สิ้นสุดการเช่า</label>
+                            <label class="input">
+                                <i class="icon-append fa fa-calendar"></i>
+                                <input type="text"  class="mea-form-date">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ค่าเช่าต่อเดือน (บาท/เดือน)</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ค่าเช่าทั้งหมดในระยะเวลา 3 ปี</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ค่าเช่าล่วงหน้า 1 เดือน</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">จำนวนหลักประกันเงินสด (บาท)</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">รายละเอียดแผนผังสถานที่หรือพื้นที่เช่า</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">รายละเอียดเงื่อนไขเพิ่มเติม</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">หนังสือส่งมอบพื้นที่เพื่อติดตั้งป้ายโฆษณา</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">เอกสารสัญญา</label>
+                            <label for="file" class="input input-file">
+                                <div class="button"><input type="file" name="file" multiple="" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">เอกสารอื่นๆ</label>
+                            <label for="file" class="input input-file">
+                                <div class="button"><input type="file" name="file" multiple="" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
                             </label>
                         </section>
                     </fieldset>
-                    <button type="submit" class="btn-u">Submit</button>
-                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Back</button>
+                    <fieldset>
+                        <section>
+                            <label class="checkbox"><input type="checkbox" name="subscription" id="subscription"><i></i>ยกเลิกสัญญา</label>
+                        </section>
+                        <section>
+                            <label class="label">วันที่ยกเลิก</label>
+                            <label class="input">
+                                <i class="icon-append fa fa-calendar"></i>
+                                <input type="text" class="mea-form-date">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">หมายเหตุ</label>
+                            <label class="textarea">
+                                <textarea></textarea>
+                            </label>
+                        </section>
+
+                    </fieldset>
+                    <footer>
+                        <button type="submit" class="btn-u">บันทึก</button>
+                        <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">ยกเลิก</button>
+                    </footer>
+                  
                 </form>
                 <!-- General Unify Forms -->
                 <div class="margin-bottom-60"></div>
@@ -82,3 +183,27 @@
     </div><!--/container-->
     <!--=== End Content Part ===-->
 </div><!--/End Wrapepr-->
+@section Scripts{
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/smoothScroll.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js")"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/custom.js")"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/app.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/reg.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
+    <script src='@Url.Content("~/js/customs/bootbox.min.js")'></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".mea-form-date").datepicker({ language: "th", format: "dd/mm/yyyy" });
+
+        });
+    </script>
+}
+
