@@ -539,6 +539,7 @@
     <Content Include="assets\js\plugins\style-switcher.js" />
     <Content Include="assets\js\plugins\validation.js" />
     <Content Include="assets\js\plugins\vector-map.js" />
+    <Content Include="assets\js_custom\bootbox.min.js" />
     <Content Include="assets\js_custom\flot\examples\ajax\index.html" />
     <Content Include="assets\js_custom\flot\examples\annotating\index.html" />
     <Content Include="assets\js_custom\flot\examples\axes-interacting\index.html" />
