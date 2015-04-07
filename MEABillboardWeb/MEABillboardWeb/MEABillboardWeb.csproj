@@ -539,6 +539,7 @@
     <Content Include="assets\js\plugins\style-switcher.js" />
     <Content Include="assets\js\plugins\validation.js" />
     <Content Include="assets\js\plugins\vector-map.js" />
+    <Content Include="assets\js_custom\bootbox.min.js" />
     <Content Include="assets\js_custom\chosen\chosen-sprite%402x.png" />
     <Content Include="assets\js_custom\chosen\chosen-sprite.png" />
     <Content Include="assets\js_custom\chosen\chosen.css" />
