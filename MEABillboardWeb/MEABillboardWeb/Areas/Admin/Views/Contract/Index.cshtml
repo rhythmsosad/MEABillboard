@@ -11,9 +11,11 @@
 
     <!-- CSS Page Style -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/js_custom/chosen/chosen.css")">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
+
 }
 
 <!--=== Breadcrumbs ===-->
@@ -55,10 +57,15 @@
                     </section>
                     <section>
                         <label class="label">พื้นที่เช่า</label>
-                        <label class="input">
-                            <input type="text" name="ContractName" placeholder="พื้นที่เช่า">
-                            <b class="tooltip tooltip-bottom-right">พื้นที่เช่า</b>
-                        </label>
+                        @*<label class="input">
+                                <input type="text" name="ContractName" placeholder="พื้นที่เช่า">
+                                <b class="tooltip tooltip-bottom-right">พื้นที่เช่า</b>
+                            </label>*@
+                        <select multiple="" class="chosen-select form-control" id="form-field-select-4" data-placeholder="ไม่ระบุ">
+                            <option value="1">การไฟฟ้านครหลวงเขตวัดเลียบ</option>
+                            <option value="2">การไฟฟ้านครหลวงเขตลาดพร้าว</option>
+                            <option value="3">การไฟฟ้านครหลวงเขตมีนบุรี</option>
+                        </select>
                     </section>
                     @*<section>
                             <label class="label">ประเภท</label>
@@ -358,7 +365,7 @@
     <script type="text/javascript" src="@Url.Content("~/assets/js/forms/reg.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
-    <script src='@Url.Content("~/js/customs/bootbox.min.js")'></script>
+    <script src='@Url.Content("~/assets/js_custom/chosen/chosen.jquery.js")'></script>
 
     <script type="text/javascript">
         jQuery(document).ready(function () {
@@ -369,6 +376,8 @@
             CheckoutForm.initCheckoutForm();
 
             //start custom script
+
+            $(".chosen-select").chosen();
 
             @*$(".btn-delete").click(function () {
                 theButton = this;
