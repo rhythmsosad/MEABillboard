@@ -4358,6 +4358,7 @@
     <Content Include="Areas\Admin\Views\Contract\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Contract\Form.cshtml" />
     <Content Include="assets\js_custom\chosen\bower.json" />
+    <Content Include="Areas\Admin\Views\Member\Login.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -8462,10 +8463,12 @@
     <Compile Include="Areas\Admin\Controllers\BoardAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ContractController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MemberController.cs" />
     <Compile Include="Areas\Admin\Controllers\PageController.cs" />
     <Compile Include="Areas\Admin\Models\AdminFunction.cs" />
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
     <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
+    <Compile Include="Areas\Admin\Models\Dummy.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -8482,6 +8485,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AuthUser.cs" />
     <Compile Include="Models\AuthUserGroup.cs" />
+    <Compile Include="Models\Dummy.cs" />
     <Compile Include="Models\MEABillboardContext.cs" />
     <Compile Include="Models\MEABillboardDBInitializer .cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
