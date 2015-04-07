@@ -7,26 +7,26 @@
         <ul class="dropdown-menu">
             <li><a href="@Url.Action("Index", "News")">ข่าวประชาสัมพันธ์ Admin</a></li>
             <li><a href="@Url.Action("Index", "News")">ผลการพิจารณา Admin</a></li>
-        </ul>    </li>
-    
+        </ul>
+    </li>
+
     <li class="@Html.IsSelected(controller: "Contract")"><a href="@Url.Action("Index", "Contract")">สัญญาเช่า</a></li>
     <li class="@Html.IsSelected(controller: "Rent")"><a href="@Url.Action("Index", "Rent")">ผู้เช่า</a></li>
     <li class="@Html.IsSelected(controller: "Board")"><a href="@Url.Action("Index", "Board")">ป้าย</a></li>
     <li class="@Html.IsSelected(controller: "Media")"><a href="@Url.Action("Index", "Media")">สื่อ</a></li>
     <li class="@Html.IsSelected(controller: "Area")"><a href="@Url.Action("Index", "Area")">พื้นที่เช่า</a></li>
 
-
     <!-- Search Block -->
     @*<li>
-        <i class="search fa fa-search search-btn"></i>
-        <div class="search-open">
-            <div class="input-group animated fadeInDown">
-                <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-btn">
-                    <button class="btn btn-u" type="button">Go</button>
-                </span>
+            <i class="search fa fa-search search-btn"></i>
+            <div class="search-open">
+                <div class="input-group animated fadeInDown">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button class="btn btn-u" type="button">Go</button>
+                    </span>
+                </div>
             </div>
-        </div>
-    </li>*@
+        </li>*@
     <!-- End Search Block -->
 </ul>
