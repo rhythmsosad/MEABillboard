@@ -4359,6 +4359,7 @@
     <Content Include="Areas\Admin\Views\Contract\Form.cshtml" />
     <Content Include="assets\js_custom\chosen\bower.json" />
     <Content Include="Areas\Admin\Views\Member\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\BoardAdmin\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
