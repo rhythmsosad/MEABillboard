@@ -21,7 +21,7 @@
         <h1 class="pull-left">ป้ายโฆษณา</h1>
         <ul class="pull-right breadcrumb">
             <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
-            <li><a href="">แอดมิน</a></li>
+            @*<li><a href="">แอดมิน</a></li>*@
             <li class="active">ป้ายโฆษณา</li>
         </ul>
     </div>
@@ -35,13 +35,13 @@
             <div class="headline"><h2>ค้นหา</h2></div>
             <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
                 <fieldset>
-                    <section>
+                    @*<section>
                         <label class="label">สัญญาเลขที่</label>
                         <label class="input">
                             <input type="text" name="ContractName" placeholder="สัญญาเลขที่">
-                            <b class="tooltip tooltip-@*bottom*@-right">สัญญาเลขที่</b>
+                            <b class="tooltip tooltip-bottom-right">สัญญาเลขที่</b>
                         </label>
-                    </section>
+                    </section>*@
                     <section>
                         <label class="label">ชื่อป้าย</label>
                         <label class="input">
@@ -84,7 +84,7 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>สัญญาเลขที่</th>
+                                @*<th>สัญญาเลขที่</th>*@
                                 <th>ชื่อป้าย</th>
                                 <th>ประเภทป้าย</th>
                                 <th>ประเภทสื่อ</th>
@@ -94,9 +94,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
+                                @*<td>
                                     <a href="@Url.Action("Form")">201544113</a>
-                                </td>
+                                </td>*@
                                 <td class="text-right">
                                     ป้าย 1
                                 </td>
@@ -112,13 +112,13 @@
                                     การไฟฟ้านครหลวงเขตมีนบุรี
                                 </td>
                                 <td>
-                                    <i class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera"></i>
+                                    <i id="picSample" class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera" style="cursor:pointer;"></i>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                @*<td>
                                     <a href="@Url.Action("Form")">2015441>201544123</a>
-                                </td>
+                                </td>*@
                                 <td class="text-right">
                                     ป้าย 2
                                 </td>
@@ -132,13 +132,13 @@
                                     การไฟฟ้านครหลวงเขตวัดเลียบ
                                 </td>
                                 <td>
-                                    <i class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera"></i>
+                                    <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                @*<td>
                                     <a href="@Url.Action("Form")">2015441>201544126</a>
-                                </td>
+                                </td>*@
                                 <td class="text-right">
                                     ป้าย 3
                                 </td>
@@ -152,13 +152,13 @@
                                     การไฟฟ้านครหลวงเขตมีนบุรี
                                 </td>
                                 <td>
-                                    <i class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera"></i>
+                                    <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                @*<td>
                                     <a href="@Url.Action("Form")">2015441>201544129</a>
-                                </td>
+                                </td>*@
                                 <td class="text-right">
                                     ป้าย 4
                                 </td>
@@ -172,13 +172,13 @@
                                     การไฟฟ้านครหลวงเขตลาดกระบัง
                                 </td>
                                 <td>
-                                    <i class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera"></i>
+                                    <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                @*<td>
                                     <a href="@Url.Action("Form")">2015445>201544500</a>
-                                </td>
+                                </td>*@
                                 <td class="text-right">
                                     ป้าย 5
                                 </td>
@@ -192,13 +192,13 @@
                                     การไฟฟ้านครหลวงเขตลาดกระบัง
                                 </td>
                                 <td>
-                                    <i class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera"></i>
+                                    <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                @*<td>
                                     <a href="@Url.Action("Form")">2015445>201544544</a>
-                                </td>
+                                </td>*@
                                 <td class="text-right">
                                     ป้าย 6
                                 </td>
@@ -212,14 +212,14 @@
                                     การไฟฟ้านครหลวงเขตลาดพร้าว
                                 </td>
                                 <td>
-                                    <i class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera"></i>
+                                    <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                @*<td>
                                     <a href="@Url.Action("Form")">2015456>201545670</a>
 
-                                </td>
+                                </td>*@
                                 <td class="text-right">
                                     ป้าย 7
                                 </td>
@@ -233,7 +233,7 @@
                                     การไฟฟ้านครหลวงเขตบางกะปิ
                                 </td>
                                 <td>
-                                    <i class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera"></i>
+                                    <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
                                 </td>
                             </tr>
                         </tbody>
@@ -283,6 +283,13 @@
             RegForm.initRegForm();
             Datepicker.initDatepicker();
             CheckoutForm.initCheckoutForm();
+
+            $("#picSample").click(function () {
+                bootbox.alert("<img class='col-md-12' src='../../../Images/Sample/board1.jpg' />", function () {
+                    //Example.show("Hello world callback");
+                    ///Example.show("<img src='~/Images/Sample/board1.jpg' />");
+                });
+            });
         });
     </script>
 }
