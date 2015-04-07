@@ -1,0 +1,295 @@
+﻿@section Styles{
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/animate.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/line-icons/line-icons.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/font-awesome/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
+
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
+}
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">สัญญาเช่า</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+            <li class="active">สัญญาเช่า</li>
+        </ul>
+    </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+<!--=== Profile ===-->
+<div class="container content profile">
+    <div class="row">
+        <!-- Profile Content -->
+        <div class="col-md-12">
+            <div class="headline"><h2>ค้นหา</h2></div>
+            <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
+                <fieldset>                
+                    <section>
+                        <label class="label">สัญญาเลขที่</label>
+                        <label class="input">
+                            <input type="text" name="ContractName" placeholder="สัญญาเลขที่">
+                            <b class="tooltip tooltip-bottom-right">สัญญาเลขที่</b>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ชื่อผู้เช่า</label>
+                        <label class="input">
+                            <input type="text" name="ContractName" placeholder="ชื่อผู้เช่า">
+                            <b class="tooltip tooltip-bottom-right">ชื่อผู้เช่า</b>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">พื้นที่เช่า</label>
+                        <label class="input">
+                            <input type="text" name="ContractName" placeholder="พื้นที่เช่า">
+                            <b class="tooltip tooltip-bottom-right">พื้นที่เช่า</b>
+                        </label>
+                    </section>
+                    @*<section>
+                        <label class="label">ประเภท</label>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทตั้งเสา Tower</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทผนังอาคาร</label>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <label class="label">ป้าย</label>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Digital Billboard </label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Billboard/Vinyl </label>
+                            </div>
+                        </div>
+                    </section>*@
+                    <section>
+                        <label class="label">สถานะ</label>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>อยู่ระหว่างสัญญา</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ใกล้สิ้นสุดสัญญา</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>หมดสัญญา</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ยกเลิกสัญญา</label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a href="#" class="btn-u">ค้นหา</a>
+                </fieldset>
+
+
+
+            </form>
+
+
+            <div class="margin-bottom-60"></div>
+            <div class="headline"><h2>ผลลัพธ์</h2></div>
+            <div class="table-search-v1 panel panel-dark">
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>สัญญาเลขที่</th>
+                                <th>ระยะเวลาสัญญา</th>
+                                <th>ชื่อผู้เช่า</th>
+                                <th>ชื่อพื้นที่</th>
+                                <th>สถานะ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("ContractInfo")">201544113</a>
+                                </td>
+                                <td>
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
+                                </td>
+                                <td class="text-right">
+                                    5
+                                </td>
+                                <td>
+                                    การไฟฟ้านครหลวงเขตวัดเลียบ<br />
+                                    การไฟฟ้านครหลวงเขตลาดพร้าว<br />
+                                    การไฟฟ้านครหลวงเขตมีนบุรี
+                                </td>
+                                <td>
+                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("ContractInfo")">201544123</a>
+                                </td>
+                                <td>
+                                    1 ม.ค. 2556 - 1 ม.ค. 2559
+                                </td>
+                                <td class="text-right">
+                                    นายอมร จิตกร
+                                </td>
+                                <td>
+                                    การไฟฟ้านครหลวงเขตวัดเลียบ
+                                </td>
+                                <td>
+                                    <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;ใกล้สิ้นสุดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("ContractInfo")">201544126</a>
+                                </td>
+                                <td>
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
+                                </td>
+                                <td class="text-right">
+                                    นายสมปอง วัฒนะ
+                                </td>
+                                <td>
+                                    การไฟฟ้านครหลวงเขตมีนบุรี
+                                </td>
+                                <td>
+                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;หมดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("ContractInfo")">201544129</a>
+                                </td>
+                                <td>
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
+                                </td>
+                                <td class="text-right">
+                                    นายสมบูรณ์ ดีเสมอ
+                                </td>
+                                <td>
+                                    การไฟฟ้านครหลวงเขตลาดกระบัง
+                                </td>
+                                <td>
+                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ยกเลิกสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("ContractInfo")">201544500</a>
+                                </td>
+                                <td>
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
+                                </td>
+                                <td class="text-right">
+                                    นายสมบูรณ์ ดีเสมอ
+                                </td>
+                                <td>
+                                    การไฟฟ้านครหลวงเขตลาดกระบัง
+                                </td>
+                                <td>
+                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("ContractInfo")">201544544</a>
+                                </td>
+                                <td>
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
+                                </td>
+                                <td class="text-right">
+                                    นายเอกราช บูญมี
+                                </td>
+                                <td>
+                                    การไฟฟ้านครหลวงเขตลาดพร้าว
+                                </td>
+                                <td>
+                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("ContractInfo")">201545670</a>
+                                    
+                                </td>
+                                <td>
+                                    1 ม.ค. 2557 - 1 ม.ค. 2560
+                                </td>
+                                <td class="text-สำเสำดะ">
+                                    นายสถาพร มั่งคั่ง
+                                </td>
+                                <td>
+                                    การไฟฟ้านครหลวงเขตบางกะปิ
+                                </td>
+                                <td>
+                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <!--Pagination-->
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+            <!--End Pagination-->
+        </div>
+        <!-- End Profile Content -->
+    </div><!--/end row-->
+</div>
+<!--=== End Profile ===-->
+@section Scripts{
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/smoothScroll.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js")"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/custom.js")"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/app.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/reg.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            //App.initScrollBar();
+            RegForm.initRegForm();
+            Datepicker.initDatepicker();
+            CheckoutForm.initCheckoutForm();
+        });
+    </script>
+}

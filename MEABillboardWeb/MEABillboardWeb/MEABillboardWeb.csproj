@@ -4339,6 +4339,8 @@
     <Content Include="Areas\Admin\Views\BoardAdmin\Form.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Navigation.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Contract\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Contract\Form.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -8441,6 +8443,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserGroupController.cs" />
     <Compile Include="Areas\Admin\Controllers\BoardAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ContractController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\PageController.cs" />
     <Compile Include="Areas\Admin\Models\AdminFunction.cs" />
