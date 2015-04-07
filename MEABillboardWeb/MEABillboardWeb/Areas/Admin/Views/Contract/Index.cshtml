@@ -61,7 +61,8 @@
                                 <input type="text" name="ContractName" placeholder="พื้นที่เช่า">
                                 <b class="tooltip tooltip-bottom-right">พื้นที่เช่า</b>
                             </label>*@
-                        <select multiple="" class="chosen-select form-control" id="form-field-select-4" data-placeholder="ไม่ระบุ">
+                        <select class="chosen-select form-control" id="form-field-select-4" data-placeholder="ไม่ระบุ">
+                            <option value="0">ไม่ระบุ</option>
                             <option value="1">การไฟฟ้านครหลวงเขตวัดเลียบ</option>
                             <option value="2">การไฟฟ้านครหลวงเขตลาดพร้าว</option>
                             <option value="3">การไฟฟ้านครหลวงเขตมีนบุรี</option>
@@ -377,7 +378,7 @@
 
             //start custom script
 
-            $(".chosen-select").chosen();
+            //$(".chosen-select").chosen();
 
             @*$(".btn-delete").click(function () {
                 theButton = this;
