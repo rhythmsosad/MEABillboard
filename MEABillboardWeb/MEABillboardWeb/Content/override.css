@@ -4,11 +4,10 @@
 }
 
 .header {
-    background-image: url('../Images/top-mnu_22.gif');
+    background-color: #fff;
 }
 
     .header .logo img {
-        margin: 0px 0;
         position: relative;
         z-index: 1;
     }

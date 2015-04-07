@@ -1,6 +1,6 @@
 ﻿<ul class="nav navbar-nav">
-    <li class="@Html.IsSelected(controller: "Home")"><a href="@Url.Action("Index", "Home")">หน้าหลัก</a></li>
-    <li class="dropdown @Html.IsSelected(controller: "News")">
+    <li class="@Html.IsSelected(controller: "Home")"><a href="@Url.Action("Index", "Home", new { area = "Admin" })">หน้าหลัก</a></li>
+    @*<li class="dropdown @Html.IsSelected(controller: "News")">
         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
             ข่าวประชาสัมพันธ์
         </a>
@@ -8,7 +8,7 @@
             <li><a href="@Url.Action("Index", "News")">ข่าวประชาสัมพันธ์ Admin</a></li>
             <li><a href="@Url.Action("Index", "News")">ผลการพิจารณา Admin</a></li>
         </ul>
-    </li>
+    </li>*@
 
     <li class="@Html.IsSelected(controller: "Contract")"><a href="@Url.Action("Index", "Contract")">สัญญาเช่า</a></li>
     <li class="@Html.IsSelected(controller: "Rent")"><a href="@Url.Action("Index", "Rent")">ผู้เช่า</a></li>
