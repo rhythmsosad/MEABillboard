@@ -1,1 +1,84 @@
-﻿
+﻿@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="wrapper">
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">General Forms</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Admin</a></li>
+                <li class="active">เพิ่มป้ายโฆษณา</li>
+            </ul>
+        </div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+    <!--=== Content Part ===-->
+    <div class="container content">
+        <div class="row">
+            <!-- Begin Content -->
+            <div class="col-md-9">
+                <!-- General Unify Forms -->
+                <form action="#" class="sky-form">
+                    <header>เพิ่มป้ายโฆษณา</header>
+                    <fieldset>
+                        <section>
+                            <label class="label">ชื่อป้าย</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ประเภทป้าย</label>
+                            <label class="select">
+                                <select name="interested">
+                                    <option value="0" selected disabled>Painted billboards</option>
+                                    <option value="1">Digital billboards</option>
+                                    <option value="2">Mobile billboards</option>
+                                    <option value="3">Inflatable billboards</option>
+                                </select>
+                                <i></i>
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">ประเภทสื่อ</label>
+                            <div class="row">
+                                <div class="col col-3">
+                                    <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Media</label>
+                                </div>
+                                <div class="col col-3">
+                                    <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Vynil</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <label class="label">ชื่อพื้นที่</label>
+                            <label class="input">
+                                <input type="text">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">รูปภาพ</label>
+                            <label for="file" class="input input-file">
+                                <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
+                            </label>
+                        </section>
+                        <section>
+                            <label class="label">เลขที่สัญญา</label>
+                            <label class="input">
+                                <input type="text" disabled value="1234567">
+                            </label>
+                        </section>
+                    </fieldset>
+                    <button type="submit" class="btn-u">Submit</button>
+                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Back</button>
+                </form>
+                <!-- General Unify Forms -->
+                <div class="margin-bottom-60"></div>
+            </div>
+            <!-- End Content -->
+        </div>
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+</div><!--/End Wrapepr-->
