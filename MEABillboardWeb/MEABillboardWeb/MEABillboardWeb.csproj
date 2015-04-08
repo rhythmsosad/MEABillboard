@@ -4361,6 +4361,9 @@
     <Content Include="assets\js_custom\chosen\bower.json" />
     <Content Include="Areas\Admin\Views\Member\Login.cshtml" />
     <Content Include="Areas\Admin\Views\BoardAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Rent\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Media\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Area\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -8462,11 +8465,14 @@
     <Compile Include="Areas\Admin\Controllers\AdminFunctionController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminUserGroupController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AreaController.cs" />
     <Compile Include="Areas\Admin\Controllers\BoardAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ContractController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MediaController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberController.cs" />
     <Compile Include="Areas\Admin\Controllers\PageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RentController.cs" />
     <Compile Include="Areas\Admin\Models\AdminFunction.cs" />
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
     <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
