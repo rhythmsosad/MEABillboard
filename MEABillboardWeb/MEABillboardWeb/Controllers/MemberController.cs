@@ -18,7 +18,7 @@ namespace MEABillboardWeb.Controllers
         [HttpPost]
         public ActionResult Login(Dummy model)
         {
-            return RedirectToAction("Index", "Home", new { area = "" });
+            return RedirectToAction("Index", "Profile", new { area = "" });
         }
     }
 }

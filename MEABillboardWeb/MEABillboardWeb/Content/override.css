@@ -48,8 +48,9 @@
 .btn-u {
     font-size: 20px;
 }
+
 h2.heading-xs {
-     font-size: 20px;
+    font-size: 20px;
 }
 
 .footer-v1 .footer {
@@ -57,13 +58,13 @@ h2.heading-xs {
     padding: 40px 0;
 }
 
-.footer-v1 .footer p, .footer-v1 .footer h2, .footer-v1 address, .footer-v1 .link-list a, .footer-v1 .link-list i, .footer-v1 .copyright p {
-    color: #333;
-}
+    .footer-v1 .footer p, .footer-v1 .footer h2, .footer-v1 address, .footer-v1 .link-list a, .footer-v1 .link-list i, .footer-v1 .copyright p {
+        color: #333;
+    }
 
-.footer-v1 .footer .headline {
-    border-bottom: 1px dotted #333;
-}
+    .footer-v1 .footer .headline {
+        border-bottom: 1px dotted #333;
+    }
 
 .footer-v1 .copyright {
     background: none repeat scroll 0 0 #fff;
@@ -75,7 +76,7 @@ h2.heading-xs {
     font-size: 18px;
 }
 
-.flot-tooltip { 
+.flot-tooltip {
     font-size: 18px;
 }
 
@@ -83,3 +84,14 @@ h2.heading-xs {
 .form-control {
     font-size: 20px;
 }
+
+
+/*heading*/
+.header .topbar ul.loginbar > li > a,
+.header .topbar ul.loginbar > li > a:hover {
+    font-size: 18px;
+}
+.header .topbar ul.languages li a {
+    font-size: 18px;
+}
+/*end heading*/
