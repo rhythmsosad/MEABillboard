@@ -1,0 +1,96 @@
+﻿@section Styles{
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/animate.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/line-icons/line-icons.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/font-awesome/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
+
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
+}
+
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">สื่อ</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="@Url.Action("Index")">สื่อ</a></li>
+            <li class="active">รายละเอียด</li>
+        </ul>
+    </div>
+</div>
+<!--/breadcrumbs-->
+<!--=== Profile ===-->
+<div class="container content profile">
+    <div class="row">
+        <!-- Profile Content -->
+        <div class="col-md-12">
+            <form action="#" class="sky-form">
+                <div class="headline"><h2>เพิ่มสื่อ</h2></div>
+                <fieldset>
+                    <section>
+                        <label class="label">ชื่อ</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ประเภทสื่อ</label>
+                        <div class="row">
+                            <div class="col col-3">
+                                <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Media</label>
+                            </div>
+                            <div class="col col-3">
+                                <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Vynil</label>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <label class="label">ไฟล์สื่อ</label>
+                        <label for="file" class="input input-file">
+                            <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">เจ้าของสื่อ(ผู้เช่า)</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+
+                    <hr />
+
+                    <a class="btn-u" href="@Url.Action("Media")"><span class="glyphicon glyphicon-floppy-disk"></span> บันทึก </a>
+                    <a class="btn-u btn-u-default" href="@Url.Action("index")"><span class="icon icon-back"></span> ยกเลิก</a>
+                    <a class="btn-u btn-u-blue" href="@Url.Action("Media") "><span class=" glyphicon glyphicon-open"></span> ส่งตรวจสอบ </a>
+                </fieldset>
+
+            </form>
+        </div>
+        <!-- End Profile Content -->
+    </div><!--/end row-->
+</div>
+<!--=== End Profile ===-->
+@section Scripts{
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/smoothScroll.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js")"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/custom.js")"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/app.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/reg.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
+}
