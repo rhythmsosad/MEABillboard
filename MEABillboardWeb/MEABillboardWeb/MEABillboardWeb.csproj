@@ -4379,6 +4379,7 @@
     <Content Include="Areas\Member\Views\Media\Info.cshtml" />
     <Content Include="Areas\Member\Views\Mapping\Index.cshtml" />
     <Content Include="Areas\Member\Views\Media\SendMedia.cshtml" />
+    <Content Include="Areas\Member\Views\Board\Info.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -8492,6 +8493,7 @@
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
     <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
     <Compile Include="Areas\Admin\Models\Dummy.cs" />
+    <Compile Include="Areas\Member\Controllers\BoardController.cs" />
     <Compile Include="Areas\Member\Controllers\ContractController.cs" />
     <Compile Include="Areas\Member\Controllers\LoginController.cs" />
     <Compile Include="Areas\Member\Controllers\MappingController.cs" />
