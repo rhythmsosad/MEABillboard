@@ -21,46 +21,65 @@
     <div class="row">
         <!--Left Sidebar-->
         <div class="col-md-3 md-margin-bottom-40">
-            @{ Html.RenderPartial("Menu");  }
-            @{ Html.RenderPartial("Sidebar");  }
+            @{ Html.RenderAction("Menu", "Sidebar");  }
+            @{ Html.RenderAction("Sidebar", "Sidebar");  }
         </div>
         <!--End Left Sidebar-->
         <!-- Profile Content -->
         <div class="col-md-9">
-            <form action="#" class="sky-form">
-                <div class="headline"><h2>ส่งสื่อ online</h2></div>
-                <fieldset>
-                    <section>
-                        <label class="label">ชื่อ</label>
-                        <label class="input">
-                            <input type="text">
-                        </label>
-                    </section>
-                    <section>
-                        <label class="label">ประเภทสื่อ</label>
-                        <div class="row">
-                            <div class="col col-3">
-                                <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Media</label>
-                            </div>
-                            <div class="col col-3">
-                                <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Vynil</label>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <label class="label">ไฟล์สื่อ</label>
-                        <label for="file" class="input input-file">
-                            <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
-                        </label>
-                    </section>                    
-                    <hr />
+            <div class="headline"><h2>รายละเอียดสื่อ</h2></div>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td class="text-nowrap">ชื่อ</td>
+                        <td>โฆษณา HP Enterprise Service #1</td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">ประเภท </td>
+                        <td>Media</td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">สถานะ </td>
+                        <td><span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">สัญญาเลขที่ </td>
+                        <td>
+                            201544113 <br />
+                            201544123
+                        </td>
+                    </tr>
                     
-                    <a class="btn-u" href="@Url.Action("Media")"><span class="glyphicon glyphicon-floppy-disk"></span> บันทึก </a>
-                    <a class="btn-u btn-u-default" href="#"><span class="icon icon-back"></span> ยกเลิก</a>
-                    <a class="btn-u btn-u-blue" href="@Url.Action("Media") "><span class=" glyphicon glyphicon-open"></span> ส่งตรวจสอบ </a>
-                </fieldset>
-               
-            </form>
+                </tbody>
+            </table>
+
+            <div class="margin-bottom-60"></div>
+
+
+            <div class="headline"><h2>ไฟล์ภาพ</h2></div>
+            <div class="row margin-bottom-50">
+                <div class="col-md-12 shadow-wrapper md-margin-bottom-40">
+                    <div class="box-shadow shadow-effect-2">
+                        <a href="@Url.Content("~/assets/img/main/img1.jpg")" target="_blank">
+                            <img class="img-responsive" src="@Url.Content("~/assets/img/main/img1.jpg")" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>         
+
+            <div class="headline"><h2>ไฟล์วิดีโอ</h2></div>
+            <div class="row margin-bottom-60">
+                <!-- Vimeo Video -->
+                <div class="col-md-12">
+                    <div class="responsive-video md-margin-bottom-40">
+                        <iframe width="100%" src="//www.youtube.com/embed/4dmt7tQG1-w" frameborder="0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                <!-- End Vimeo Video -->               
+            </div>
+
+            <hr />
+            <a class="btn-u" @*href="@Url.Action("Media")"*@ onclick="history.back();"><span class="icon icon-back"></span> ย้อนกลับ</a>
         </div>
         <!-- End Profile Content -->
     </div><!--/end row-->

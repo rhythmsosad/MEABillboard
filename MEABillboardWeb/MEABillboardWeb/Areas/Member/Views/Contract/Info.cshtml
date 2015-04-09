@@ -21,8 +21,8 @@
     <div class="row">
         <!--Left Sidebar-->
         <div class="col-md-3 md-margin-bottom-40">
-            @{ Html.RenderPartial("Menu");  }
-            @{ Html.RenderPartial("Sidebar");  }
+            @{ Html.RenderAction("Menu", "Sidebar");  }
+            @{ Html.RenderAction("Sidebar", "Sidebar");  }
         </div>
         <!--End Left Sidebar-->
         <!-- Profile Content -->

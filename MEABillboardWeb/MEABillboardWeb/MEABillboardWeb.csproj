@@ -4364,6 +4364,21 @@
     <Content Include="Areas\Admin\Views\Rent\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Media\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Area\Index.cshtml" />
+    <Content Include="Areas\Member\Views\web.config" />
+    <Content Include="Areas\Member\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Member\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Member\Views\Shared\_Navigation.cshtml" />
+    <Content Include="Areas\Member\Views\Shared\_Slider.cshtml" />
+    <Content Include="Areas\Member\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\Member\Views\Contract\Index.cshtml" />
+    <Content Include="Areas\Member\Views\Contract\Info.cshtml" />
+    <Content Include="Areas\Member\Views\Sidebar\Menu.cshtml" />
+    <Content Include="Areas\Member\Views\Sidebar\Sidebar.cshtml" />
+    <Content Include="Areas\Member\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Member\Views\Media\Index.cshtml" />
+    <Content Include="Areas\Member\Views\Media\Info.cshtml" />
+    <Content Include="Areas\Member\Views\Mapping\Index.cshtml" />
+    <Content Include="Areas\Member\Views\Media\SendMedia.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -8477,11 +8492,16 @@
     <Compile Include="Areas\Admin\Models\AdminUser.cs" />
     <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
     <Compile Include="Areas\Admin\Models\Dummy.cs" />
+    <Compile Include="Areas\Member\Controllers\ContractController.cs" />
+    <Compile Include="Areas\Member\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Member\Controllers\MappingController.cs" />
+    <Compile Include="Areas\Member\Controllers\MediaController.cs" />
+    <Compile Include="Areas\Member\Controllers\SidebarController.cs" />
+    <Compile Include="Areas\Member\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Member\MemberAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PageController.cs" />
-    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -9761,17 +9781,7 @@
     <Content Include="Theme_Unify\Shop-UI\assets\plugins\sky-forms-pro\skyforms\icons\FontAwesome.otf" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\News\Info.cshtml" />
-    <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Profile\Contract.cshtml" />
-    <Content Include="Views\Profile\ContractInfo.cshtml" />
-    <Content Include="Views\Profile\Media.cshtml" />
-    <Content Include="Views\Profile\Menu.cshtml" />
-    <Content Include="Views\Profile\MediaInfo.cshtml" />
-    <Content Include="Views\Profile\Sidebar.cshtml" />
-    <Content Include="Views\Profile\BoardInfo.cshtml" />
-    <Content Include="Views\Profile\SendMedia.cshtml" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
-    <Content Include="Views\Member\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -9781,6 +9791,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Member\Models\" />
     <Folder Include="assets\js_custom\flot\examples\gauge\" />
   </ItemGroup>
   <ItemGroup>
