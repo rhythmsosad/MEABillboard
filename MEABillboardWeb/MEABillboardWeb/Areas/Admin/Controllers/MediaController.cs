@@ -22,10 +22,6 @@ namespace MEABillboardWeb.Areas.Admin.Controllers
         {
             return View();
         }
-        public ActionResult SendMedia()
-        {
-            return View();
-        }
 
     }
 }

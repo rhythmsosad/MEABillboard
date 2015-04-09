@@ -4386,7 +4386,6 @@
     <Content Include="Areas\Member\Views\Media\SendMedia.cshtml" />
     <Content Include="Areas\Admin\Views\Rent\Form.cshtml" />
     <Content Include="Areas\Admin\Views\Media\Info.cshtml" />
-    <Content Include="Areas\Admin\Views\Media\SendMedia.cshtml" />
     <Content Include="Areas\Admin\Views\Media\Form.cshtml" />
     <Content Include="Areas\Member\Views\Shared\_LayoutNoMenu.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
