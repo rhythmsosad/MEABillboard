@@ -8506,7 +8506,9 @@
     </Compile>
     <Compile Include="Areas\Member\Controllers\SidebarController.cs" />
     <Compile Include="Areas\Member\Controllers\ProfileController.cs" />
-    <Compile Include="Areas\Member\MemberAreaRegistration.cs" />
+    <Compile Include="Areas\Member\MemberAreaRegistration.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PageController.cs" />
