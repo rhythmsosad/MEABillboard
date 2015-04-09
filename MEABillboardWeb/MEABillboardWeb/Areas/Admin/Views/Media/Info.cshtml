@@ -16,6 +16,19 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
+
+ <!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">สื่อ</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="@Url.Action("Index")">สื่อ</a></li>
+            <li class="active">รายละเอียด</li>
+        </ul>
+    </div>
+</div>
+<!--/breadcrumbs-->
+
 <!--=== Profile ===-->
 <div class="container content profile">
     <div class="row">
@@ -31,6 +44,10 @@
                     <tr>
                         <td class="text-nowrap">ประเภท </td>
                         <td>Media</td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">เจ้าของสื่อ(ผู้เช่า)</td>
+                        <td>นายกนก สมองดี</td>
                     </tr>
                     <tr>
                         <td class="text-nowrap">สถานะ </td>

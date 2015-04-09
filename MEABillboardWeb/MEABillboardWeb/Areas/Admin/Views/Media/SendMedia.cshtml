@@ -16,6 +16,18 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
+ <!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">สื่อ</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="@Url.Action("Index")">สื่อ</a></li>
+            <li class="active">รายละเอียด</li>
+        </ul>
+    </div>
+</div>
+<!--/breadcrumbs-->
+
 <!--=== Profile ===-->
 <div class="container content profile">
     <div class="row">      
@@ -46,9 +58,16 @@
                         <label for="file" class="input input-file">
                             <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
                         </label>
-                    </section>                    
+                    </section>
+                    <section>
+                        <label class="label">เจ้าของสื่อ(ผู้เช่า)</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+
                     <hr />
-                    
+
                     <a class="btn-u" href="@Url.Action("Media")"><span class="glyphicon glyphicon-floppy-disk"></span> บันทึก </a>
                     <a class="btn-u btn-u-default" href="@Url.Action("index")"><span class="icon icon-back"></span> ยกเลิก</a>
                     <a class="btn-u btn-u-blue" href="@Url.Action("Media") "><span class=" glyphicon glyphicon-open"></span> ส่งตรวจสอบ </a>

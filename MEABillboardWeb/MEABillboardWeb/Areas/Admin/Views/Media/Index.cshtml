@@ -16,14 +16,21 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">สื่อ</h1>     
+    </div>
+</div>
+<!--/breadcrumbs-->
 <!--=== Profile ===-->
 <div class="container content profile">
     <div class="row">
-       
+
 
         <div class="col-md-12">
 
-            <a href="@Url.Action("SendMedia")" class="btn-u"><span class="glyphicon glyphicon-open"></span>&nbsp;ส่งสื่อ online</a>
+            <a href="@Url.Action("SendMedia")" class="btn-u"><span class="glyphicon glyphicon-open"></span>&nbsp;เพิ่มสื่อ online</a>
 
 
             <div class="margin-bottom-20"></div>
@@ -32,6 +39,14 @@
             <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
                 <fieldset>
                     <section>
+                        <label class="label">เจ้าของสื่อ</label>
+                        <label class="input">
+                            <input type="text" name="ContractName" placeholder="เจ้าของสื่อ">
+                            <b class="tooltip tooltip-bottom-right">เจ้าของสื่อ</b>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ชื่อสื่อ</label>
                         <label class="input">
                             <input type="text" name="ContractName" placeholder="ชื่อสื่อ">
                             <b class="tooltip tooltip-bottom-right">ชื่อสื่อ</b>

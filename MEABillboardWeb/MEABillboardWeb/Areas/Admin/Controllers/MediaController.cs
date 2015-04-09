@@ -27,6 +27,5 @@ namespace MEABillboardWeb.Areas.Admin.Controllers
             return View();
         }
 
-
     }
 }
