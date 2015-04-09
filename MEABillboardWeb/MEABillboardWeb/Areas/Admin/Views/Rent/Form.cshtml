@@ -9,7 +9,7 @@
             <ul class="pull-right breadcrumb">
                 @*<li><a href="index.html">Home</a></li>*@
                 <li><a href="@Url.Action("Index")">ผู้เช่าป้ายโฆษณา</a></li>
-                <li class="active">เพิ่มผู้เช่าป้ายโฆษณา</li>
+                <li class="active">รายละเอียดผู้เช่าป้ายโฆษณา</li>
             </ul>
         </div>
     </div><!--/breadcrumbs-->
@@ -21,7 +21,7 @@
             @*<div class="col-md-9">*@
             <!-- General Unify Forms -->
             <form action="#" class="sky-form">
-                <header>เพิ่มผู้เช่าป้ายโฆษณา</header>
+                <header>รายละเอียดผู้เช่าป้ายโฆษณา</header>
                 <fieldset>
                     <section>
                         <label class="label">หมายเลขทะเบียนบริษัท</label>
@@ -55,7 +55,7 @@
                         </label>
                     </section>
                     <section>
-                        <label class="label">อาชีพ/ประเภทธุระกิจ</label>
+                        <label class="label">อาชีพ/ประเภทธุรกิจ</label>
                         <label class="input">
                             <input type="text">
                         </label>
@@ -81,10 +81,25 @@
                 </fieldset>
                 <fieldset>
                     <section>
-                        <label class="label">ที่อยู่</label>
-                        <label class="textarea">
+                        <label class="label">เลขที่บ้าน</label>
+                        @*<label class="textarea">
                             <i class="icon-append fa fa-comment"></i>
                             <textarea rows="3" name="message" id="message"></textarea>
+                        </label>*@
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ถนน</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ซอย</label>
+                        <label class="input">
+                            <input type="text">
                         </label>
                     </section>
                     <section>
@@ -96,6 +111,34 @@
                                 <option value="2">นนทบุรี</option>
                             </select>
                             <i></i>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">อำเภอ/แขวง</label>
+                        <label class="select">
+                            <select name="interested">
+                                <option value="0" selected disabled></option>
+                                <option value="1"></option>
+                                <option value="2"></option>
+                            </select>
+                            <i></i>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ตำบล/เขต</label>
+                        <label class="select">
+                            <select name="interested">
+                                <option value="0" selected disabled></option>
+                                <option value="1"></option>
+                                <option value="2"></option>
+                            </select>
+                            <i></i>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">รหัสไปรษณีย์</label>
+                        <label class="input">
+                            <input type="text">
                         </label>
                     </section>
                 </fieldset>
@@ -113,3 +156,25 @@
     </div><!--/container-->
     <!--=== End Content Part ===-->
 </div><!--/End Wrapepr-->
+@section Scripts{
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/smoothScroll.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js")"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/custom.js")"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/app.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/reg.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
+    <script src='@Url.Content("~/js/customs/bootbox.min.js")'></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".mea-form-date").datepicker({ language: "th", format: "dd/mm/yyyy" });
+
+        });
+    </script>
+}
