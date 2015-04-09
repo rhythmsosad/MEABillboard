@@ -1,6 +1,5 @@
 ﻿@section Styles{
     <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
-
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/animate.css")">
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/line-icons/line-icons.css")">
@@ -8,24 +7,20 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css")">
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
     <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
-
     <!-- CSS Page Style -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
     <link rel="stylesheet" href="@Url.Content("~/assets/js_custom/chosen/chosen.css")">
-
     <!-- CSS Customization -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
-
 }
-
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
     <div class="container">
         <h1 class="pull-left">สัญญาเช่า</h1>
-        <ul class="pull-right breadcrumb">
-            <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
-            <li class="active">สัญญาเช่า</li>
-        </ul>
+        @*<ul class="pull-right breadcrumb">
+                <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+                <li class="active">สัญญาเช่า</li>
+            </ul>*@
     </div>
 </div>
 <!--/breadcrumbs-->
@@ -35,9 +30,7 @@
     <div class="row">
         <!-- Profile Content -->
         <div class="col-md-12">
-
             <a href="@Url.Action("Form")" class="btn-u"><span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มสัญญาเช่า</a>
-
             <div class="headline"><h2>ค้นหา</h2></div>
             <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
                 <fieldset>
@@ -61,7 +54,7 @@
                                 <input type="text" name="ContractName" placeholder="พื้นที่เช่า">
                                 <b class="tooltip tooltip-bottom-right">พื้นที่เช่า</b>
                             </label>*@
-                        <select class="chosen-select form-control" id="form-field-select-4" data-placeholder="ไม่ระบุ">
+                        <select class="select form-control" id="form-field-select-4" data-placeholder="ไม่ระบุ">
                             <option value="0">ไม่ระบุ</option>
                             <option value="1">การไฟฟ้านครหลวงเขตวัดเลียบ</option>
                             <option value="2">การไฟฟ้านครหลวงเขตลาดพร้าว</option>
@@ -107,19 +100,14 @@
                             </div>
                         </div>
                     </section>
-
                     <a href="#" class="btn-u">ค้นหา</a>
                 </fieldset>
 
-
-
             </form>
-
 
             <div class="margin-bottom-60"></div>
             <div class="headline"><h2>ผลลัพธ์</h2></div>
             <div class="table-search-v1 panel panel-dark">
-
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <thead>
@@ -135,7 +123,7 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">201544113</a>
+                                    201544113
                                 </td>
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
@@ -164,7 +152,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">201544123</a>
+                                    201544123
                                 </td>
                                 <td>
                                     1 ม.ค. 2556 - 1 ม.ค. 2559
@@ -191,7 +179,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">201544126</a>
+                                    201544126
                                 </td>
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
@@ -218,7 +206,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">201544129</a>
+                                    201544129
                                 </td>
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
@@ -245,7 +233,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">201544500</a>
+                                    201544500
                                 </td>
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
@@ -272,7 +260,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">201544544</a>
+                                    201544544
                                 </td>
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
@@ -299,8 +287,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("ContractInfo")">201545670</a>
-
+                                    201545670
                                 </td>
                                 <td>
                                     1 ม.ค. 2557 - 1 ม.ค. 2560
@@ -328,7 +315,6 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
             <!--Pagination-->
             <div class="text-center">
@@ -367,7 +353,6 @@
     <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
     <script src='@Url.Content("~/assets/js_custom/chosen/chosen.jquery.js")'></script>
-
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();

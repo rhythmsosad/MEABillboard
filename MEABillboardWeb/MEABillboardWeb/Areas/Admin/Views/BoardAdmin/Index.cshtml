@@ -19,11 +19,10 @@
 <div class="breadcrumbs">
     <div class="container">
         <h1 class="pull-left">ป้ายโฆษณา</h1>
-        <ul class="pull-right breadcrumb">
-            <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
-            @*<li><a href="">แอดมิน</a></li>*@
-            <li class="active">ป้ายโฆษณา</li>
-        </ul>
+        @*<ul class="pull-right breadcrumb">
+                <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+                <li class="active">ป้ายโฆษณา</li>
+            </ul>*@
     </div>
 </div><!--/breadcrumbs-->
 <!--=== End Breadcrumbs ===-->
@@ -32,16 +31,18 @@
     <div class="row">
         <!-- Profile Content -->
         <div class="col-md-12">
+            <a href="@Url.Action("Form")" class="btn-u"><span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มป้าย</a>
             <div class="headline"><h2>ค้นหา</h2></div>
             <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
                 <fieldset>
-                    @*<section>
-                            <label class="label">สัญญาเลขที่</label>
-                            <label class="input">
-                                <input type="text" name="ContractName" placeholder="สัญญาเลขที่">
-                                <b class="tooltip tooltip-bottom-right">สัญญาเลขที่</b>
-                            </label>
-                        </section>*@
+                    <section>
+                        <label class="label">สัญญาเลขที่</label>
+                        <label class="input">
+                            <input type="text" name="ContractName" placeholder="สัญญาเลขที่">
+                            <b class="tooltip tooltip-bottom-right">สัญญาเลขที่</b>
+                        </label>
+                    </section>
+
                     <section>
                         <label class="label">ชื่อป้าย</label>
                         <label class="input">

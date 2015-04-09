@@ -6,10 +6,10 @@
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">เพิ่มป้ายโฆษณา</h1>
+            <h1 class="pull-left">ป้ายโฆษณา</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Admin</a></li>
+                @*<li><a href="index.html">Home</a></li>*@
+                <li><a href="@Url.Action("Index")">ป้ายโฆษณา</a></li>
                 <li class="active">เพิ่มป้ายโฆษณา</li>
             </ul>
         </div>
@@ -72,12 +72,12 @@
                         <label class="input">
                             <input type="text" disabled value="1234567">
                         </label>
-                    </section>
-                    <section>
-                        <button type="submit" class="btn-u">Submit</button>
-                        <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">Back</button>
-                    </section>
+                    </section>                  
                 </fieldset>
+                <footer>
+                    <button type="submit" class="btn-u">บันทึก</button>
+                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">ยกเลิก</button>
+                </footer>
              
             </form>
             <!-- General Unify Forms -->
