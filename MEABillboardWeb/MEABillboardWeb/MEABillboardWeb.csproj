@@ -100,6 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Member\Views\Board\Info.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="assets\ajax\cube-portfolio\project1.html" />
     <Content Include="assets\ajax\cube-portfolio\project2.html" />
     <Content Include="assets\ajax\cube-portfolio\project3.html" />
@@ -4379,7 +4382,6 @@
     <Content Include="Areas\Member\Views\Media\Info.cshtml" />
     <Content Include="Areas\Member\Views\Mapping\Index.cshtml" />
     <Content Include="Areas\Member\Views\Media\SendMedia.cshtml" />
-    <Content Include="Areas\Member\Views\Board\Info.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -8494,10 +8496,14 @@
     <Compile Include="Areas\Admin\Models\AdminUserGroup.cs" />
     <Compile Include="Areas\Admin\Models\Dummy.cs" />
     <Compile Include="Areas\Member\Controllers\BoardController.cs" />
-    <Compile Include="Areas\Member\Controllers\ContractController.cs" />
+    <Compile Include="Areas\Member\Controllers\ContractController.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Areas\Member\Controllers\LoginController.cs" />
     <Compile Include="Areas\Member\Controllers\MappingController.cs" />
-    <Compile Include="Areas\Member\Controllers\MediaController.cs" />
+    <Compile Include="Areas\Member\Controllers\MediaController.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Areas\Member\Controllers\SidebarController.cs" />
     <Compile Include="Areas\Member\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Member\MemberAreaRegistration.cs" />
