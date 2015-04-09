@@ -1,6 +1,115 @@
-﻿
-@{
+﻿@{
     //ViewBag.Title = "Form";
 }
+<div class="wrapper">
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">ผู้เช่าป้ายโฆษณา</h1>
+            <ul class="pull-right breadcrumb">
+                @*<li><a href="index.html">Home</a></li>*@
+                <li><a href="@Url.Action("Index")">ผู้เช่าป้ายโฆษณา</a></li>
+                <li class="active">เพิ่มผู้เช่าป้ายโฆษณา</li>
+            </ul>
+        </div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+    <!--=== Content Part ===-->
+    <div class="container content">
+        <div class="row">
+            <!-- Begin Content -->
+            @*<div class="col-md-9">*@
+            <!-- General Unify Forms -->
+            <form action="#" class="sky-form">
+                <header>เพิ่มผู้เช่าป้ายโฆษณา</header>
+                <fieldset>
+                    <section>
+                        <label class="label">หมายเลขทะเบียนบริษัท</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">วันที่</label>
+                        <label class="input">
+                            <i class="icon-append fa fa-calendar"></i>
+                            <input type="text" class="mea-form-date">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ชื่อ (บุคคล/หน่วยงาน/บริษัท)</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ทุนจดทะเบียน</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ระยะเวลา (ปี)</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">อาชีพ/ประเภทธุระกิจ</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">โทรศัพท์</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">โทรศัพท์มือถือ</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">อีเมล์</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                </fieldset>
+                <fieldset>
+                    <section>
+                        <label class="label">ที่อยู่</label>
+                        <label class="textarea">
+                            <i class="icon-append fa fa-comment"></i>
+                            <textarea rows="4" name="message" id="message"></textarea>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">จังหวัด</label>
+                        <label class="select">
+                            <select name="interested">
+                                <option value="0" selected disabled>กรุงเทพ</option>
+                                <option value="1">สมุทรปราการ</option>
+                                <option value="2">นนทบุรี</option>
+                            </select>
+                            <i></i>
+                        </label>
+                    </section>
+                </fieldset>
+                <footer>
+                    <button type="submit" class="btn-u">บันทึก</button>
+                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">ยกเลิก</button>
+                </footer>
 
-
+            </form>
+            <!-- General Unify Forms -->
+            <div class="margin-bottom-60"></div>
+            @*</div>*@
+            <!-- End Content -->
+        </div>
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+</div><!--/End Wrapepr-->
