@@ -1,1 +1,243 @@
-﻿
+﻿@{
+    //ViewBag.Title = "Index";
+}
+@section Styles{
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/animate.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/line-icons/line-icons.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/font-awesome/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
+}
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">พื้นที่ให้เช่า</h1>
+        @*<ul class="pull-right breadcrumb">
+                <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+                <li class="active">ป้ายโฆษณา</li>
+            </ul>*@
+    </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+<!--=== Profile ===-->
+<div class="container content profile">
+    <div class="row">
+        <!-- Profile Content -->
+        <div class="col-md-12">
+            <a href="@Url.Action("Form")" class="btn-u"><span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มพื้นที่ให้เช่า</a>
+            <div class="headline"><h2>ค้นหา</h2></div>
+            <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
+                <fieldset>
+                    <section>
+                        <label class="label">ชื่อพื้นที่</label>
+                        <label class="input">
+                            <input type="text" name="ContractName" placeholder="ชื่อพื้นที่">
+                            <b class="tooltip tooltip-bottom-right">ชื่อพื้นที่</b>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ประเภทพื้นที่</label>
+                        <label class="select">
+                            <select name="interested">
+                                <option value="0" selected disabled>พื้นที่ประเภท 1</option>
+                                <option value="1">พื้นที่ประเภท 2</option>
+                                <option value="2">พื้นที่ประเภท 3</option>
+                            </select>
+                            <i></i>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">รหัส GIS</label>
+                        @*<label class="input">
+                                <input type="text">
+                            </label>*@
+                    </section>
+                    <section>
+                        <label class="label">Lat @*itude*@</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">Long @*itude*@</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <a href="#" class="btn-u">ค้นหา</a>
+                </fieldset>
+            </form>
+            <div class="margin-bottom-60"></div>
+            <div class="headline"><h2>ผลลัพธ์</h2></div>
+            <div class="table-search-v1 panel panel-dark">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                @*<th>สัญญาเลขที่</th>*@
+                                <th>ชื่อพื้นที่</th>
+                                <th>ประเภทพื้นที่</th>
+                                <th>Lat</th>
+                                <th>Long</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">201544113</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">   ชื่อพื้นที่ 1</a>
+                                </td>
+                                <td>
+                                    ประเภทพื้นที่ 1
+                                </td>
+                                <td>
+                                    13.999254
+                                </td>
+                                <td>
+                                    100.5673572
+                                </td>
+
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015441>201544123</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">  ชื่อพื้นที่ 2</a>
+                                </td>
+                                <td>
+                                    ประเภทพื้นที่ 2
+                                </td>
+                                <td>
+                                    13.999254
+                                </td>
+                                <td>
+                                    100.5673572
+                                </td>
+
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015441>201544126</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">  ชื่อพื้นที่ 3</a>
+                                </td>
+                                <td>
+                                    ประเภทพื้นที่ 3
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015441>201544129</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">ชื่อพื้นที่ 4</a>
+                                </td>
+                                <td>
+                                    ประเภทพื้นที่ 1
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015445>201544500</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")"> ชื่อพื้นที่ 5 </a>
+                                </td>
+                                <td>
+                                    ประเภทพื้นที่ 2
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015445>201544544</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")"> ชื่อพื้นที่ 6</a>
+                                </td>
+                                <td>
+                                    ประเภทพื้นที่ 3
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015456>201545670</a>
+
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">    ชื่อพื้นที่ 7</a>
+                                </td>
+                                <td>
+                                    ประเภทพื้นที่ 4
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--Pagination-->
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+            <!--End Pagination-->
+        </div>
+        <!-- End Profile Content -->
+    </div><!--/end row-->
+</div>
+<!--=== End Profile ===-->
