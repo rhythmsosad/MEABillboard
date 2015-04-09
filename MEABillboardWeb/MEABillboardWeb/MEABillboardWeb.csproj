@@ -103,6 +103,10 @@
     <Content Include="Areas\Member\Views\Board\Info.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Areas\Member\Views\Mapping\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Areas\Member\Views\web.config" />
     <Content Include="assets\ajax\cube-portfolio\project1.html" />
     <Content Include="assets\ajax\cube-portfolio\project2.html" />
     <Content Include="assets\ajax\cube-portfolio\project3.html" />
@@ -4367,7 +4371,6 @@
     <Content Include="Areas\Admin\Views\Rent\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Media\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Area\Index.cshtml" />
-    <Content Include="Areas\Member\Views\web.config" />
     <Content Include="Areas\Member\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Member\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Member\Views\Shared\_Navigation.cshtml" />
@@ -4380,7 +4383,6 @@
     <Content Include="Areas\Member\Views\Login\Index.cshtml" />
     <Content Include="Areas\Member\Views\Media\Index.cshtml" />
     <Content Include="Areas\Member\Views\Media\Info.cshtml" />
-    <Content Include="Areas\Member\Views\Mapping\Index.cshtml" />
     <Content Include="Areas\Member\Views\Media\SendMedia.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
