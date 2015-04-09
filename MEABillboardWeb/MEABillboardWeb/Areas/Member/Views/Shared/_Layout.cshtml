@@ -45,7 +45,7 @@
         <div class="header">
             <div class="container">
                 <!-- Logo -->
-                <a class="logo" href="@Url.Action("Index", "Home", new { area="admin" })">
+                <a class="logo" href="@Url.Action("Index", "Profile")">
                     @*<img src="@Url.Content("~/assets/img/logo1-default.png")" alt="Logo">*@
                     <img src="@Url.Content("~/Images/MEALogo_Horizontal_ss.png")" alt="Logo" />
                 </a>
@@ -68,11 +68,11 @@
                             <li class="topbar-devider"></li>
                             <li><a href="page_faq.html">Help</a></li>
                             <li class="topbar-devider"></li>*@
-                        <li class="hoverSelector">                           
+                        <li class="hoverSelector">
                             <a>Login</a>
                             <ul class="languages hoverSelectorBlock">
                                 <li>
-                                    <a href="@Url.Action("Login", "Member", new { area = "Member" })">ประชาชน</a>
+                                    <a href="@Url.Action("Index", "Login")">ผู้เช่า</a>
                                 </li>
                                 <li><a href="@Url.Action("Login", "Member", new { area="admin"})">พนักงาน</a></li>
                             </ul>
