@@ -16,23 +16,10 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
-<!--=== Profile ===-->
-<div class="container content profile">
-    <div class="row">
-        <!--Left Sidebar-->
-        <div class="col-md-3 md-margin-bottom-40">
-            @{ Html.RenderAction("Menu", "Sidebar");  }
-            @{ Html.RenderAction("Sidebar", "Sidebar");  }
-        </div>
-        <!--End Left Sidebar-->
-        <!-- Profile Content -->
-        <div class="col-md-9">
-            
-        </div>
-        <!-- End Profile Content -->
-    </div><!--/end row-->
+<div class="col-md-9">
+
 </div>
-<!--=== End Profile ===-->
+
 @section Scripts{
     <!-- JS Implementing Plugins -->
     <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>
