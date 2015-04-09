@@ -4384,6 +4384,7 @@
     <Content Include="Areas\Member\Views\Media\Index.cshtml" />
     <Content Include="Areas\Member\Views\Media\Info.cshtml" />
     <Content Include="Areas\Member\Views\Media\SendMedia.cshtml" />
+    <Content Include="Areas\Admin\Views\Rent\Form.cshtml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
