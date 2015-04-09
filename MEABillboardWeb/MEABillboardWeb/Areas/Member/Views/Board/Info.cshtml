@@ -16,128 +16,115 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
-<!--=== Profile ===-->
-<div class="container content profile">
-    <div class="row">
-        <!--Left Sidebar-->
-        <div class="col-md-3 md-margin-bottom-40">
-            @{ Html.RenderAction("Menu", "Sidebar");  }
-            @{ Html.RenderAction("Sidebar", "Sidebar");  }
+<div class="col-md-9">
+
+
+    <div class="headline"><h2>รายละเอียดป้าย</h2></div>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td class="text-nowrap text-right">ชื่อ :</td>
+                <td>ป้าย HP Enterprise Service #1</td>
+            </tr>
+            <tr>
+                <td class="text-nowrap text-right">ประเภท :</td>
+                <td>ป้าย Digital Billboard</td>
+            </tr>
+            <tr>
+                <td class="text-nowrap text-right">พื้นที่ :</td>
+                <td>การไฟฟ้านครหลวงเขตวัดเลียบ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="margin-bottom-60"></div>
+
+    <div class="headline"><h2>ภาพป้าย</h2></div>
+    <div class="col-md-6 md-margin-bottom-20">
+        <div class="box-shadow shadow-effect-1">
+            <img class="img-responsive img-bordered" src="@Url.Content("~/images/sample/board1.jpg")" alt="">
         </div>
-        <!--End Left Sidebar-->
-        <!-- Profile Content -->
-        <div class="col-md-9">
+    </div>
+    <div class="margin-bottom-60"></div>
 
+    <div class="headline"><h2>รายการสื่อ</h2></div>
+    <div class="table-search-v1 panel panel-dark">
 
-            <div class="headline"><h2>รายละเอียดป้าย</h2></div>
-            <table class="table table-striped">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>ชื่อ </th>
+                        <th>ประเภท </th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                        <td class="text-nowrap text-right">ชื่อ :</td>
-                        <td>ป้าย HP Enterprise Service #1</td>
+                        <td>
+                            <a href="@Url.Action("info", "Media")"> โฆษณา HP Enterprise Service #1</a>
+                        </td>
+                        <td>
+                            Media
+                        </td>
                     </tr>
                     <tr>
-                        <td class="text-nowrap text-right">ประเภท :</td>
-                        <td>ป้าย Digital Billboard</td>
+                        <td>
+                            โฆษณา HP Enterprise Service #2
+                        </td>
+                        <td>
+                            Media
+                        </td>
                     </tr>
                     <tr>
-                        <td class="text-nowrap text-right">พื้นที่ :</td>
-                        <td>การไฟฟ้านครหลวงเขตวัดเลียบ</td>
+                        <td>
+                            โฆษณา HP Enterprise Service #3
+                        </td>
+                        <td>
+                            Media
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            โฆษณา HP Enterprise Service #4
+                        </td>
+                        <td>
+                            Media
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            โฆษณา HP Enterprise Service #5
+                        </td>
+                        <td>
+                            Media
+                        </td>
                     </tr>
                 </tbody>
             </table>
-
-            <div class="margin-bottom-60"></div>
-
-            <div class="headline"><h2>ภาพป้าย</h2></div>
-            <div class="col-md-6 md-margin-bottom-20">
-                <div class="box-shadow shadow-effect-1">
-                    <img class="img-responsive img-bordered" src="@Url.Content("~/images/sample/board1.jpg")" alt="">
-                </div>
-            </div>
-            <div class="margin-bottom-60"></div>
-
-            <div class="headline"><h2>รายการสื่อ</h2></div>
-            <div class="table-search-v1 panel panel-dark">
-
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>ชื่อ </th>
-                                <th>ประเภท </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("info", "Media")"> โฆษณา HP Enterprise Service #1</a>
-                                </td>
-                                <td>
-                                    Media
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    โฆษณา HP Enterprise Service #2
-                                </td>
-                                <td>
-                                    Media
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    โฆษณา HP Enterprise Service #3
-                                </td>
-                                <td>
-                                    Media
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    โฆษณา HP Enterprise Service #4
-                                </td>
-                                <td>
-                                    Media
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    โฆษณา HP Enterprise Service #5
-                                </td>
-                                <td>
-                                    Media
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-            <!--Pagination-->
-            <div class="text-center">
-                <ul class="pagination">
-                    <li><a href="#">«</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li class="active"><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="#">7</a></li>
-                    <li><a href="#">8</a></li>
-                    <li><a href="#">»</a></li>
-                </ul>
-            </div>
-            <!--End Pagination-->
-
-            <hr />
-            <button class="btn-u" onclick="window.history.back();"><span class="icon icon-back"></span> ย้อนกลับ</button>
         </div>
-        <!-- End Profile Content -->
-    </div><!--/end row-->
+
+    </div>
+    <!--Pagination-->
+    <div class="text-center">
+        <ul class="pagination">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="active"><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>
+    <!--End Pagination-->
+
+    <hr />
+    <button class="btn-u" onclick="window.history.back();"><span class="icon icon-back"></span> ย้อนกลับ</button>
 </div>
-<!--=== End Profile ===-->
+
 @section Scripts{
     <!-- JS Implementing Plugins -->
     <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>

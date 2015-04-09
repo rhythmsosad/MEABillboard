@@ -16,237 +16,224 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
-<!--=== Profile ===-->
-<div class="container content profile">
-    <div class="row">
-        <!--Left Sidebar-->
-        <div class="col-md-3 md-margin-bottom-40">
-            @{ Html.RenderAction("Menu", "Sidebar");  }
-            @{ Html.RenderAction("Sidebar", "Sidebar");  }
-        </div>
-        <!--End Left Sidebar-->
-        <!-- Profile Content -->
-        <div class="col-md-9">
-            <div class="headline"><h2>สัญญา</h2></div>
-            <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
-                <fieldset>
-                    <section>
-                        <label class="input">
-                            <input type="text" name="ContractName" placeholder="สัญญาเลขที่">
-                            <b class="tooltip tooltip-bottom-right">สัญญาเลขที่</b>
-                        </label>
-                    </section>
-                    <section>
-                        <label class="label">ประเภท</label>
-                        <div class="row">
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทตั้งเสา Tower</label>
-                            </div>
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทผนังอาคาร</label>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <label class="label">ป้าย</label>
-                        <div class="row">
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Digital Billboard </label>
-                            </div>
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Billboard/Vinyl </label>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <label class="label">สถานะ</label>
-                        <div class="row">
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>อยู่ระหว่างสัญญา</label>
-                            </div>
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ใกล้สิ้นสุดสัญญา</label>
-                            </div>
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>หมดสัญญา</label>
-                            </div>
-                            <div class="col col-3">
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ยกเลิกสัญญา</label>
-                            </div>
-                        </div>
-                    </section>
-
-                    <a href="#" class="btn-u">ค้นหา</a>
-                </fieldset>
-
-
-
-            </form>
-
-
-            <div class="margin-bottom-60"></div>
-            <div class="headline"><h2>รายการสัญญา</h2></div>
-            <div class="table-search-v1 panel panel-dark">
-
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>สัญญาเลขที่</th>
-                                <th>ระยะเวลาสัญญา</th>
-                                <th>จำนวนป้าย</th>
-                                <th>ชื่อพื้นที่</th>
-                                <th>สถานะ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("Info")">201544113</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 1 ม.ค. 2560
-                                </td>
-                                <td class="text-right">
-                                    5
-                                </td>
-                                <td>
-                                    การไฟฟ้านครหลวงเขตวัดเลียบ<br />
-                                    การไฟฟ้านครหลวงเขตลาดพร้าว<br />
-                                    การไฟฟ้านครหลวงเขตมีนบุรี 
-                                </td>
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("Info")">201544123</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2556 - 1 ม.ค. 2559
-                                </td>
-                                <td class="text-right">
-                                    7
-                                </td>
-                                <td>
-                                    การไฟฟ้านครหลวงเขตวัดเลียบ
-                                </td>
-                                <td>
-                                    <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;ใกล้สิ้นสุดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("Info")">201544126</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 1 ม.ค. 2560
-                                </td>
-                                <td class="text-right">
-                                    4
-                                </td>
-                                <td>
-                                    การไฟฟ้านครหลวงเขตมีนบุรี 
-                                </td>
-                                <td>
-                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;หมดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("Info")">201544129</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 1 ม.ค. 2560
-                                </td>
-                                <td class="text-right">
-                                    8
-                                </td>
-                                <td>
-                                    การไฟฟ้านครหลวงเขตลาดกระบัง 
-                                </td>
-                                <td>
-                                    <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ยกเลิกสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("Info")">201544500</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 1 ม.ค. 2560
-                                </td>
-                                <td class="text-right">
-                                    9
-                                </td>
-                                <td>
-                                    การไฟฟ้านครหลวงเขตลาดกระบัง 
-                                </td>
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("Info")">201544544</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 1 ม.ค. 2560
-                                </td>
-                                <td class="text-right">
-                                    12
-                                </td>
-                                <td>
-                                    การไฟฟ้านครหลวงเขตลาดพร้าว 
-                                </td>
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="@Url.Action("Info")">201545670</a>
-                                </td>
-                                <td>
-                                    1 ม.ค. 2557 - 1 ม.ค. 2560
-                                </td>
-                                <td class="text-right">
-                                    7
-                                </td>
-                                <td>
-                                    การไฟฟ้านครหลวงเขตบางกะปิ 
-                                </td>
-                                <td>
-                                    <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+<div class="col-md-9">
+    <div class="headline"><h2>สัญญา</h2></div>
+    <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
+        <fieldset>
+            <section>
+                <label class="input">
+                    <input type="text" name="ContractName" placeholder="สัญญาเลขที่">
+                    <b class="tooltip tooltip-bottom-right">สัญญาเลขที่</b>
+                </label>
+            </section>
+            <section>
+                <label class="label">ประเภท</label>
+                <div class="row">
+                    <div class="col col-3">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทตั้งเสา Tower</label>
+                    </div>
+                    <div class="col col-3">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ประเภทผนังอาคาร</label>
+                    </div>
                 </div>
+            </section>
+            <section>
+                <label class="label">ป้าย</label>
+                <div class="row">
+                    <div class="col col-3">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Digital Billboard </label>
+                    </div>
+                    <div class="col col-3">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ป้าย Billboard/Vinyl </label>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <label class="label">สถานะ</label>
+                <div class="row">
+                    <div class="col col-3">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>อยู่ระหว่างสัญญา</label>
+                    </div>
+                    <div class="col col-3">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ใกล้สิ้นสุดสัญญา</label>
+                    </div>
+                    <div class="col col-3">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>หมดสัญญา</label>
+                    </div>
+                    <div class="col col-3">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ยกเลิกสัญญา</label>
+                    </div>
+                </div>
+            </section>
 
-            </div>
-            <!--Pagination-->
-            <div class="text-center">
-                <ul class="pagination">
-                    <li><a href="#">«</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li class="active"><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="#">7</a></li>
-                    <li><a href="#">8</a></li>
-                    <li><a href="#">»</a></li>
-                </ul>
-            </div>
-            <!--End Pagination-->
+            <a href="#" class="btn-u">ค้นหา</a>
+        </fieldset>
+
+
+
+    </form>
+
+
+    <div class="margin-bottom-60"></div>
+    <div class="headline"><h2>รายการสัญญา</h2></div>
+    <div class="table-search-v1 panel panel-dark">
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>สัญญาเลขที่</th>
+                        <th>ระยะเวลาสัญญา</th>
+                        <th>จำนวนป้าย</th>
+                        <th>ชื่อพื้นที่</th>
+                        <th>สถานะ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Info")">201544113</a>
+                        </td>
+                        <td>
+                            1 ม.ค. 2557 - 1 ม.ค. 2560
+                        </td>
+                        <td class="text-right">
+                            5
+                        </td>
+                        <td>
+                            การไฟฟ้านครหลวงเขตวัดเลียบ<br />
+                            การไฟฟ้านครหลวงเขตลาดพร้าว<br />
+                            การไฟฟ้านครหลวงเขตมีนบุรี
+                        </td>
+                        <td>
+                            <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Info")">201544123</a>
+                        </td>
+                        <td>
+                            1 ม.ค. 2556 - 1 ม.ค. 2559
+                        </td>
+                        <td class="text-right">
+                            7
+                        </td>
+                        <td>
+                            การไฟฟ้านครหลวงเขตวัดเลียบ
+                        </td>
+                        <td>
+                            <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;ใกล้สิ้นสุดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Info")">201544126</a>
+                        </td>
+                        <td>
+                            1 ม.ค. 2557 - 1 ม.ค. 2560
+                        </td>
+                        <td class="text-right">
+                            4
+                        </td>
+                        <td>
+                            การไฟฟ้านครหลวงเขตมีนบุรี
+                        </td>
+                        <td>
+                            <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;หมดสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Info")">201544129</a>
+                        </td>
+                        <td>
+                            1 ม.ค. 2557 - 1 ม.ค. 2560
+                        </td>
+                        <td class="text-right">
+                            8
+                        </td>
+                        <td>
+                            การไฟฟ้านครหลวงเขตลาดกระบัง
+                        </td>
+                        <td>
+                            <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ยกเลิกสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Info")">201544500</a>
+                        </td>
+                        <td>
+                            1 ม.ค. 2557 - 1 ม.ค. 2560
+                        </td>
+                        <td class="text-right">
+                            9
+                        </td>
+                        <td>
+                            การไฟฟ้านครหลวงเขตลาดกระบัง
+                        </td>
+                        <td>
+                            <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Info")">201544544</a>
+                        </td>
+                        <td>
+                            1 ม.ค. 2557 - 1 ม.ค. 2560
+                        </td>
+                        <td class="text-right">
+                            12
+                        </td>
+                        <td>
+                            การไฟฟ้านครหลวงเขตลาดพร้าว
+                        </td>
+                        <td>
+                            <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Info")">201545670</a>
+                        </td>
+                        <td>
+                            1 ม.ค. 2557 - 1 ม.ค. 2560
+                        </td>
+                        <td class="text-right">
+                            7
+                        </td>
+                        <td>
+                            การไฟฟ้านครหลวงเขตบางกะปิ
+                        </td>
+                        <td>
+                            <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;อยู่ระหว่างสัญญา&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <!-- End Profile Content -->
-    </div><!--/end row-->
+
+    </div>
+    <!--Pagination-->
+    <div class="text-center">
+        <ul class="pagination">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="active"><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>
+    <!--End Pagination-->
 </div>
-<!--=== End Profile ===-->
+
 @section Scripts{
     <!-- JS Implementing Plugins -->
     <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>

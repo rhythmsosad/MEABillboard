@@ -105,24 +105,7 @@
         <!--/slider-->
         <!--=== End Slider ===-->
         <!--=== Content Part ===-->
-
-        <!--=== Profile ===-->
-        <div class="container content profile">
-            <div class="row">
-                <!--Left Sidebar-->
-                <div class="col-md-3 md-margin-bottom-40">
-                    @{ Html.RenderAction("Menu", "Sidebar");  }
-                    @{ Html.RenderAction("Sidebar", "Sidebar");  }
-                </div>
-                <!--End Left Sidebar-->
-                <!-- Profile Content -->
-                @RenderBody()
-                <!-- End Profile Content -->
-            </div><!--/end row-->
-        </div>
-        <!--=== End Profile ===-->
-
-       
+        @RenderBody()
         <!--/container-->
         <!-- End Content Part -->
         <!--=== Footer Version 1 ===-->
