@@ -16,60 +16,62 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
-<div class="col-md-9">
-    <div class="headline"><h2>รายละเอียดสื่อ</h2></div>
-    <table class="table table-striped">
-        <tbody>
-            <tr>
-                <td class="text-nowrap">ชื่อ</td>
-                <td>โฆษณา HP Enterprise Service #1</td>
-            </tr>
-            <tr>
-                <td class="text-nowrap">ประเภท </td>
-                <td>Media</td>
-            </tr>
-            <tr>
-                <td class="text-nowrap">สถานะ </td>
-                <td><span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span></td>
-            </tr>
-            <tr>
-                <td class="text-nowrap">สัญญาเลขที่ </td>
-                <td>
-                    201544113 <br />
-                    201544123
-                </td>
-            </tr>
+<div class="panel panel-profile">
+    <div class="panel-body ">
+        <div class="headline"><h2>รายละเอียดสื่อ</h2></div>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td class="text-nowrap">ชื่อ</td>
+                    <td>โฆษณา HP Enterprise Service #1</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap">ประเภท </td>
+                    <td>Media</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap">สถานะ </td>
+                    <td><span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap">สัญญาเลขที่ </td>
+                    <td>
+                        201544113 <br />
+                        201544123
+                    </td>
+                </tr>
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 
-    <div class="margin-bottom-60"></div>
+        <div class="margin-bottom-60"></div>
 
 
-    <div class="headline"><h2>ไฟล์ภาพ</h2></div>
-    <div class="row margin-bottom-50">
-        <div class="col-md-12 shadow-wrapper md-margin-bottom-40">
-            <div class="box-shadow shadow-effect-2">
-                <a href="@Url.Content("~/assets/img/main/img1.jpg")" target="_blank">
-                    <img class="img-responsive" src="@Url.Content("~/assets/img/main/img1.jpg")" alt="">
-                </a>
+        <div class="headline"><h2>ไฟล์ภาพ</h2></div>
+        <div class="row margin-bottom-50">
+            <div class="col-md-12 shadow-wrapper md-margin-bottom-40">
+                <div class="box-shadow shadow-effect-2">
+                    <a href="@Url.Content("~/assets/img/main/img1.jpg")" target="_blank">
+                        <img class="img-responsive" src="@Url.Content("~/assets/img/main/img1.jpg")" alt="">
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="headline"><h2>ไฟล์วิดีโอ</h2></div>
-    <div class="row margin-bottom-60">
-        <!-- Vimeo Video -->
-        <div class="col-md-12">
-            <div class="responsive-video md-margin-bottom-40">
-                <iframe width="100%" src="//www.youtube.com/embed/4dmt7tQG1-w" frameborder="0" allowfullscreen=""></iframe>
+        <div class="headline"><h2>ไฟล์วิดีโอ</h2></div>
+        <div class="row margin-bottom-60">
+            <!-- Vimeo Video -->
+            <div class="col-md-12">
+                <div class="responsive-video md-margin-bottom-40">
+                    <iframe width="100%" src="//www.youtube.com/embed/4dmt7tQG1-w" frameborder="0" allowfullscreen=""></iframe>
+                </div>
             </div>
+            <!-- End Vimeo Video -->
         </div>
-        <!-- End Vimeo Video -->
-    </div>
 
-    <hr />
-    <a class="btn-u" @*href="@Url.Action("Media")"*@ onclick="history.back();"><span class="icon icon-back"></span> ย้อนกลับ</a>
+        <hr />
+        <a class="btn-u" @*href="@Url.Action("Media")"*@ onclick="history.back();"><span class="icon icon-back"></span> ย้อนกลับ</a>
+    </div>
 </div>
 
 @section Scripts{

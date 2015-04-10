@@ -105,7 +105,6 @@
         <!--/slider-->
         <!--=== End Slider ===-->
         <!--=== Content Part ===-->
-
         <!--=== Profile ===-->
         <div class="container content profile">
             <div class="row">
@@ -116,13 +115,16 @@
                 </div>
                 <!--End Left Sidebar-->
                 <!-- Profile Content -->
-                @RenderBody()
+                <div class="col-md-9">
+                    <div class="profile-body margin-bottom-20">
+                        @RenderBody()
+                    </div>
+                </div>
+              
                 <!-- End Profile Content -->
             </div><!--/end row-->
         </div>
         <!--=== End Profile ===-->
-
-       
         <!--/container-->
         <!-- End Content Part -->
         <!--=== Footer Version 1 ===-->

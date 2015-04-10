@@ -16,41 +16,43 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
-<div class="col-md-9">
-    <form action="#" class="sky-form">
-        <div class="headline"><h2>ส่งสื่อ online</h2></div>
-        <fieldset>
-            <section>
-                <label class="label">ชื่อ</label>
-                <label class="input">
-                    <input type="text">
-                </label>
-            </section>
-            <section>
-                <label class="label">ประเภทสื่อ</label>
-                <div class="row">
-                    <div class="col col-3">
-                        <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Media</label>
+<div class="panel panel-profile">
+    <div class="panel-body ">
+        <form action="#" class="sky-form">
+            <div class="headline"><h2>ส่งสื่อ online</h2></div>
+            <fieldset>
+                <section>
+                    <label class="label">ชื่อ</label>
+                    <label class="input">
+                        <input type="text">
+                    </label>
+                </section>
+                <section>
+                    <label class="label">ประเภทสื่อ</label>
+                    <div class="row">
+                        <div class="col col-3">
+                            <label class="radio"><input type="radio" name="radio" checked=""><i class="rounded-x"></i>Media</label>
+                        </div>
+                        <div class="col col-3">
+                            <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Vynil</label>
+                        </div>
                     </div>
-                    <div class="col col-3">
-                        <label class="radio"><input type="radio" name="radio"><i class="rounded-x"></i>Vynil</label>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <label class="label">ไฟล์สื่อ</label>
-                <label for="file" class="input input-file">
-                    <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
-                </label>
-            </section>
-            <hr />
+                </section>
+                <section>
+                    <label class="label">ไฟล์สื่อ</label>
+                    <label for="file" class="input input-file">
+                        <div class="button"><input type="file" id="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" readonly="">
+                    </label>
+                </section>
+                <hr />
 
-            <a class="btn-u" href="@Url.Action("Media")"><span class="glyphicon glyphicon-floppy-disk"></span> บันทึก </a>
-            <a class="btn-u btn-u-default" href="@Url.Action("index")"><span class="icon icon-back"></span> ยกเลิก</a>
-            <a class="btn-u btn-u-blue" href="#"><span class=" glyphicon glyphicon-open"></span> ส่งเจ้าหน้าที่ตรวจสอบ </a>
-        </fieldset>
+                <a class="btn-u" href="#"><span class="glyphicon glyphicon-floppy-disk"></span> บันทึก </a>
+                <a class="btn-u btn-u-default" href="@Url.Action("index")"><span class="icon icon-back"></span> ยกเลิก</a>
+                <a class="btn-u btn-u-blue" href="#"><span class=" glyphicon glyphicon-open"></span> ส่งเจ้าหน้าที่ตรวจสอบ </a>
+            </fieldset>
 
-    </form>
+        </form>
+    </div>
 </div>
 
 @section Scripts{

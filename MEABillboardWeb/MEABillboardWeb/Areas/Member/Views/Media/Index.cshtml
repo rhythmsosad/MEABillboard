@@ -16,199 +16,206 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
-<div class="col-md-9">
-
-    <a href="@Url.Action("SendMedia")" class="btn-u"><span class="glyphicon glyphicon-open"></span>&nbsp;ส่งสื่อ online</a>
 
 
-    <div class="margin-bottom-20"></div>
-
-    <div class="headline"><h2>สื่อ</h2></div>
-    <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
-        <fieldset>
-            <section>
-                <label class="input">
-                    <input type="text" name="ContractName" placeholder="ชื่อสื่อ">
-                    <b class="tooltip tooltip-bottom-right">ชื่อสื่อ</b>
-                </label>
-            </section>
-            <section>
-                <label class="label">ประเภทสื่อ</label>
-                <div class="row">
-                    <div class="col col-3">
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>Media</label>
-                    </div>
-                    <div class="col col-3">
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>Vynil</label>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <label class="label">สถานะการตรวจสอบ</label>
-                <div class="row">
-                    <div class="col col-3">
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ผ่าน</label>
-                    </div>
-                    <div class="col col-3">
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ไม่ผ่าน</label>
-                    </div>
-                    <div class="col col-3">
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>กำลังตรวจสอบ</label>
-                    </div>
-                </div>
-            </section>
-
-            <a href="#" class="btn-u">ค้นหา</a>
-        </fieldset>
-
-    </form>
-    <div class="margin-bottom-60"></div>
-
-    <div class="headline"><h2>รายการสื่อ</h2></div>
-    <div class="table-search-v1 panel panel-dark">
-
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>ชื่อ </th>
-                        <th>ประเภท </th>
-                        <th>สถานะ </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #1</a>
-                        </td>
-                        <td>
-                            Media
-                        </td>
-                        <td>
-                            <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #2</a>
-                        </td>
-                        <td>
-                            Media
-                        </td>
-                        <td>
-                            <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #3</a>
-                        </td>
-                        <td>
-                            Media
-                        </td>
-                        <td>
-                            <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #4</a>
-                        </td>
-                        <td>
-                            vinyl
-                        </td>
-                        <td>
-                            <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #5</a>
-                        </td>
-                        <td>
-                            vinyl
-                        </td>
-                        <td>
-                            <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #6</a>
-                        </td>
-                        <td>
-                            vinyl
-                        </td>
-                        <td>
-                            <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #7</a>
-                        </td>
-                        <td>
-                            vinyl
-                        </td>
-                        <td>
-                            <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #8</a>
-                        </td>
-                        <td>
-                            vinyl
-                        </td>
-                        <td>
-                            <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #9</a>
-                        </td>
-                        <td>
-                            vinyl
-                        </td>
-                        <td>
-                            <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #10</a>
-                        </td>
-                        <td>
-                            vinyl
-                        </td>
-                        <td>
-                            <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+<div class="panel panel-profile">
+    <div class="panel-body ">
+        <div class="margin-bottom-30">
+            <a href="@Url.Action("SendMedia")" class="btn-u"><span class="glyphicon glyphicon-open"></span>&nbsp;ส่งสื่อ online</a>
         </div>
+        <div class="headline"><h2>ค้นหา</h2></div>
+        <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
+            <fieldset>
+                <section>
+                    <label class="input">
+                        <input type="text" name="ContractName" placeholder="ชื่อสื่อ">
+                        <b class="tooltip tooltip-bottom-right">ชื่อสื่อ</b>
+                    </label>
+                </section>
+                <section>
+                    <label class="label">ประเภทสื่อ</label>
+                    <div class="row">
+                        <div class="col col-3">
+                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>Media</label>
+                        </div>
+                        <div class="col col-3">
+                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>Vynil</label>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <label class="label">สถานะการตรวจสอบ</label>
+                    <div class="row">
+                        <div class="col col-3">
+                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ผ่าน</label>
+                        </div>
+                        <div class="col col-3">
+                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>ไม่ผ่าน</label>
+                        </div>
+                        <div class="col col-3">
+                            <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>กำลังตรวจสอบ</label>
+                        </div>
+                    </div>
+                </section>
+
+                <a href="#" class="btn-u">ค้นหา</a>
+            </fieldset>
+
+        </form>
+
+        <div class="headline"><h2>ผลลัพธ์</h2></div>
+        <div class="table-search-v1 panel panel-dark">
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ชื่อ </th>
+                            <th>ประเภท </th>
+                            <th>สถานะ </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #1</a>
+                            </td>
+                            <td>
+                                Media
+                            </td>
+                            <td>
+                                <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #2</a>
+                            </td>
+                            <td>
+                                Media
+                            </td>
+                            <td>
+                                <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #3</a>
+                            </td>
+                            <td>
+                                Media
+                            </td>
+                            <td>
+                                <span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #4</a>
+                            </td>
+                            <td>
+                                vinyl
+                            </td>
+                            <td>
+                                <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #5</a>
+                            </td>
+                            <td>
+                                vinyl
+                            </td>
+                            <td>
+                                <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #6</a>
+                            </td>
+                            <td>
+                                vinyl
+                            </td>
+                            <td>
+                                <span class="label label-danger">&nbsp;&nbsp;&nbsp;&nbsp;ไม่ผ่าน&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #7</a>
+                            </td>
+                            <td>
+                                vinyl
+                            </td>
+                            <td>
+                                <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #8</a>
+                            </td>
+                            <td>
+                                vinyl
+                            </td>
+                            <td>
+                                <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #9</a>
+                            </td>
+                            <td>
+                                vinyl
+                            </td>
+                            <td>
+                                <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Info")">โฆษณา HP Enterprise Service #10</a>
+                            </td>
+                            <td>
+                                vinyl
+                            </td>
+                            <td>
+                                <span class="label label-warning">&nbsp;&nbsp;&nbsp;&nbsp;กำลังตรวจสอบ&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!--Pagination-->
+        <div class="text-center">
+            <ul class="pagination">
+                <li><a href="#">«</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="active"><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">»</a></li>
+            </ul>
+        </div>
+        <!--End Pagination-->
 
     </div>
-    <!--Pagination-->
-    <div class="text-center">
-        <ul class="pagination">
-            <li><a href="#">«</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li class="active"><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-            <li><a href="#">»</a></li>
-        </ul>
-    </div>
-    <!--End Pagination-->
 </div>
+
+
+
+
+
+
 @section Scripts{
     <!-- JS Implementing Plugins -->
     <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>

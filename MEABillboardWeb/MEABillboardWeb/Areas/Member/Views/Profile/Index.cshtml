@@ -16,105 +16,101 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 }
 
-<div class="col-md-9">
-    <div class="profile-body margin-bottom-20">
-        <div class="tab-v1">
-            <ul class="nav nav-justified nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#profile">ข้อมูลส่วนตัว</a></li>
-                <li><a data-toggle="tab" href="#passwordTab">รหัสผ่าน</a></li>
-            </ul>
-            <div class="tab-content">
-                <div id="profile" class="profile-edit tab-pane fade in active">
-                    <h2 class="heading-md">Manage your Name, ID and Email Addresses.</h2>
-                    <p>Below are the name and email addresses on file for your account.</p>
-                    <br>
+    <div class="tab-v1">
+        <ul class="nav nav-justified nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#profile">ข้อมูลส่วนตัว</a></li>
+            <li><a data-toggle="tab" href="#passwordTab">รหัสผ่าน</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="profile" class="profile-edit tab-pane fade in active">
+                <h2 class="heading-md">Manage your Name, ID and Email Addresses.</h2>
+                <p>Below are the name and email addresses on file for your account.</p>
+                <br>
+                <dl class="dl-horizontal">
+                    <dt><strong>Your name </strong></dt>
+                    <dd>
+                        Edward Rooster
+                    </dd>
+                    <hr>
+                    <dt><strong>Your ID </strong></dt>
+                    <dd>
+                        FKJ-032440
+                    </dd>
+                    <hr>
+                    <dt><strong>Company name </strong></dt>
+                    <dd>
+                        Htmlstream
+                    </dd>
+                    <hr>
+                    <dt><strong>Primary Email Address </strong></dt>
+                    <dd>
+                        edward-rooster@gmail.com
+                    </dd>
+                    <hr>
+                    <dt><strong>Phone Number </strong></dt>
+                    <dd>
+                        (304) 33-2867-499
+                    </dd>
+                    <hr>
+                    <dt><strong>Office Number </strong></dt>
+                    <dd>
+                        (304) 44-9810-296
+                    </dd>
+                    <hr>
+                    <dt><strong>Address </strong></dt>
+                    <dd>
+                        California, US
+                    </dd>
+                    <hr>
+                </dl>
+                @*<button type="button" class="btn-u btn-u-default">Cancel</button>
+                    <button type="button" class="btn-u">Save Changes</button>*@
+            </div>
+
+            <div id="passwordTab" class="profile-edit tab-pane fade">
+                <h2 class="heading-md">Manage your Security Settings</h2>
+                <p>Change your password.</p>
+                <br>
+                <form class="sky-form" id="sky-form4" action="#">
                     <dl class="dl-horizontal">
-                        <dt><strong>Your name </strong></dt>
+                        <dt>Old password</dt>
                         <dd>
-                            Edward Rooster
+                            <section>
+                                <label class="input">
+                                    <i class="icon-append fa fa-lock"></i>
+                                    <input type="password" id="old_password" name="old_password" placeholder="Old Password">
+                                    <b class="tooltip tooltip-bottom-right">Needed to verify your Old Password</b>
+                                </label>
+                            </section>
                         </dd>
-                        <hr>
-                        <dt><strong>Your ID </strong></dt>
+                        <dt>Enter your password</dt>
                         <dd>
-                            FKJ-032440
+                            <section>
+                                <label class="input">
+                                    <i class="icon-append fa fa-lock"></i>
+                                    <input type="password" id="password" name="password" placeholder="Password">
+                                    <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+                                </label>
+                            </section>
                         </dd>
-                        <hr>
-                        <dt><strong>Company name </strong></dt>
+                        <dt>Confirm Password</dt>
                         <dd>
-                            Htmlstream
+                            <section>
+                                <label class="input">
+                                    <i class="icon-append fa fa-lock"></i>
+                                    <input type="password" name="passwordConfirm" placeholder="Confirm password">
+                                    <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+                                </label>
+                            </section>
                         </dd>
-                        <hr>
-                        <dt><strong>Primary Email Address </strong></dt>
-                        <dd>
-                            edward-rooster@gmail.com
-                        </dd>
-                        <hr>
-                        <dt><strong>Phone Number </strong></dt>
-                        <dd>
-                            (304) 33-2867-499
-                        </dd>
-                        <hr>
-                        <dt><strong>Office Number </strong></dt>
-                        <dd>
-                            (304) 44-9810-296
-                        </dd>
-                        <hr>
-                        <dt><strong>Address </strong></dt>
-                        <dd>
-                            California, US
-                        </dd>
-                        <hr>
                     </dl>
-                    @*<button type="button" class="btn-u btn-u-default">Cancel</button>
-                        <button type="button" class="btn-u">Save Changes</button>*@
-                </div>
 
-                <div id="passwordTab" class="profile-edit tab-pane fade">
-                    <h2 class="heading-md">Manage your Security Settings</h2>
-                    <p>Change your password.</p>
-                    <br>
-                    <form class="sky-form" id="sky-form4" action="#">
-                        <dl class="dl-horizontal">
-                            <dt>Old password</dt>
-                            <dd>
-                                <section>
-                                    <label class="input">
-                                        <i class="icon-append fa fa-lock"></i>
-                                        <input type="password" id="old_password" name="old_password" placeholder="Old Password">
-                                        <b class="tooltip tooltip-bottom-right">Needed to verify your Old Password</b>
-                                    </label>
-                                </section>
-                            </dd>
-                            <dt>Enter your password</dt>
-                            <dd>
-                                <section>
-                                    <label class="input">
-                                        <i class="icon-append fa fa-lock"></i>
-                                        <input type="password" id="password" name="password" placeholder="Password">
-                                        <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
-                                    </label>
-                                </section>
-                            </dd>
-                            <dt>Confirm Password</dt>
-                            <dd>
-                                <section>
-                                    <label class="input">
-                                        <i class="icon-append fa fa-lock"></i>
-                                        <input type="password" name="passwordConfirm" placeholder="Confirm password">
-                                        <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
-                                    </label>
-                                </section>
-                            </dd>
-                        </dl>
-
-                        <button class="btn-u" type="submit">บันทึก</button>
-                        <button type="button" class="btn-u btn-u-default">ยกเลิก</button>
-                    </form>
-                </div>
+                    <button class="btn-u" type="submit">บันทึก</button>
+                    <button type="button" class="btn-u btn-u-default">ยกเลิก</button>
+                </form>
             </div>
         </div>
     </div>
-</div>
 
 @section Scripts{
     <!-- JS Implementing Plugins -->
