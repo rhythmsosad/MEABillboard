@@ -1,1 +1,289 @@
-﻿
+﻿@{
+    //ViewBag.Title = "Index";
+}
+@section Styles{
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/animate.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/line-icons/line-icons.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/font-awesome/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
+}
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">ผู้เช่าป้ายโฆษณา</h1>
+        @*<ul class="pull-right breadcrumb">
+                <li><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+                <li class="active">ป้ายโฆษณา</li>
+            </ul>*@
+    </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+<!--=== Profile ===-->
+<div class="container content profile">
+    <div class="row">
+        <!-- Profile Content -->
+        <div class="col-md-12">
+            <a href="@Url.Action("Form")" class="btn-u"><span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มผู้เช่าป้ายโฆษณา</a>
+            <div class="headline"><h2>ค้นหา</h2></div>
+            <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
+                <fieldset>
+                    <section>
+                        <label class="label">หมายเลขทะเบียนบริษัท</label>
+                        <label class="input">
+                            <input type="text" name="ContractName" placeholder="หมายเลขทะเบียนบริษัท">
+                            <b class="tooltip tooltip-bottom-right">หมายเลขทะเบียนบริษัท</b>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ชื่อ (บุคคล/หน่วยงาน/บริษัท)</label>
+                        <label class="input">
+                            <input type="text" name="billBoardName" placeholder="ชื่อ (บุคคล/หน่วยงาน/บริษัท)">
+                            <b class="tooltip tooltip-bottom-right">ชื่อ (บุคคล/หน่วยงาน/บริษัท)</b>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ระยะเวลาเปิด (ปี)</label>
+                        <label class="input">
+                            <input type="text" name="billBoardName" placeholder="ระยะเวลาเปิด (ปี)">
+                            <b class="tooltip tooltip-bottom-right">ระยะเวลาเปิด (ปี)</b>
+                        </label>
+                    </section>
+                    <a href="#" class="btn-u">ค้นหา</a>
+                </fieldset>
+            </form>
+            <div class="margin-bottom-60"></div>
+            <div class="headline"><h2>ผลลัพธ์</h2></div>
+            <div class="table-search-v1 panel panel-dark">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                @*<th>สัญญาเลขที่</th>*@
+                                <th>หมายเลขทะเบียนบริษัท</th>
+                                <th>ชื่อ (บุคคล/หน่วยงาน/บริษัท)</th>
+                                <th>ระยะเวลา (ปี)</th>
+                                <th>โทรศัพท์</th>
+                                @*<th>ชื่อพื้นที่</th>
+                                    <th>รูปภาพ</th>*@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">201544113</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">    111111</a>
+                                </td>
+                                <td>
+                                    บริษัท ก
+                                </td>
+                                <td>
+                                    2
+                                </td>
+                                <td>02-123-45678</td>
+                                @*<td>
+                                        การไฟฟ้านครหลวงเขตวัดเลียบ
+                                    </td>
+                                    <td>
+                                        <i id="picSample" class="icon-custom icon-sm rounded-x icon-color-orange icon-line icon-camera" style="cursor:pointer;"></i>
+                                    </td>*@
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015441>201544123</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">  222222</a>
+                                </td>
+                                <td>
+                                    บริษัท ข
+                                </td>
+                                <td>
+                                    3
+                                </td>
+                                <td></td>
+                                @*<td>
+                                        การไฟฟ้านครหลวงเขตวัดเลียบ
+                                    </td>
+                                    <td>
+                                        <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
+                                    </td>*@
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015441>201544126</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">  333333</a>
+                                </td>
+                                <td>
+                                    บริษัท ค
+                                </td>
+                                <td>
+                                    2
+                                </td>
+                                <td></td>
+                                @*<td>
+                                        การไฟฟ้านครหลวงเขตมีนบุรี
+                                    </td>
+                                    <td>
+                                        <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
+                                    </td>*@
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015441>201544129</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">444444</a>
+                                </td>
+                                <td>
+                                    บริษัท ง
+                                </td>
+                                <td>
+                                    4
+                                </td>
+                                <td></td>
+                                @*<td>
+                                        การไฟฟ้านครหลวงเขตลาดกระบัง
+                                    </td>
+                                    <td>
+                                        <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
+                                    </td>*@
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015445>201544500</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")"> 555555 </a>
+                                </td>
+                                <td>
+                                    บริษัท จ
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td></td>
+                                @*<td>
+                                        การไฟฟ้านครหลวงเขตลาดกระบัง
+                                    </td>
+                                    <td>
+                                        <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
+                                    </td>*@
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015445>201544544</a>
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")"> 666666</a>
+                                </td>
+                                <td>
+                                    บริษัท ฉ
+                                </td>
+                                <td>
+                                    3
+                                </td>
+                                <td></td>
+                                @*<td>
+                                        การไฟฟ้านครหลวงเขตลาดพร้าว
+                                    </td>
+                                    <td>
+                                        <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
+                                    </td>*@
+                            </tr>
+                            <tr>
+                                @*<td>
+                                        <a href="@Url.Action("Form")">2015456>201545670</a>
+
+                                    </td>*@
+                                <td>
+                                    <a href="@Url.Action("Form")">    777777</a>
+                                </td>
+                                <td>
+                                    บริษัท ช
+                                </td>
+                                <td>
+                                    5
+                                </td>
+                                <td></td>
+                                @*<td>
+                                        การไฟฟ้านครหลวงเขตบางกะปิ
+                                    </td>
+                                    <td>
+                                        <i class="icon-custom icon-sm rounded-x icon-color-light-grey icon-line icon-camera"></i>
+                                    </td>*@
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--Pagination-->
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+            <!--End Pagination-->
+        </div>
+        <!-- End Profile Content -->
+    </div><!--/end row-->
+</div>
+<!--=== End Profile ===-->
+@section Scripts{
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/smoothScroll.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js")"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/custom.js")"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/app.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/reg.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            //App.initScrollBar();
+            RegForm.initRegForm();
+            Datepicker.initDatepicker();
+            CheckoutForm.initCheckoutForm();
+
+            $("#picSample").click(function () {
+                //bootbox.alert("<img class='col-md-12' src='../../../Images/Sample/board1.jpg' />", function () {
+                //  bootbox.dialog("รูปภาพ", function () {
+                //Example.show("Hello world callback");
+                ///Example.show("<img src='~/Images/Sample/board1.jpg' />");
+                bootbox.dialog(
+                    {
+                        title: "รูปภาพ",
+                        message: "<img  src='../../../Images/Sample/board1.jpg' />"
+                    });
+                // });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,82 @@
+﻿@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="wrapper">
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">พื้นที่เช่า</h1>
+            <ul class="pull-right breadcrumb">
+                @*<li><a href="index.html">Home</a></li>*@
+                <li><a href="@Url.Action("Index")">พื้นที่เช่า</a></li>
+                <li class="active">รายละเอียดพื้นที่เช่า</li>
+            </ul>
+        </div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+    <!--=== Content Part ===-->
+    <div class="container content">
+        <div class="row">
+            <!-- Begin Content -->
+            @*<div class="col-md-9">*@
+            <!-- General Unify Forms -->
+            <form action="#" class="sky-form">
+                <header>รายละเอียดพื้นที่เช่า</header>
+                <fieldset>
+                    <section>
+                        <label class="label">ชื่อพื้นที่</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">คำอธิบาย</label>
+                        <label class="textarea">
+                            @*<i class="icon-append fa fa-comment"></i>*@
+                            <textarea rows="2" name="message" id="message"></textarea>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">ประเภทพื้นที่</label>
+                        <label class="select">
+                            <select name="interested">
+                                <option value="0" selected disabled>พื้นที่ประเภท 1</option>
+                                <option value="1">พื้นที่ประเภท 2</option>
+                                <option value="2">พื้นที่ประเภท 3</option>
+                            </select>
+                            <i></i>
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">รหัส GIS</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">Lat @*itude*@</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                    <section>
+                        <label class="label">Long @*itude*@</label>
+                        <label class="input">
+                            <input type="text">
+                        </label>
+                    </section>
+                </fieldset>
+                <footer>
+                    <button type="submit" class="btn-u">บันทึก</button>
+                    <button type="button" class="btn-u btn-u-default" onclick="window.history.back();">ยกเลิก</button>
+                </footer>
+
+            </form>
+            <!-- General Unify Forms -->
+            <div class="margin-bottom-60"></div>
+            @*</div>*@
+            <!-- End Content -->
+        </div>
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+</div><!--/End Wrapepr-->
