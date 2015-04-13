@@ -13,5 +13,9 @@ namespace MEABillboardWeb.Areas.Member.Controllers
         {
             return View();
         }
+        public ActionResult Info()
+        {
+            return View();
+        }
     }
 }

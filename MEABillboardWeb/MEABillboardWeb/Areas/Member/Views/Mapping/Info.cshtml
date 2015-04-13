@@ -1,0 +1,117 @@
+﻿@section Styles{
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/animate.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/line-icons/line-icons.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/font-awesome/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
+
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
+}
+
+<div class="panel panel-profile">
+    <div class="panel-body ">
+        <div class="headline"><h2>รายละเอียดป้าย</h2></div>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td class="text-nowrap text-right">ชื่อ :</td>
+                    <td>ป้าย HP Enterprise Service #1</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap text-right">ประเภท :</td>
+                    <td>ป้าย Digital Billboard</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap text-right">พื้นที่ :</td>
+                    <td>การไฟฟ้านครหลวงเขตวัดเลียบ</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="margin-bottom-60"></div>
+
+
+        <div class="headline"><h2>สื่อ</h2></div>
+        <div id="inline"></div>
+
+        <hr />
+        <form action="@Url.Action("Index")" id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
+
+            <fieldset>
+                <section>
+                    <label class="label">
+                        สื่อ
+                    </label>
+                    <label class="select">
+                        <select name="gender">
+                            <option value="0" selected disabled>กรุณาระบุ</option>
+                            <option value="1">Media#1</option>
+                            <option value="2">Media#2</option>
+                            <option value="3">Media#3</option>
+                            <option value="4">Media#4</option>
+                            <option value="5">Media#5</option>
+                            <option value="6">Media#6</option>
+                        </select>
+                        <i></i>
+                    </label>
+                </section>
+                <section>
+                    <label class="label">ช่วงวันที่แสดง</label>
+                    <div class="row">
+                        <section class="col col-6">
+                            <label class="input">
+                                <i class="icon-append fa fa-calendar"></i>
+                                <input type="text" name="start" id="start" placeholder="เริ่มต้น">
+                            </label>
+                        </section>
+                        <section class="col col-6">
+                            <label class="input">
+                                <i class="icon-append fa fa-calendar"></i>
+                                <input type="text" name="finish" id="finish" placeholder="สื้นสุด">
+                            </label>
+                        </section>
+                    </div>
+                </section>
+            </fieldset>
+            <footer>
+                <button class="btn-u"><i class="fa fa-plus"></i>&nbsp;เพิ่มสื่อ</button>
+                <button class="btn-u btn-u-default" onclick="window.history.back();"><span class="icon icon-back"></span> ย้อนกลับ</button>
+            </footer>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/back-to-top.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/smoothScroll.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js")"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/custom.js")"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="@Url.Content("~/assets/js/app.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/reg.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/forms/checkout.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/assets/js/plugins/datepicker.js")"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#start,#finish").datepicker();
+            $('#inline').datepicker({
+                dateFormat: 'dd.mm.yy',
+                prevText: '<i class="fa fa-angle-left"></i>',
+                nextText: '<i class="fa fa-angle-right"></i>'
+            });
+        });
+    </script>
+}
