@@ -2,155 +2,91 @@
 
 @{
     //ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="wrapper wrapper-content  animated fadeInRight">
+@section Styles{
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/animate.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/line-icons/line-icons.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/font-awesome/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css")">
+    <link rel="stylesheet" href="@Url.Content("~/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css")">
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/pages/profile.css")">
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="@Url.Content("~/assets/css/custom.css")">
 
+}
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">กลุ่มผู้ใช้งาน</h1>
+
+    </div>
+</div>
+<!--/breadcrumbs-->
+
+
+
+<div class="container content profile">
     <div class="row">
         <div class="col-md-12">
-            <div class="ibox ">
-                <div class="ibox-title">
-                    <h5>กลุ่มผู้ใช้งาน</h5>
+            <a href="@Url.Action("Form")" class="btn-u"><span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มกลุ่มผู้ใช้งาน</a>
+            <div class="margin-bottom-30"></div>        
+           
+            <div class="table-search-v1 panel panel-dark">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                             
+                                <th>ลำดับ</th>
+                                <th>ชื่อกลุ่มผู้ใช้งาน</th>
+                                <th>ชื่อกลุ่มฟังก์ชั่น</th>
+                                <th>จำนวนผู้ใช้งาน</th>
+                                <th>Long</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                        </tbody>
+                    </table>
                 </div>
-                <div class="ibox-content">
-                    @using (Html.BeginForm("Index", "AdminUserGroup", FormMethod.Post, new { @id = "frmIndex", @class = "form-horizontal" }))
-                    {
-                        <div class="form-group">
-                            <div class="col-sm-4 customValidate">
-                                <div>คำค้นหา</div>
-                                @Html.TextBox("keyword", "", new { @class = "form-control", maxlength = 1000 })
-                            </div>
-
-                        </div>
-
-                    }
-                    <div class="row" style="margin-left:10px">
-                        <button type="submit" class="btn btn-success" id="btnSearch"><span class="glyphicon glyphicon-search"></span> ค้นหา</button>
-                    </div>
-
-
-                </div>
-                <div class="ibox-content">
-                    <table id="resultTable" class="display" cellspacing="0" width="100%"></table>
-                </div>
-
+            </div>
+            <!--Pagination-->
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
             </div>
 
         </div>
     </div>
 
 </div>
-@section Styles {
-    @System.Web.Optimization.Styles.Render("~/Content/plugins/dataTables/dataTablesStyles")
-}
 
 
 @section scripts{
-    @System.Web.Optimization.Scripts.Render("~/plugins/jeditable")
-    @System.Web.Optimization.Scripts.Render("~/plugins/dataTables")
-
+  
 
     <script type="text/javascript">
         $(function () {
 
-          
-            //var jsondata = @Html.Raw(ViewBag.jsonData);
 
-
-            $('#resultTable').dataTable({
-                "data": [],
-                "columnDefs": [
-                    {
-                        "data": "ID",
-                        "title": "รหัสเอกสาร",
-                        "targets": 1
-                    },
-                    {
-                        "data": "NAME",
-                        "title": "รหัสแปลง",
-                        "targets": 2
-                    },
-                    {
-                        "defaultContent": '<button value="View" type="button" class="btn btn-default"><span class="glyphicon glyphicon-list-alt"></button>',
-                        "width": "20px",
-                        "orderable": false,
-                        "title": "แสดง",
-                        "targets": 3
-                    },
-                    {
-                        "defaultContent": '<button value="Edit" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></button>',
-                        "width": "20px",
-                        "orderable": false,
-                        "title": "แก้ไข",
-                        "targets": 4
-                    },
-                    {
-                        "defaultContent": '<button value="Delete" type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove-circle"></button>',
-                        "width": "20px",
-                        "orderable": false,
-                        "title": "ลบ",
-                        "targets": 5
-                    }
-                ],
-                "stateSave": true,
-                "lengthChange": false,
-                "searching": false,
-                "language": {
-                    "sProcessing": "กำลังดำเนินการ...",
-                    "sLengthMenu": "แสดง_MENU_ แถว",
-                    "sZeroRecords": "ไม่พบข้อมูล",
-                    "sInfo": "แสดง _START_ ถึง _END_ จาก _TOTAL_ แถว",
-                    "sInfoEmpty": "แสดง 0 ถึง 0 จาก 0 แถว",
-                    "sInfoFiltered": "(กรองข้อมูล _MAX_ ทุกแถว)",
-                    "sInfoPostFix": "",
-                    "sSearch": "ค้นหา:",
-                    "sUrl": "",
-                    "oPaginate": {
-                        "sFirst": "เริ่มต้น",
-                        "sPrevious": "ก่อนหน้า",
-                        "sNext": "ถัดไป",
-                        "sLast": "สุดท้าย"
-                    }
-                }
-            });
-
-            $('#resultTable tbody').on('click', 'button', function () {
-                var row = $(this).parents('tr');
-                var data = table.row($(this).parents('tr')).data();
-                if ($(this).val() == "Edit") {
-                    window.location = '@Url.Action("Form1", "plant01")' + '/' + data["DOC_ID"] + '/Edit';
-                } else if ($(this).val() == "View") {
-                    window.location = '@Url.Action("Form1", "plant01")' + '/' + data["DOC_ID"];
-                }
-                else if ($(this).val() == "Delete") {
-                    $('#globalWithConfirm').modal('show');
-                    $("#globalWithConfirm .global-modal-confirm").off("click");
-                    $('#globalWithConfirm .global-modal-confirm').on("click", (function () {
-                        $.ajax({
-                            url: '@Url.Action("Delete", "plant01")',
-                            type: "POST",
-                            data: { doc_id: data["DOC_ID"] },
-                            success: function (result) {
-                                $('#globalWithConfirm').modal('hide');
-                                if (result.success == true) {
-                                    setModalAlertContent(GlobalMessage.successTitle, GlobalMessage.successMessage);
-                                    showModalAlert();
-                                    table.row(row).remove().draw(false);
-                                } else {
-                                    setModalAlertContent(GlobalMessage.errorTitle, GlobalMessage.errorMessage);
-                                    showModalAlert();
-                                }
-                            }
-                        });
-                    }));
-                }
-            });
-
-            Pace.stop();
         });
     </script>
-
 }
 
 
